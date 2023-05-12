@@ -5,3 +5,4 @@ import './js/for-each-partial/modal';
 import './js/for-each-partial/store';
 import './js/for-each-partial/support';
 import './js/api/book.service';
+import './js/for-each-partial/create-markup-bookcard';
