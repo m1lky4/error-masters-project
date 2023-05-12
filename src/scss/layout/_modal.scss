@@ -1,141 +1,142 @@
-.backdrop{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(47, 47, 47, 0.2);
-    transition: opacity 250ms linear, visibility 250ms linear;  
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 47, 47, 0.2);
+  transition: opacity 250ms linear, visibility 250ms linear;
 }
 
 .backdrop.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
-@media screen and (min-width: 375px){
-.modal-container {
+@media screen and (min-width: 375px) {
+  .modal-container {
     width: 375px;
+  }
 }
-}
-@media screen and (min-width: 768px){
-.modal-container {
+@media screen and (min-width: 768px) {
+  .modal-container {
     width: 768px;
     padding-left: 32px;
     padding-right: 32px;
+  }
 }
-}
-.modal{
-    width: 339px;
-    height: 408px;
-    border: 2px solid #111111;
-    background-color: #FFFFFF;
-    border-radius: 18px;
-    padding: 40px 24px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.modal {
+  width: 339px;
+  height: 408px;
+  border: 2px solid #111111;
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 40px 24px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media screen and (min-width: 768px){
-.modal {
+@media screen and (min-width: 768px) {
+  .modal {
     width: 579px;
     height: 465px;
     padding: 40px;
-}
+  }
 }
 
 .modal-close {
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    background-color: rgba(0,0,0,0);
-    border: none;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    display: flex;
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover {
-        fill: #4F2EE8
-    }
-    &:focus {
-        fill: #4F2EE8
-    }
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    fill: #4f2ee8;
+  }
+  &:focus {
+    fill: #4f2ee8;
+  }
 }
 
-@media screen and (min-width: 768px){
-.modal-close {
+@media screen and (min-width: 768px) {
+  .modal-close {
     top: 24px;
-    right: 24px;}
+    right: 24px;
+  }
 }
 
 .modal-shopping-btn {
-    display: block;
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    color: #111111;
-    background-color: transparent;
-    box-sizing: border-box;
-    border: 2px solid #4f2ee8;
-    border-radius: 40px;
-    padding: 14px 24px;
-    text-align: center;
-    margin: auto;
-    margin-top: 40px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover {
-      background-color: #4F2EE8;
-      color: #FFFFFF;
-    }
-    &:focus {
-      background-color: #4F2EE8;
-      color: #FFFFFF;
-    }
+  display: block;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #111111;
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 2px solid #4f2ee8;
+  border-radius: 40px;
+  padding: 14px 24px;
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    background-color: #4f2ee8;
+    color: #ffffff;
   }
-
-  @media screen and (min-width: 768px) {
-    .modal-shopping-btn {
-      width: 100%;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      font-size: 18px;
-      line-height: 1.33;
-    }
+  &:focus {
+    background-color: #4f2ee8;
+    color: #ffffff;
   }
+}
 
+@media screen and (min-width: 768px) {
+  .modal-shopping-btn {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
+
+.congratulations-text {
+  text-align: center;
+  width: 242px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: rgba(17, 17, 17, 0.6);
+}
+
+@media screen and (min-width: 768px) {
   .congratulations-text {
-    text-align: center;
-    width: 242px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8px;
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 1.2;
-    text-align: center;
-    letter-spacing: -0.04em;
-    color: rgba(17,17,17,0.6);
-  }
+    width: 324px;
 
-  @media screen and (min-width: 768px) {
-    .congratulations-text {
-      width: 324px;
-  
-      font-size: 12px;
-      line-height: 1.17;
-    }
+    font-size: 12px;
+    line-height: 1.17;
   }
+}
