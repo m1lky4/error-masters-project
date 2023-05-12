@@ -15,3 +15,30 @@ body {
     font-family: 'DM Sans', sans-serif; 
     // Regular 400 Regular 400 Italic Medium 500 Bold 700
 }
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+​li,
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+    outline: transparent;
+}
+
+img {
+    display: block;
+}
