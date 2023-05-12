@@ -1,0 +1,13 @@
+:root {
+    --body-color: #ffffff;
+    --focus-color: #EAC645;
+    --accent-color: #4F2EE8;
+    --text-color: #111111;
+    --light-text-color:#B4AFAF;
+    --white-color:#fff;
+}
+
+body.dark-theme {
+   --body-color:#202024;
+   --text-color: #fff;
+}
