@@ -1,0 +1,9 @@
+@import url(/src/scss/utils/_variables.scss);
+
+.site-nav {
+  display: flex;
+  height: 72px;
+  background: #ffffff;
+  border: 1.5px solid #111111;
+  border-radius: 0px 0px 8px 8px;
+}
