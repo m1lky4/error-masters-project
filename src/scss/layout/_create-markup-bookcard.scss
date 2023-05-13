@@ -20,6 +20,10 @@
   line-height: 1.12;
   letter-spacing: -0.04em;
   text-transform: uppercase;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .book-author {
@@ -36,7 +40,7 @@
     max-width: 218px;
   }
   .book-images {
-    width: 100%;
+    width: 218px;
     height: 316px;
   }
 }
@@ -46,7 +50,7 @@
     max-width: 180px;
   }
   .book-images {
-    width: 100%;
+    width: 180px;
     height: 256px;
   }
 }
