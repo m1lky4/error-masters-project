@@ -1,63 +1,3 @@
-// .category-markup {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   gap: 40px;
-// }
-
-// @media only screen and (min-width: 768px) {
-//   .category-markup {
-//     gap: 100px;
-//   }
-// }
-
-// @media only screen and (min-width: 1200px) {
-//   .category-markup {
-//     gap: 40px;
-//     flex-direction: row;
-//   }
-// }
-
-// .box-list {
-//   width: 327px;
-//   height: 228px;
-//   background-color: tomato;
-// }
-
-// @media only screen and (min-width: 768px) {
-//   .box-list {
-//     width: 704px;
-//     height: 472px;
-//   }
-// }
-
-// @media only screen and (min-width: 1200px) {
-//   .category-box {
-//     width: 1152px;
-//     height: 472px;
-//   }
-// }
-
-// .container-category-markup {
-//   width: 327px;
-//   background-color: var(--light-text-color);
-//   display: flex;
-//   flex-direction: column;
-//   gap: 40px;
-// }
-
-// @media only screen and (min-width: 768px) {
-//   .container-category-markup {
-//     width: 704px;
-//   }
-// }
-
-// @media only screen and (min-width: 1200px) {
-//   .container-category-markup {
-//     width: 1060px;
-//   }
-// }
-// ==========================================
 .title-category-markup {
   font-weight: 700;
   font-size: 32px;
@@ -75,6 +15,22 @@
 
 .violet {
   color: var(--accent-color);
+}
+
+.category-markup-list {
+  width: 335px;
+}
+
+@media only screen and (min-width: 768px) {
+  .category-markup-list {
+    width: 704px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .category-markup-list {
+    width: 996px;
+  }
 }
 
 .category-markup-item {
@@ -105,11 +61,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 40px 24px;
+    justify-content: space-between;
   }
 }
 
 .category-markup-button {
+  margin-top: 32px;
   align-self: flex-end;
+  cursor: pointer;
   width: 124px;
   height: 46px;
   border: 2px solid var(--accent-color);
