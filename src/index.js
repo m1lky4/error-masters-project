@@ -7,3 +7,5 @@ import './js/for-each-partial/support';
 import './js/for-each-partial/book_list_markup'; //O.D.
 import './js/api/book.service';
 import './js/for-each-partial/create-markup-bookcard';
+
+
