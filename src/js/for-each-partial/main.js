@@ -10,6 +10,7 @@ const categoryMarkupList = document.querySelector('.category-markup-list');
 
 categoryMarkupList.innerHTML = createImmediateSkeleton();
 
+
 export function renderTopBookList(data, limit) {
   const markup = createTopBookList(data, limit);
   const categoryMarkupList = document.querySelector('.category-markup-list');
