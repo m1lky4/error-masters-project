@@ -42,8 +42,11 @@
 }
 
 @media only screen and (min-width: 1200px) {
+  .book-item {
+    max-width: 180px;
+  }
   .book-images {
     width: 100%;
-    height: 318px;
+    height: 256px;
   }
 }

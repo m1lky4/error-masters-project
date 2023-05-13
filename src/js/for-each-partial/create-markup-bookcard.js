@@ -1,5 +1,4 @@
 export function createBookCardMarkup(param) {
-  console.log(param);
   const markup = param
     .map(data => {
       return `<li class="book-item" date-id='${data._id}'>
