@@ -1,0 +1,107 @@
+.registration-modal {
+  position: relative;
+  width: 335px;
+  height: 384px;
+  background-color: var(--body-color);
+
+  border: 2px solid var(--text-color);
+  border-radius: 18px;
+
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-input-filds {
+  width: 295px;
+  height: 50px;
+  padding: 16px 173px 16px 24px;
+  border: 2px solid var(--text-color);
+  background-color: var(--body-color);
+  border-radius: 40px;
+
+  margin-bottom: 24px;
+}
+
+.registration-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  cursor: pointer;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+
+  background-color: transparent;
+  border: 0px;
+}
+
+.registration-close-btn-icon {
+  stroke: var(--text-color);
+}
+.form-input-filds::placeholder {
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.registration-form {
+  position: relative;
+}
+.input-icon {
+  stroke: var(--text-color);
+  fill: transparent;
+  position: absolute;
+}
+
+.email-input-icon {
+  top: 93px;
+  right: 25.25px;
+}
+
+.password-input-icon {
+  top: 166.25px;
+  right: 26.25px;
+}
+
+.sign-button {
+  width: 294px;
+  height: 50px;
+  border: 0px;
+  border-radius: 40px;
+  background-color: var(--text-color);
+  color: var(--body-color);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.switch-sign {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.switch-sign-button {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 3em;
+
+  padding: 0;
+  border: 0px;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: var(--text-color);
+
+  cursor: pointer;
+}
+
+.switch-sign-active {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
