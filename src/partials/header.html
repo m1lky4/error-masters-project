@@ -1,80 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<header class="main-header">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/scss/base/_header.scss">
-    <title>Document</title>
-</head>
-
-<body>
-    <header class="main-header">
-
-        <!-- ===============================NAVIGATION=========================================== -->
-        <nav class="site-nav">
+    <!-- ===============================NAVIGATION=========================================== -->
+    <nav class="site-nav">
 
 
-            <!-- ===============================LOGO============================ -->
-            <a class="link logo-top" href="../index.html">
-                <svg class="light-mode-svg" width="109px" height="28px">
-                    <use href="/src/images/sprite-header.svg#icon-logo-light"></use>
-                </svg>
-                <svg class="dark-mode-svg" width="109px" height="28px">
-                    <use href="/src/images/sprite-header.svg#icon-logo-dark"></use>
-                </svg>
-            </a>
-            <!-- ===============================/LOGO============================ -->
-            <div class="nav-container">
-                <ul class="nav-list">
-                    <li class="nav-item home-item"><a href="../index.html">HOME</a></li>
-                    <li class="nav-container shoping-item"><a href="#">
-                            Shopping list<svg class="light-mode-svg" width="109px" height="28px">
-                                <use href="/src/images/sprite-header.svg#icon-soppingCart"></use>
-                            </svg>
-                        </a></li>
-                </ul>
-            </div>
-            <!-- ===============================SWITCHER============================ -->
-            <label class="switcher">
-                <svg class="switch-light">
-                    <use href="/src/images/sprite-header.svg#icon-Switcher-light" width="40px" height="24"></use>
-                </svg>
-                <svg class="switch-dark">
-                    <use href="/src/images/sprite-header.svg#icon-Switcher-dark" width="40px" height="24"></use>
-                </svg>
-            </label>
-            <!-- ===============================/SWITCHER============================ -->
-            <!-- =========================BURGER======================================= -->
-            <button type="button" class="burger">
-                <svg width="28px" height="28px">
-                    <use href="/src/images/sprite-header.svg#icon-burger-light">
-                </svg>
-                <svg width="28px" height="28px">
-                    <use href="/src/images/sprite-header.svg#icon-burger-dark">
-                </svg>
-            </button>
-            <!-- ===============================SIGN UP============================ -->
-            <button type="button" class="sign-up">Sign up</button>
-            <!-- ===============================/ SIGN UP============================ -->
-        </nav>
-        <!-- ===============================NAVIGATION=========================================== -->
+        <!-- ===============================LOGO============================ -->
+        <a class=" logo-top" href="/src/index.html">
+            <svg class="logo-svg" width="109px" height="28px">
+                <use href="/src/images/sprite-header.svg#icon-logo"></use>
+            </svg>
 
-        <!-- ========================MOBILE MENU MODAL============================== -->
-        <!-- <div class="menu-overlay"></div>
-            <div class="menu">
-                <ul class="mobile-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shopping List<svg class="dark-mode-svg">
-                                <use href="./шлях-до-свг-спрайту/ім'я-спрайта.svg#ідентифікатор-символа"></use>
-                            </svg></a></li>
-                </ul>
-            </div> -->
-        <!-- ========================/MOBILE MENU MODAL============================== -->
+        </a>
+        <!-- ===============================/LOGO============================ -->
+        <!-- ===============================NAV LINKS==================== -->
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li class="nav-item home-item"><a class="link-home current" href="/src/index.html">HOME</a></li>
+                <li class="nav-item shoping-item"><a class="link-shoping  " href="#">
+                        SHOPPING LIST
+                        <svg class="icon-item" width="20px" height="20px">
+                            <use href="/src/images/sprite-header.svg#icon-soppingCart"></use>
+                        </svg>
 
-        <!-- ========================MOBILE MENU MODAL============================== -->
-    </header>
-</body>
+                    </a></li>
+            </ul>
+        </div>
+        <!-- ===============================SWITCHER============================ -->
 
-</html>
+        <!-- ===============================/SWITCHER============================ -->
+        <!-- =========================BURGER======================================= -->
+        <button type="button" class="burger">
+            <svg width="28px" height="28px">
+                <use href="/src/images/sprite-header.svg#icon-burger">
+            </svg>
+        </button>
+        <!-- ===============================SIGN UP============================ -->
+        <button type="button" class="sign-up">Sign up <svg class="icon-arrow" width="20px" height="20px">
+                <use href="/src/images/sprite-header.svg#icon-arrow"></use>
+            </svg></button>
+        <!-- ===============================/ SIGN UP============================ -->
+    </nav>
+    <!-- ===============================NAVIGATION=========================================== -->
+
+
+</header>
