@@ -9,14 +9,14 @@
       class="form-input-filds"
       type="text"
       placeholder="name"
-      name="user-name"
+      name="user_name"
     />
 
     <input
       class="form-input-filds"
       type="email"
       placeholder="email"
-      name="user-email"
+      name="user_email"
     />
     <svg class="email-input-icon input-icon" width="15px" height="13px">
       <use href="./images/registration-modal-icon.svg#email-icon"></use>
@@ -25,17 +25,19 @@
       class="form-input-filds"
       type="password"
       placeholder="password"
-      name="user-password"
+      name="user_password"
     />
     <svg class="password-input-icon input-icon" width="13.5px" height="13.5px">
       <use href="./images/registration-modal-icon.svg#password-icon"></use>
     </svg>
-    <button class="sign-button">sign up</button>
+    <button class="sign-button" name="submit_btn">sign up</button>
   </form>
   <ul class="switch-sign">
     <li>
-      <button class="switch-sign-button switch-sign-active">sign up</button>
+      <button class="switch-sign-button switch-sign-active" name="sign-up">
+        sign up
+      </button>
     </li>
-    <li><button class="switch-sign-button">sign in</button></li>
+    <li><button class="switch-sign-button" name="sign-in">sign in</button></li>
   </ul>
 </div>
