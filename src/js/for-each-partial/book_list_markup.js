@@ -1,7 +1,6 @@
 import { createBookCardMarkup } from './create-markup-bookcard';
 
 export function createTopBookList(param, limit) {
-  console.log(param);
   const bookList = param
     .map(({ list_name, books }) => {
       return `
