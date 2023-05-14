@@ -2,6 +2,7 @@ import { createTopBookList } from './book_list_markup';
 import { BookAPI } from '../api/book.service';
 import { formatResponse } from '../helpers/format_data';
 import debounce from 'lodash.debounce';
+import {onModal} from './modal'
 
 export let data;
 const bookAPI = new BookAPI();
@@ -10,6 +11,7 @@ export function renderTopBookList(data, limit) {
   const markup = createTopBookList(data, limit);
   const categoryMarkupList = document.querySelector('.category-markup-list');
   categoryMarkupList.innerHTML = markup;
+  categoryMarkupList.addEventListener('click',onModal);
 }
 
 window.addEventListener('resize', debounce(formatResponse, 300));
