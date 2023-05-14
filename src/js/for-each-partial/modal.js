@@ -1,28 +1,40 @@
-// import axios from 'axios';
 import { BookAPI } from '../api/book.service';
 const bookApi = new BookAPI();
 
+const body = document.body;
 const modal = document.querySelector('.modal');
 const backdrop = document.querySelector('.backdrop');
-const modalOpenBtn = document.querySelector('button[data-modal-open-btn]');
 const modalCloseBtn = document.querySelector('button[data-modal-close-btn]');
 const modalImg = document.querySelector('.modal-img');
 const modalText = document.querySelector('.modal-text');
 const modalShopList = document.querySelector('.modal-shop-list');
-// const shoppingBtn = document.querySelector('.modal-shopping-btn');
-// const congratulationsText = document.querySelector('.congratulations-text');
+const shoppingBtn = document.querySelector('.modal-shopping-btn');
+const congratulationsText = document.querySelector('.congratulations-text');
+
+let bookId;
+if (localStorage.getItem('shoppingList') === null) {
+  let shoppingList = localStorage.setItem('shoppingList', JSON.stringify([]));
+}
+
+body.classList.remove('modal-open');
 
 function openModal() {
   backdrop.classList.remove('is-hidden');
   modal.classList.remove('is-hidden');
 
+  body.classList.add('modal-open');
+
   backdrop.addEventListener('click', closeModalOnBackdropClick);
   modalCloseBtn.addEventListener('click', closeModal);
 
   document.addEventListener('keydown', closeModalOnEsc);
+
+  shoppingBtn.addEventListener('click', addToShoppingList);
 }
 
 function closeModal() {
+  body.classList.remove('modal-open');
+
   backdrop.classList.add('is-hidden');
   modal.classList.add('is-hidden');
 
@@ -30,6 +42,8 @@ function closeModal() {
   modalCloseBtn.removeEventListener('click', closeModal);
 
   document.removeEventListener('keydown', closeModalOnEsc);
+
+  shoppingBtn.removeEventListener('click', addToShoppingList);
 }
 function closeModalOnBackdropClick(e) {
   if (e.target === backdrop) {
@@ -43,18 +57,27 @@ function closeModalOnEsc(event) {
 }
 
 export function onModal(event) {
-  console.log(event.target.closest('li'));
   if (event.target.closest('li').classList.contains('book-item')) {
-        const bookItem = event.target.closest('li');
-        const bookId = bookItem.getAttribute('data-id');
-        showBookDetails(bookId);
-      }
+    const bookItem = event.target.closest('li');
+    bookId = bookItem.getAttribute('data-id');
+    showBookDetails(bookId);
+    updateButton();
+    const localList = JSON.parse(localStorage.getItem('shoppingList'));
+    if (localList !== []) {
+      localList.map(el => {
+        if (el.id === bookId) {
+          return (shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST');
+        } else {
+          return;
+        }
+      });
+    }
+  }
 }
 
 async function showBookDetails(bookId) {
   try {
     const book = await bookApi.getBookByID(bookId);
-    console.log(book);
     if (book) {
       modalImg.innerHTML = `<img src="${book.book_image}" alt="${book.title}" class="modal-book-img"/>`;
       modalText.innerHTML = `
@@ -73,4 +96,38 @@ async function showBookDetails(bookId) {
   } catch (error) {
     console.error('Error in getting data:', error);
   }
+}
+
+function updateLocalStorage(shoppingList) {
+  localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
+}
+
+function updateButton() {
+  shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
+  const shopIndex = shoppingList.filter(({ id }) => id !== bookId);
+  if (shopIndex === -1) {
+    shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST';
+  } else {
+    shoppingBtn.textContent = 'ADD TO SHOPPING LIST';
+  }
+}
+
+function addToShoppingList() {
+  shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
+  const bookIndex = shoppingList.findIndex(item => item.id === bookId);
+
+  if (shoppingBtn.textContent === 'ADD TO SHOPPING LIST') {
+    let book = {
+      id: bookId,
+    };
+    shoppingList.push(book);
+    shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST';
+    congratulationsText.textContent =
+      'Congratulations! You have added the book to the shopping list. To delete, press the button "Remove from the shopping list".';
+  } else {
+    shoppingBtn.textContent = 'ADD TO SHOPPING LIST';
+    shoppingList.splice(bookIndex, 1);
+    congratulationsText.textContent = '';
+  }
+  updateLocalStorage(shoppingList);
 }
