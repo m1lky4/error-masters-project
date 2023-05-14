@@ -53,19 +53,16 @@ ol {
 }
 
 .shopping-title {
-  margin-bottom: 20px;
+
+  margin-bottom: 140px;
+  margin-top: 40px;
   font-family: 'DM Sans';
   font-weight: 700;
   font-size: 48px;
   line-height: 1.1;
-  /* identical to box height, or 108% */
-
   letter-spacing: -0.04em;
-
   color: var(--text-color);
-  margin-bottom: 140px;
 }
-
 .shopping-book-title h3 {
   font-family: 'DM Sans';
   font-weight: 700;
@@ -90,6 +87,8 @@ ol {
   letter-spacing: -0.04em;
   color: var(--text-color);
   margin-bottom: 40px;
+  margin-top: 40px;
+
 }
 
 .shopping-book-title p {
