@@ -1,7 +1,7 @@
 export function createBookCardMarkup(param) {
   const markup = param
     .map(data => {
-      return `<li class="book-item" date-id='${data._id}'>
+      return `<li class="book-item" data-id='${data._id}'>
       <div class="scale-images mask mask-one mask-one-frame">
         <img
           class="book-images mask-img"
