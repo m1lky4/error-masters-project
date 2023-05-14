@@ -1,3 +1,8 @@
+.main {
+  display: flex;
+  padding-top: 40px;
+}
+
 .title-category-markup {
   margin-bottom: 40px;
   font-weight: 700;
@@ -81,9 +86,16 @@
   text-transform: uppercase;
   background-color: var(--body-color);
   color: var(--text-color);
+  transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.category-markup-button:hover {
+.category-markup-button:hover,
+.category-markup-button:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
+  outline: transparent;
+}
+
+.category-markup-button:active {
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
 }
