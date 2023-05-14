@@ -126,24 +126,6 @@ ol {
   margin-bottom: 0px;
 }
 
-@media only screen and (min-width: 768px) {
-  .shopping-list-book {
-    width: 704px;
-    height: 213px;
-    padding: 24px 24px;
-  }
-  .shopping-book-img {
-    width: 116px;
-    height: 165px;
-    margin-right: 24px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .shopping-list-book {
-    width: 996px;
-  }
-}
-
 .shopping-book-img {
   float: left;
   margin-right: 14px;
@@ -162,6 +144,7 @@ ol {
 .book__add-cart-icon {
   float: right;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 .shopping-book-author {
