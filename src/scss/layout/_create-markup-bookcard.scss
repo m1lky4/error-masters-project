@@ -1,14 +1,113 @@
+// * {
+//   box-sizing: border-box;
+// }
+
 .book-item {
   max-width: 335px;
   margin: 0;
+
+  cursor: pointer;
+}
+
+.scale-images {
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  border-radius: 8px;
 }
 
 .book-images {
   width: 335px;
   height: 485px;
   display: block;
-  margin-bottom: 14px;
+  transition: transform 6s linear;
+
   border-radius: 8px;
+}
+.book-images:hover {
+  transform: scale(1.1);
+}
+
+.quick-view {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  transform-origin: bottom;
+  transform: perspective(1000px) rotateX(-90deg);
+  padding-top: 26px;
+  background-color: var(--focus-color);
+  border-radius: 8px;
+
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--text-color);
+  text-align: center;
+}
+
+// ====================================
+// .mask {
+//   --uiMaskClipPath: var(--maskClipPath);
+//   box-sizing: var(--maskBoxSizing, border-box);
+//   display: var(--maskDisplay, inline-flex);
+//   padding: var(--maskStrokeThickness, 3px);
+//   clip-path: var(--uiMaskClipPath);
+//   background-color: var(--maskStrokeColor, currentColor);
+//   --maskStrokeColor: transparent;
+//   --maskStrokeThickness: 1px;
+// }
+// .mask-img {
+//   max-width: 100%;
+//   display: block;
+//   clip-path: var(--uiMaskClipPath);
+// }
+// .mask,
+// .mask-img {
+//   transition: clip-path var(--maskAnimationDuration, 0.3s)
+//     var(--maskAnimationTimingFunction, ease-out);
+// }
+
+// .mask-one {
+//   --maskClipPath: polygon(
+//     0 0,
+//     100% 0,
+//     100% 10%,
+//     100% 100%,
+//     90% 100%,
+//     0% 100%,
+//     0% 90%,
+//     0% 10%
+//   );
+// }
+// .mask-one-frame {
+//   --maskAnimationDuration: 0.8s;
+// }
+// .mask-one:hover,
+// .mask-one:focus {
+//   --maskClipPath: polygon(
+//     0 10%,
+//     10% 0,
+//     90% 0,
+//     100% 10%,
+//     100% 90%,
+//     90% 100%,
+//     10% 100%,
+//     0 90%
+//   );
+// }
+// ====================================
+
+.book-item:hover .quick-view,
+.book-item:focus .quick-view {
+  transform: perspective(2000px) rotateX(0deg);
 }
 
 .book-full-name {
