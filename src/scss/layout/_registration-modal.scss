@@ -15,15 +15,26 @@
   margin-right: auto;
 }
 
+.input-list {
+  height: 198px;
+  margin-bottom: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 .form-input-filds {
   width: 295px;
   height: 50px;
-  padding: 16px 173px 16px 24px;
+  padding: 16px 50px 16px 24px;
   border: 2px solid var(--text-color);
   background-color: var(--body-color);
   border-radius: 40px;
+  outline: transparent;
+}
 
-  margin-bottom: 24px;
+.input-error {
+  border: 2px solid var(--focus-color);
 }
 
 .registration-close-btn {
@@ -50,9 +61,10 @@
   text-transform: uppercase;
 }
 
-.registration-form {
+.input-fild-container {
   position: relative;
 }
+
 .input-icon {
   stroke: var(--text-color);
   fill: transparent;
@@ -60,13 +72,35 @@
 }
 
 .email-input-icon {
-  top: 93px;
-  right: 25.25px;
+  top: 19px;
+  right: 25.5px;
+}
+
+.show-password-text {
+  position: absolute;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0px;
+  width: 18px;
+  height: 18px;
+
+  top: 16px;
+  right: 24px;
 }
 
 .password-input-icon {
-  top: 166.25px;
-  right: 26.25px;
+  position: relative;
+  top: 0.5px;
+  right: 3.5px;
+}
+
+.errom-massage {
+  position: absolute;
+  top: 50px;
+  left: 24px;
+
+  color: var(--focus-color);
+  font-weight: 700;
 }
 
 .sign-button {
