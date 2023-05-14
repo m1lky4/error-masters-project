@@ -1,0 +1,242 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 47, 47, 0.2);
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 375px) {
+  .modal-container {
+    width: 375px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+.modal {
+  width: 339px;
+  border: 2px solid #111111;
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 40px 24px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 579px;
+    padding: 40px;
+  }
+}
+
+.modal-close {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    fill: #4f2ee8;
+  }
+  &:focus {
+    fill: #4f2ee8;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-close {
+    top: 24px;
+    right: 24px;
+  }
+}
+
+.modal-shopping-btn {
+  display: block;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #111111;
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 2px solid #4f2ee8;
+  border-radius: 40px;
+  padding: 14px 24px;
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    background-color: #4f2ee8;
+    color: #ffffff;
+  }
+  &:focus {
+    background-color: #4f2ee8;
+    color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-shopping-btn {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
+
+.congratulations-text {
+  text-align: center;
+  width: 242px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: rgba(17, 17, 17, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  .congratulations-text {
+    width: 324px;
+
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
+.modal-book-info{
+
+}
+
+@media screen and (min-width: 768px) {
+  .modal-book-info{
+  height: 281px;
+  display: flex;
+  justify-content: space-between;
+  }
+}
+.modal-img{ 
+  // margin-right: 24px;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 408px;
+}
+
+.modal-book-img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-img{
+    width: 192px;
+    height: 281px
+  }
+}
+.modal-text{
+  margin-top: 14px;
+  width: 279px;
+  max-height: 219px;
+  overflow: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-text{
+    margin-top: 0;
+  }
+}
+
+.modal-book-title{
+  font-size: 16px;
+  line-height: 1.17;
+  letter-spacing: -.04em;
+  color: #111111;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-book-title{
+    font-size: 24px;
+  }
+}
+
+.modal-book-author {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.29;
+  letter-spacing: -.04em;
+  color: #B4AFAF;
+  font-style: italic;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-book-author{
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+
+.modal-book-desc{
+  margin-top: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -.04em;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-book-desc{
+    margin-top: 20px;
+  }
+}
+
+.modal-shop-list{
+  align-items: center;
+  gap: 20px;
+  margin-top: 14px;
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-shop-list{
+    margin-top: 20px;
+  }
+}
+// .modal-img{
+//   width: 192px;
+// }
