@@ -3,7 +3,6 @@
 //   console.log(app);
 //   try {
 //     await app.auth().createUserWithEmailAndPassword(email, username, password);
-
 //     const user = await app.auth().currentUser;
 //     await user.updateProfile({
 //       displayName: username,
@@ -36,3 +35,4 @@
 // //   username: 'gergreg',
 // //   password: 'gferager',
 // // });
+
