@@ -1,4 +1,5 @@
 .title-category-markup {
+  margin-bottom: 40px;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.19;
@@ -78,4 +79,11 @@
   line-height: 1.29;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.category-markup-button:hover {
+  background-color: var(--accent-color);
+  color: var(--white-color);
 }

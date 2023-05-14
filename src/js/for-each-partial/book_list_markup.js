@@ -1,7 +1,6 @@
 import { createBookCardMarkup } from './create-markup-bookcard';
 
 export function createTopBookList(param, limit) {
-  console.log(param);
   const bookList = param
     .map(({ list_name, books }) => {
       return `
@@ -13,7 +12,7 @@ export function createTopBookList(param, limit) {
             ${createBookCardMarkup(books.slice(0, limit))}
             </ul>
             <button class="category-markup-button" type="submit">
-              See more
+              <span>See more</span>
             </button>
           </li>
         `;

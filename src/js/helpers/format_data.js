@@ -10,3 +10,5 @@ export function formatResponse(e) {
     renderTopBookList(data, 5);
   }
 }
+
+

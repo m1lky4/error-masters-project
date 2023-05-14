@@ -3,9 +3,13 @@ import { BookAPI } from '../api/book.service';
 import { formatResponse } from '../helpers/format_data';
 import debounce from 'lodash.debounce';
 import {onModal} from './modal'
+import { createImmediateSkeleton } from './skeleton';
 
 export let data;
 const bookAPI = new BookAPI();
+const categoryMarkupList = document.querySelector('.category-markup-list');
+
+categoryMarkupList.innerHTML = createImmediateSkeleton();
 
 export function renderTopBookList(data, limit) {
   const markup = createTopBookList(data, limit);
