@@ -3,7 +3,7 @@
     margin-bottom: 40px;
 }
 .categories-box{
-    overflow: scroll;
+    overflow-y: scroll;
     width: 335px;
     height: 228px;
 }
@@ -39,4 +39,32 @@
     text-transform: uppercase;
 }
 
+@media only screen and (min-width: 768px) {
+    .container-category {
+        margin-bottom: 100px;
+    }
+    .categories-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    max-width: 337px;
+    }
+.categories-item{
+        font-size: 18px;
+        line-height: 24px;
+}
+.list-categories {
+    row-gap: 32px;
+}
+}
 
+@media only screen and (min-width: 1200px) {
+    .container-category {
+        margin-bottom: 86px;
+        }
+    .categories-box {
+        align-items: flex-start;
+        max-width: 356px;
+    }
+}
