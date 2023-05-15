@@ -5,14 +5,13 @@
   top: 0;
   z-index: 1;
   background: var(--body-color);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 // ====================NAVIGATION===========================
 /* /THEME/ */
 
 .container-border {
-  border: 1.5px solid #111111; //add
-  // border-top: none; //??? if need
   border-radius: 0px 0px 8px 8px; //add
 }
 
@@ -22,7 +21,6 @@
   height: 72px;
   width: 100%;
   background: inherit;
-  border-radius: 0px 0px 8px 8px;
 }
 
 .burger svg use {
