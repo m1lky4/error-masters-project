@@ -1,20 +1,28 @@
 @import url(/src/scss/utils/_variables.scss);
 
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--body-color);
+}
+
 // ====================NAVIGATION===========================
 /* /THEME/ */
+
+.container-border {
+  border: 1.5px solid #111111; //add
+  // border-top: none; //??? if need
+  border-radius: 0px 0px 8px 8px; //add
+}
 
 .site-nav {
   display: flex;
   align-items: center;
-
   height: 72px;
   width: 100%;
-  margin-right: 24px;
-
   background: inherit;
-  border: 1.5px solid var(--logo-font-color);
   border-radius: 0px 0px 8px 8px;
-  padding: 12px 24px;
 }
 
 .burger svg use {
