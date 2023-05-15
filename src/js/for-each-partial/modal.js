@@ -13,7 +13,7 @@ const congratulationsText = document.querySelector('.congratulations-text');
 
 let bookId;
 if (localStorage.getItem('shoppingList') === null) {
-  let shoppingList = localStorage.setItem('shoppingList', JSON.stringify([]));
+  const shoppingList = localStorage.setItem('shoppingList', JSON.stringify([]));
 }
 
 body.classList.remove('modal-open');
@@ -98,22 +98,8 @@ async function showBookDetails(bookId) {
   }
 }
 
-function updateLocalStorage(shoppingList) {
-  localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
-}
-
-function updateButton() {
-  shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
-  const shopIndex = shoppingList.filter(({ id }) => id !== bookId);
-  if (shopIndex === -1) {
-    shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST';
-  } else {
-    shoppingBtn.textContent = 'ADD TO SHOPPING LIST';
-  }
-}
-
 function addToShoppingList() {
-  shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
+  const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
   const bookIndex = shoppingList.findIndex(item => item.id === bookId);
 
   if (shoppingBtn.textContent === 'ADD TO SHOPPING LIST') {
@@ -130,4 +116,18 @@ function addToShoppingList() {
     congratulationsText.textContent = '';
   }
   updateLocalStorage(shoppingList);
+}
+
+function updateLocalStorage(shoppingList) {
+  localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
+}
+
+function updateButton() {
+  const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
+  const shopIndex = shoppingList.filter(({ id }) => id !== bookId);
+  if (shopIndex === -1) {
+    shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST';
+  } else {
+    shoppingBtn.textContent = 'ADD TO SHOPPING LIST';
+  }
 }
