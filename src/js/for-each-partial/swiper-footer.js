@@ -5,7 +5,6 @@ const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination],
   slidesPerView: 3,
   spaceBetween: 30,
-  slidesPerGroup: 2,
   fade: true,
   loop: true,
   loopFillGroupWithBlank: true,

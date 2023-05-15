@@ -87,8 +87,8 @@ function createModalContentMarkup() {
     .map(
       developer => ` 
       <div class="swiper-slide developers-cards">
-    <div class="card" style="background-image: url(${developer.img})">
-      <div class="content">
+    <div class="card-footer" style="background-image: url(${developer.img})">
+      <div class="content-footer">
         <h2 class="dev-name">${developer.name}</h2>
         <p class="dev-position">${developer.position}</p>
         <ul class="ftr-social-list">

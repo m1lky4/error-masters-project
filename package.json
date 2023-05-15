@@ -20,7 +20,7 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "axios": "^1.4.0",
-    "swiper": "^9.3.1"
+    "swiper": "^9.3.1",
     "firebase": "^9.22.0",
     "lodash.debounce": "^4.0.8",
     "modern-normalize": "^1.1.0"
