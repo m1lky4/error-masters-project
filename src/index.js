@@ -8,5 +8,9 @@ import './js/for-each-partial/book_list_markup'; //O.D.
 import './js/api/book.service';
 import './js/for-each-partial/create-markup-bookcard';
 import './js/for-each-partial/main';
+
+import './js/for-each-partial/mobile-menu';
+
 // import './js/firebase/firebase';
 import './js/firebase/auth';
+
