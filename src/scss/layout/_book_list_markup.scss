@@ -1,64 +1,5 @@
-// .category-markup {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   gap: 40px;
-// }
-
-// @media only screen and (min-width: 768px) {
-//   .category-markup {
-//     gap: 100px;
-//   }
-// }
-
-// @media only screen and (min-width: 1200px) {
-//   .category-markup {
-//     gap: 40px;
-//     flex-direction: row;
-//   }
-// }
-
-// .box-list {
-//   width: 327px;
-//   height: 228px;
-//   background-color: tomato;
-// }
-
-// @media only screen and (min-width: 768px) {
-//   .box-list {
-//     width: 704px;
-//     height: 472px;
-//   }
-// }
-
-// @media only screen and (min-width: 1200px) {
-//   .category-box {
-//     width: 1152px;
-//     height: 472px;
-//   }
-// }
-
-// .container-category-markup {
-//   width: 327px;
-//   background-color: var(--light-text-color);
-//   display: flex;
-//   flex-direction: column;
-//   gap: 40px;
-// }
-
-// @media only screen and (min-width: 768px) {
-//   .container-category-markup {
-//     width: 704px;
-//   }
-// }
-
-// @media only screen and (min-width: 1200px) {
-//   .container-category-markup {
-//     width: 1060px;
-//   }
-// }
-// ==========================================
 .title-category-markup {
+  margin-bottom: 40px;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.19;
@@ -75,6 +16,25 @@
 
 .violet {
   color: var(--accent-color);
+}
+
+.category-markup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 335px;
+}
+
+@media only screen and (min-width: 768px) {
+  .category-markup-list {
+    width: 704px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .category-markup-list {
+    width: 996px;
+  }
 }
 
 .category-markup-item {
@@ -105,11 +65,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 40px 24px;
+    justify-content: space-between;
   }
 }
 
 .category-markup-button {
+  margin-top: 32px;
   align-self: flex-end;
+  cursor: pointer;
   width: 124px;
   height: 46px;
   border: 2px solid var(--accent-color);
@@ -119,4 +82,18 @@
   line-height: 1.29;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-markup-button:hover,
+.category-markup-button:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  outline: transparent;
+}
+
+.category-markup-button:active {
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
 }

@@ -1,15 +1,18 @@
-export function renderBookList(param) {
+import { createBookCardMarkup } from './create-markup-bookcard';
+
+export function createTopBookList(param, limit) {
   const bookList = param
-    .map(() => {
+    .map(({ list_name, books }) => {
       return `
         <li class="category-markup-item">
             <p class="category-markup-subtitle">
-              Combined Print and E-Book Fiction
+              ${list_name}
             </p>
             <ul class="books-list-markup">
+            ${createBookCardMarkup(books.slice(0, limit))}
             </ul>
             <button class="category-markup-button" type="submit">
-              SEE MORE
+              <span>See more</span>
             </button>
           </li>
         `;

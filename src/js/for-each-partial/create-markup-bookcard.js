@@ -1,14 +1,17 @@
-export function markupPictureBookCard(param) {
+export function createBookCardMarkup(param) {
   const markup = param
     .map(data => {
-      return `<li class="book-item">
+      return `<li class="book-item" data-id='${data._id}'>
+      <div class="scale-images mask mask-one mask-one-frame">
         <img
-          class="book-images"
-          src="${src}"
-          alt="${desc}"
+          class="book-images mask-img"
+          src="${data.book_image}"
+          alt="${data.title}"
         />
-        <h3 class="book-full-name">${nameBook}</h3>
-        <p class="book-author">${author}</p>
+        <p class="quick-view">quick view</p>
+        </div>
+        <h3 class="book-full-name">${data.title}</h3>
+        <p class="book-author">${data.author}</p>
       </li>`;
     })
     .join('');
