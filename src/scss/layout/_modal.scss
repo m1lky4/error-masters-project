@@ -4,18 +4,22 @@
 
 .backdrop {
   position: fixed;
+  z-index: 2;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(47, 47, 47, 0.2);
-  transition: opacity 250ms linear, visibility 250ms linear;
+  background-color: rgba(47, 47, 47, 0.1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  transform: scale(0.5);
 }
 
 @media screen and (min-width: 375px) {
@@ -40,6 +44,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.42);
 }
 
 @media screen and (min-width: 768px) {
@@ -63,18 +68,22 @@
   top: 12px;
   right: 12px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    fill: var(--accent-color);
-  }
-  &:focus {
-    fill: var(--accent-color);
-  }
 }
 
 @media screen and (min-width: 768px) {
   .modal-close {
     top: 24px;
     right: 24px;
+  }
+}
+
+.modal-close-icon {
+  fill: var(--text-color);
+  &:hover {
+    fill: var(--accent-color);
+  }
+  &:focus {
+    fill: var(--accent-color);
   }
 }
 
@@ -88,6 +97,7 @@
   letter-spacing: -0.01em;
   text-transform: uppercase;
   color: var(--text-color);
+  outline: transparent;
   background-color: transparent;
   box-sizing: border-box;
   border: 2px solid var(--accent-color);
@@ -96,16 +106,28 @@
   text-align: center;
   margin: auto;
   margin-top: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    background-color: var(--accent-color);
-    color: var(--body-color);
-  }
-  &:focus {
-    background-color: var(--accent-color);
-    color: var(--body-color);
-  }
+  transition: all 0.5s ease;
+  // transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  //   color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // &:hover {
+  //   background-color: var(--accent-color);
+  //   color: var(--body-color);
+  //   // transform: translateX(-0.5em);
+  //   box-shadow: 0 0 0.5em 0em var(--accent-color);
+  // }
+  // &:focus {
+  //   background-color: var(--accent-color);
+  //   color: var(--body-color);
+  // }
+}
+
+.modal-shopping-btn:hover,
+.modal-shopping-btn:focus {
+  letter-spacing: 1px;
+  background-color: var(--accent-color);
+  color: var(--body-color);
+  // box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  box-shadow: 0 0 0.5em 0em var(--accent-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -131,7 +153,8 @@
   line-height: 1.2;
   text-align: center;
   letter-spacing: -0.04em;
-  color: rgba(17, 17, 17, 0.6);
+  // color: rgba(17, 17, 17, 0.6);
+  color: var(--light-text-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -144,39 +167,49 @@
 }
 
 @media screen and (min-width: 768px) {
-  .modal-book-info{
-  height: 281px;
-  display: flex;
-  justify-content: space-between;
+  .modal-book-info {
+    height: 281px;
+    display: flex;
+    justify-content: space-between;
   }
 }
-.modal-img{ 
+.modal-img {
   // margin-right: 24px;
   border-radius: 8px;
   overflow: hidden;
   height: 408px;
 }
 
-.modal-book-img{
+.modal-book-img {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
 
-.logo-img{
+.logo-img {
   filter: grayscale(100%);
-  &:hover {filter: grayscale(0%);
+  &:hover {
+    filter: grayscale(0%);
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
   }
 }
 
 @media screen and (min-width: 768px) {
-  .modal-img{
+  .modal-img {
     width: 192px;
-    height: 281px
+    height: 281px;
   }
 }
-.modal-text{
+
+// .logo{
+//   border-radius: 50%;
+//   &:hover {
+//     background-color: var(--accent-color);
+//     fill: var(--light-text-color);
+//   }
+// }
+
+.modal-text {
   margin-top: 14px;
   width: 279px;
   max-height: 219px;
@@ -184,20 +217,20 @@
 }
 
 @media screen and (min-width: 768px) {
-  .modal-text{
+  .modal-text {
     margin-top: 0;
   }
 }
 
-.modal-book-title{
+.modal-book-title {
   font-size: 16px;
   line-height: 1.17;
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
   color: var(--text-color);
 }
 
 @media screen and (min-width: 768px) {
-  .modal-book-title{
+  .modal-book-title {
     font-size: 24px;
   }
 }
@@ -206,33 +239,33 @@
   margin-top: 4px;
   font-size: 12px;
   line-height: 1.29;
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
   color: var(--light-text-color);
   font-style: italic;
 }
 
 @media screen and (min-width: 768px) {
-  .modal-book-author{
+  .modal-book-author {
     font-size: 14px;
     margin-top: 8px;
   }
 }
 
-.modal-book-desc{
+.modal-book-desc {
   margin-top: 18px;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.29;
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
 }
 
 @media screen and (min-width: 768px) {
-  .modal-book-desc{
+  .modal-book-desc {
     margin-top: 20px;
   }
 }
 
-.modal-shop-list{
+.modal-shop-list {
   align-items: center;
   gap: 20px;
   margin-top: 14px;
@@ -240,7 +273,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .modal-shop-list{
+  .modal-shop-list {
     margin-top: 20px;
   }
 }
