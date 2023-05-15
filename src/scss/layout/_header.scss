@@ -5,16 +5,17 @@
   top: 0;
   z-index: 1;
   background: var(--body-color);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 // ====================NAVIGATION===========================
 /* /THEME/ */
 
-.container-border {
-  border: 1.5px solid #111111; //add
-  // border-top: none; //??? if need
-  border-radius: 0px 0px 8px 8px; //add
-}
+// .container-border {
+//   // border: 1.5px solid #111111; //add
+//   // border-top: none; //??? if need
+//   // border-radius: 0px 0px 8px 8px; //add
+// }
 
 .site-nav {
   display: flex;
@@ -127,7 +128,7 @@
 }
 
 /* Для екранів пристроїв desctop */
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .logo-top {
     margin-right: 76px;
   }
