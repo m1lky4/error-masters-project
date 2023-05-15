@@ -6,7 +6,7 @@
   flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1439px) {
   .skeleton {
     padding-top: 42px;
     width: 704px;
@@ -29,7 +29,7 @@
   margin-bottom: 15px;
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1439px) {
   .movie--isloading {
     width: 218px;
   }
@@ -54,7 +54,7 @@
   animation: shine-loading-image 2s infinite ease-out;
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1439px) {
   .movie--isloading .loading-image {
     height: 316px;
   }
