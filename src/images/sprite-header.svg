@@ -30,5 +30,9 @@
 <path fill="none" stroke="#eac645" style="stroke: var(--color1, #eac645)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.3333" d="M3.555 16h35.556M39.111 16l-13.333-13.333M39.111 16l-13.333 13.333"></path>
 </symbol>
 
+<symbol id="mobile-menu-close-icon" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.4286" d="M24 8l-16 16M8 8l16 16"></path>
+</symbol>
+
 </defs>
 </svg>
