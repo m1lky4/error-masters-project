@@ -97,7 +97,6 @@ async function showBookDetails(bookId) {
     console.error('Error in getting data:', error);
   }
 }
-
 function addToShoppingList() {
   const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
   const bookIndex = shoppingList.findIndex(item => item.id === bookId);
@@ -117,7 +116,6 @@ function addToShoppingList() {
   }
   updateLocalStorage(shoppingList);
 }
-
 function updateLocalStorage(shoppingList) {
   localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
 }
