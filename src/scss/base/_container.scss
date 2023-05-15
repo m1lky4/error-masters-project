@@ -10,11 +10,37 @@
     padding-left: 32px;
     padding-right: 32px;
   }
-} 
-@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1440px) {
   .container {
     max-width: 1440px;
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+
+.main-section {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .wrapper {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container-category {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container-category {
+    flex-direction: column;
   }
 }
