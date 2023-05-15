@@ -1,9 +1,12 @@
+import { log } from 'console';
+
 refs = {
   signInButton: document.querySelector('[name="sign-in"]'),
   signUpButton: document.querySelector('[name="sign-up"]'),
   signForm: document.querySelector('.registration-form'),
   passwordFild: document.querySelector('[name="user_password"]'),
   closeButton: document.querySelector('.registration-close-btn'),
+  openModalButton: document.querySelector('.sign-up'),
   passwordShowButton: document.querySelector(`.show-password-text`),
   allFormInputs: document.querySelectorAll('.form-input-filds'),
   modalBackdrop: document.querySelector('.registration-backdrop'),
@@ -18,15 +21,21 @@ export const {
   allFormInputs,
   closeButton,
   modalBackdrop,
+  openModalButton,
 } = refs;
 
 signInButton.addEventListener('click', onSignInButtonClick);
 signUpButton.addEventListener('click', onSignUpButtonClick);
 passwordShowButton.addEventListener('click', onShowPasswordButtonClick);
 
-closeButton.addEventListener('click', closeModal);
-modalBackdrop.addEventListener('click', onBackdropClick);
-document.addEventListener('keydown', onEscapeClick);
+openModalButton.addEventListener('click', onLoginButtonClick);
+
+function onLoginButtonClick() {
+  modalBackdrop.classList.remove('registration-is-hiden');
+  closeButton.addEventListener('click', closeModal);
+  modalBackdrop.addEventListener('click', onBackdropClick);
+  document.addEventListener('keydown', onEscapeClick);
+}
 
 function onSignInButtonClick() {
   removeAndAddClasses(signUpButton, signInButton);
