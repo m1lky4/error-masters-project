@@ -1,13 +1,10 @@
 const themeSwitcher = document.getElementById('theme-switch');
 
-// light theme is default, that's why themeSwitcher is unchecked
 themeSwitcher.checked = true;
 setThemeOnLoad();
 themeSwitcher.addEventListener('change', clickHandler);
 
 function clickHandler() {
-  // if you change theme to dark, add 'dark' class and remove previus, add this change to local storage
-  // if you select light theme do the same work but add 'light' class
   const currentClass = document.body.className;
   console.log(currentClass);
   if (currentClass === 'light') {
@@ -22,9 +19,6 @@ function clickHandler() {
 }
 
 function setThemeOnLoad() {
-  // this helpful function should call every time when you update page, to check what theme was seted to local storage
-  // you should get data from LS and set saved theme to body
-  // dont forget about themeSwitcher, if current theme is dark, it should be checked
   const savedTheme = localStorage.getItem('theme');
   console.log(savedTheme);
   document.body.className = savedTheme;
@@ -42,6 +36,7 @@ function currenPage(location) {
     homeLink.classList.add('current');
     return;
   } else if (location === '/shopping-list.html') {
+    homeLink.classList.remove('current');
     shoppingLink.classList.add('current');
   }
 }
