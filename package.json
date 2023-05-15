@@ -20,15 +20,18 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "axios": "^1.4.0",
-    "modern-normalize": "^1.1.0",
     "swiper": "^9.3.1"
+    "firebase": "^9.22.0",
+    "lodash.debounce": "^4.0.8",
+    "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
     "buffer": "^6.0.3",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }

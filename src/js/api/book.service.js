@@ -3,15 +3,6 @@ import axios from 'axios';
 axios.defaults.baseURL = 'https://books-backend.p.goit.global/books';
 
 export class BookAPI {
-  bookCategory;
-  page;
-  pageLimit;
-  constructor() {
-    this.bookCategory = '';
-    this.page = 1;
-    this.pageLimit = 1;
-  }
-
   async getBooksCategoryList() {
     try {
       const responce = await axios.get(`/category-list`);
@@ -31,10 +22,9 @@ export class BookAPI {
   }
 
   async getBooksWithSelectedCategory(selectedCategory) {
-    if (selectedCategory) this.bookCategory = selectedCategory;
     try {
       const responce = await axios.get(
-        `/category?category=${this.bookCategory}`
+        `/category?category=${selectedCategory}`
       );
       return responce.data;
     } catch {
