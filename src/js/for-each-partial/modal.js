@@ -116,6 +116,7 @@ function addToShoppingList() {
   }
   updateLocalStorage(shoppingList);
 }
+
 function updateLocalStorage(shoppingList) {
   localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
 }
