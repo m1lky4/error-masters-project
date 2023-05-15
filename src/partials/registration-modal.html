@@ -1,62 +1,66 @@
-<div class="registration-modal">
-  <button class="registration-close-btn">
-    <svg class="registration-close-btn-icon" width="14px" height="14px">
-      <use href="./images/registration-modal-icon.svg#close-icon"></use>
-    </svg>
-  </button>
-  <form class="registration-form" action="">
-    <ul class="input-list">
-      <li class="input-fild-container">
-        <input
-          class="form-input-filds"
-          type="text"
-          placeholder="name"
-          name="user_name"
-        />
-        <span class="errom-massage" name="name_error"></span>
-      </li>
-      <li class="input-fild-container">
-        <input
-          class="form-input-filds"
-          type="text"
-          placeholder="email"
-          name="user_email"
-        />
-        <svg class="email-input-icon input-icon" width="15px" height="13px">
-          <use href="./images/registration-modal-icon.svg#email-icon"></use>
-        </svg>
-        <span class="errom-massage" name="email_error"></span>
-      </li>
-      <li class="input-fild-container">
-        <input
-          class="form-input-filds"
-          type="password"
-          placeholder="password"
-          name="user_password"
-        />
-        <button class="show-password-text">
-          <svg
-            class="password-input-icon input-icon"
-            width="13.5px"
-            height="13.5px"
-          >
-            <use
-              href="./images/registration-modal-icon.svg#password-icon"
-            ></use>
+<div class="registration-backdrop">
+  <div class="registration-modal">
+    <button class="registration-close-btn">
+      <svg class="registration-close-btn-icon" width="14px" height="14px">
+        <use href="./images/registration-modal-icon.svg#close-icon"></use>
+      </svg>
+    </button>
+    <form class="registration-form" action="">
+      <ul class="input-list">
+        <li class="input-fild-container">
+          <input
+            class="form-input-filds"
+            type="text"
+            placeholder="name"
+            name="user_name"
+          />
+          <span class="errom-massage" name="name_error"></span>
+        </li>
+        <li class="input-fild-container">
+          <input
+            class="form-input-filds"
+            type="text"
+            placeholder="email"
+            name="user_email"
+          />
+          <svg class="email-input-icon input-icon" width="15px" height="13px">
+            <use href="./images/registration-modal-icon.svg#email-icon"></use>
           </svg>
+          <span class="errom-massage" name="email_error"></span>
+        </li>
+        <li class="input-fild-container">
+          <input
+            class="form-input-filds"
+            type="password"
+            placeholder="password"
+            name="user_password"
+          />
+          <button class="show-password-text">
+            <svg
+              class="password-input-icon input-icon"
+              width="13.5px"
+              height="13.5px"
+            >
+              <use
+                href="./images/registration-modal-icon.svg#password-icon"
+              ></use>
+            </svg>
+          </button>
+          <span class="errom-massage" name="password_error"></span>
+        </li>
+      </ul>
+
+      <button class="sign-button" name="submit_btn">sign up</button>
+    </form>
+    <ul class="switch-sign">
+      <li>
+        <button class="switch-sign-button switch-sign-active" name="sign-up">
+          sign up
         </button>
-        <span class="errom-massage" name="password_error"></span>
+      </li>
+      <li>
+        <button class="switch-sign-button" name="sign-in">sign in</button>
       </li>
     </ul>
-
-    <button class="sign-button" name="submit_btn">sign up</button>
-  </form>
-  <ul class="switch-sign">
-    <li>
-      <button class="switch-sign-button switch-sign-active" name="sign-up">
-        sign up
-      </button>
-    </li>
-    <li><button class="switch-sign-button" name="sign-in">sign in</button></li>
-  </ul>
+  </div>
 </div>
