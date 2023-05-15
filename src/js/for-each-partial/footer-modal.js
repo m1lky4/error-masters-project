@@ -16,3 +16,9 @@ window.onclick = function (event) {
     modalFooter.style.display = 'none';
   }
 };
+
+window.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    modalFooter.style.display = 'none';
+  }
+});
