@@ -1,10 +1,12 @@
+@import url(/src/scss/utils/_variables.scss);
+.main-footer{
+    border-top: 1.5px solid black;
+}
 .container-footer{
     margin-top: 40px;
-    border: 1.5px solid black;
-    border-radius: 10px;
 }
   .footer-text {
-      color: rgba(17, 17, 17, 0.6);
+      color: var(--light-text-color);
       width: 200px;
       margin: auto;
       margin-top: 15px;
@@ -26,10 +28,12 @@
     display: block;
     border-radius: 20px;
     border: transparent;
-    background: #EAC645;
+    background: var(--focus-color);
+    color: var(--text-color);
     width: 120px;
     margin: 20px auto;
     padding: 8px 10px;
+    cursor: pointer;
 }
 .modal-about-us {
     display: none;
@@ -178,4 +182,12 @@
  }
  .swiper-button-prev{
     left: 0;
+ }
+ .swiper-pagination {
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     /* центруємо swiper-pagination */
+     bottom: 0px;
+     /* наприклад, перемістити пагінацію вгору на 10px */
  }
