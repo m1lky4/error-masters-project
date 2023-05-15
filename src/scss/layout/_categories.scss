@@ -3,15 +3,21 @@
 //   margin-bottom: 40px;
 //   width: 356px;
 // }
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  overflow: auto;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+background: var(--scroll-color);
+  border-radius: 12px;
+}
 .categories-box {
   overflow-y: scroll;
   width: 335px;
   height: 228px; //add
   margin-bottom: 40px; //add
-  //   ==
-  overflow: auto;
-  scrollbar-width: thin; /* ширина полоски прокрутки */
-  scrollbar-color: #000000 #ffffff; /* колір полоски прокрутки та фону */
 }
 
 @media only screen and (min-width: 768px) {
