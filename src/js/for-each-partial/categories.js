@@ -1,40 +1,36 @@
 import { BookAPI } from '../api/book.service.js';
 import { createBookCardMarkup } from '../for-each-partial/create-markup-bookcard.js';
 import { formatCategoryTitle } from '../helpers/format_category_title.js';
-import { createTopBookList } from '../for-each-partial/book_list_markup.js';
 import { renderTopBookList } from '../for-each-partial/main.js';
-import {createImmediateSkeleton} from '../for-each-partial/skeleton.js'
+import { createImmediateSkeleton } from '../for-each-partial/skeleton.js';
 
 const bookAPI = new BookAPI();
+const all = document.querySelector('.all');
 const categoryList = document.querySelector('.list-categories');
 const mainContent = document.querySelector('.category-markup-list');
 const titleOfCategory = document.querySelector('.title-category-markup');
-const btnLoadMore = document.querySelector('.category-markup-button');
 const categoryMarkupList = document.querySelector('.category-markup-list');
-const titleOfCategories = document.querySelector('.title-of-categories');
-const  titleCategoryMarkup = document.querySelector('.title-category-markup');
 
-categoryMarkupList.addEventListener('click', seeMoreBtnList)
+categoryMarkupList.addEventListener('click', seeMoreBtnList);
 
 async function seeMoreBtnList(e) {
-    mainContent.innerHTML = createImmediateSkeleton();
+  mainContent.innerHTML = createImmediateSkeleton();
 
-    if (e.target.nodeName !== 'BUTTON') return;
-    const liElements = e.target.closest("li");
-    const targetParagraph = liElements.querySelector('.category-markup-subtitle')
-    console.log(targetParagraph);
-    targetParagraph.style.textTransform = 'none'
-    const textTransformedLi = targetParagraph.innerText.trim()
-    const response = await bookAPI.getBooksWithSelectedCategory(textTransformedLi);
-    if (!response) return;
+  if (e.target.nodeName !== 'BUTTON') return;
+  const liElements = e.target.closest('li');
+  const targetParagraph = liElements.querySelector('.category-markup-subtitle');
+  console.log(targetParagraph);
+  targetParagraph.style.textTransform = 'none';
+  const textTransformedLi = targetParagraph.innerText.trim();
+  const response = await bookAPI.getBooksWithSelectedCategory(
+    textTransformedLi
+  );
+  if (!response) return;
 
-    mainContent.innerHTML = createBookCardMarkup(response);
-
+  mainContent.innerHTML = createBookCardMarkup(response);
 }
 
-
 async function renderCategoryList() {
-
   const response = await bookAPI.getBooksCategoryList();
 
   if (!response) return console.log('Error');
@@ -43,12 +39,10 @@ async function renderCategoryList() {
     'beforeend',
     createCategoryItemMarkup(response)
   );
-    
-    
 }
 
 async function renderBookCardsByCategory(e) {
-        mainContent.innerHTML = createImmediateSkeleton();
+  mainContent.innerHTML = createImmediateSkeleton();
 
   if (e.target.nodeName !== 'LI') return;
 
@@ -63,7 +57,7 @@ async function renderBookCardsByCategory(e) {
   if (categoryList.querySelector('.active')) {
     categoryList.querySelector('.active').classList.remove('active');
   }
-    e.target.classList.add('active');
+  e.target.classList.add('active');
 }
 
 function createCategoryItemMarkup(categories) {
@@ -78,30 +72,17 @@ renderCategoryList();
 
 categoryList.addEventListener('click', renderBookCardsByCategory);
 
-titleOfCategories.addEventListener('click', async (e) => {
-    
-    mainContent.innerHTML = createImmediateSkeleton();
+all.addEventListener('click', async e => {
+  mainContent.innerHTML = createImmediateSkeleton();
 
-    data = await bookAPI.getTopBooksList();
+  data = await bookAPI.getTopBooksList();
 
-    if (window.innerWidth < 767) {
+  if (window.innerWidth < 767) {
     renderTopBookList(data, 1);
   } else if (window.innerWidth >= 767 && window.innerWidth <= 1199) {
     renderTopBookList(data, 3);
   } else if (window.innerWidth >= 1200) {
     renderTopBookList(data, 5);
-    }
-    const selectedTopic = e.target.textContent;
-  
-     e.target.classList.add('active');
+  }
+});
 
-console.log(selectedTopic);
-//   titleOfCategories.innerHTML = formatCategoryTitle(selectedTopic);
-//   if (titleOfCategories.querySelector('.active')) {
-//     titleOfCategories.querySelector('.active').classList.remove('active');
-//   }
-//     e.target.classList.add('active');
-
-})
-
-  
