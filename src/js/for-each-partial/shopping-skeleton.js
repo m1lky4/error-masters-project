@@ -1,5 +1,5 @@
 // const ShopingList = document.querySelector('.shopping-list');
-function createSkeletonsList() {
+export function createSkeletonsList() {
   return `
         <li class="skeleton-book-list">
           <div class="skeleton-image"></div>
@@ -20,7 +20,7 @@ function createSkeletonsList() {
         </li>
         `;
 }
-function createSkeletonShopList() {
+export function createSkeletonShopList() {
   return `
           ${Array.from({ length: 3 }, () => createSkeletonsList()).join('')}
     `;

@@ -1,7 +1,7 @@
 const developers = [
   {
     img: 'https://lh3.googleusercontent.com/pw/AJFCJaVC064Hlv0EryCTAnGfUI566EntbA2UBbAJZ6xXjo0Vcrmj_1PKXPYLjyyYGr7FVovfiMGS7IDSqGEH0c0RLaNP6AEwAN358rAPPMCp125X7Dto-FGvDLryPTCxIUDEtYpDKbdvrVh6I3iajRRQiL84smES8x9GoFwNxPfnX7jaCPjccPp5zx31UnPS-2c1V9jP8IlVCYfzEHn8r4Ovs_TPE9AWMO37liqvSkbiJVcGrwxpzMAtnisJ9bnuX_5rDU8oVncr368gZ_v_Cij_4eevS8Jo8WKMeD4In9IkPauNhimoZeVFyTnmiVj99fnDZqWKnZxgNZEwuOqSA20Cf5uVIOgi9oEjGUkVT357x1HvbwyUDPMX0ufxD4y5c_ZWa77mw04PryDTgX1M2x7ANVflSC26wgmOZDCQ4HcbOsH0h0MZdHZs4oCDfJ8uy4arHe1w0lxvGi3FIM7KZPg1SV6bfiVjOminDjw-GuE-37sxx_QxSXYUQND5GcTeFrgrqf9E8BKzvvyqB3uvkx6rfvylTjn7DyPkx4kZ5oL4rSCV-GYIQrMWBcrGTJRx5gmeojC3qqKgUjc_7_4yJvSTF_WoE-efc7QeWWUwOohEVPgTXE6Mz2ICYy3dBAJtuTUWtynRC6T6Smxyva_xL9ZChjilmVOM8YUVdlIDr1lQ34Tpagehy-NAfH3pOrumkPm9MDWy7MEi0PoxfH5ZEfW-XPS3YN3pag0WBqcw6R_hlwNAAxWftafTlgqH-MXbNtn1bXmYeqkZbP2CntQRUELfx4DIvHWR93MVznbhWT7FC6lGwTbt5xzejGdBPeY6Te099rHrGiW6GkyRIT9D0okISfGinO2_YdNXcLOuehvpqeYSrDcxoMAUs9_-NwC3OCJnamfOqrR18e_SYpZ5I5Rotsm9FA=w960-h1280-s-no?authuser=0',
-    name: 'Artem Kozlov',
+    name: 'Artem <br> Kozlov',
     position: 'Team leader',
     github: 'https://github.com/m1lky4',
     linkedin: 'https://www.linkedin.com/in/artem-kozlov-80363526a/',
@@ -9,7 +9,7 @@ const developers = [
   },
   {
     img: 'https://lh3.googleusercontent.com/pw/AJFCJaVt_CFJyXVvuJnkr8HL3YcoED80YxRr8c7r_eVvhobLs56oSQu1s3gl5eOslDxme0n3kNEXMM7GDU_5V8h9Vkh5wTPxuTH7o7KID6ry5bf9KvzMkcqG7VT10TplsC5LNq5hOGVOEe1zu244cMVqSFG0St8ubb9sxk8X6_o6TQKGobTOEQbvm7-4ta8kFEh1Bn_U0kXrxm5E1fegICVoyxYRfhPRULyWhPfu64g7qfVqwkyGIeJpR91m8ffY0ooNRLPeT9yKtP47UgIUrPuBVlL98etesDyw-UHxdrwBpMlyapPq5nq7dzzkg-ukHa3teKYB5qHs8ZpLilJa0v2v99ctnrAta9VqFo596V-c4Xc3ztclfL6h8B7ypsVTelMXd3C_-Dj534URUhFJjVFPCAlt7HLZw17rvcCnwVrxO1at-5q4CmyT-zatXxlufSXZKHLN-rGG7DkRem525kK_WQka-iVMtKTeWzNFT2BF5FeA_VN9pVz2YiKQ2zRNnXVeQSqh8LXeltAQffgWvjT_2FwjhK8dq2cIWRtuBFoNwJjOUpqwgDTARLxoFrQXsVZTQFW2ZsSuhoChtC1xdAaxo0EyG10vI7oLrJVibu6i6gYzkG15nSjigBCpuXijdTSzyhiJAQr6nj548GFVtMQfMdCC8AuqcxTfRJQV2P3hr-g3rzvUd11_sUYIOPPNnlSx6YiEle5RxPKJueS4oEbR5ob-BVQDOv5XnBEbyHtJtYp4ebv65bPzqB7hxJ7N8-tNI8xa9qHy9bocOOlqHxREjkP0-kJOh9yAPSKwZ_nVyV2GLgGobKL4OaZiYlRulOEDlvHsc2A3pkViiRHYkrUkib9IPl2nm9WDWhhurMJyyVfxL3sHr8Ni1JNvhwxFKrK7mVkkiEtJcd1L_L765kbqptGk6w=w712-h853-s-no?authuser=0',
-    name: 'Serhii Syniak',
+    name: 'Serhii <br> Syniak',
     position: 'Scrum Master',
     github: 'https://github.com/Dezertirr',
     linkedin:
@@ -18,15 +18,15 @@ const developers = [
   },
   {
     img: 'https://lh3.googleusercontent.com/pw/AJFCJaWQzE77WS2lB6TfENWhseh2LjmGD1wSpfW3o_RozSRMWTvf8R4k9qZ0A1sMfJUN0KVJUV2cJToppQRkdaeDjTCMPyTvEwJ2QlRyHQkFNY9MgyhxGg5u3VzYjgHJ7iCKbW2J00p1iYp_Vi6Q_r_ZDg4c7YmQzheRjrtX9pLJjeevUhgJZqj1vTd1keezcgFxMCXRIn7ktLY0GxaPRS238M_zNLrKx3quXXJQHFP15O2Y1jT5nnFi535nN2vPUiYlON9uRDc6H3Cvki9cRkvM_9moktkW41mbmI3O0fmQNwUl0Kmc0IBh55va-YuPY6srQB7obRCVfgxmqyrhy571nEOgfKykxq3VKqrzQZY-uvpEdlrAhRZ8qww8KLVygSOGaDIoNtAgOr5qsjpDVt0uKig6fV5tMmSIUuQB7Pbsw2xl4Q8mGwcQm5Hd9EmNYNHeZ_SFLfM9SoZ_oCp2EUUU-Ile3FiN5NPDRslGDzqr6ooa1R9inEA3iUvdMUEl_l1dcDLmOBCIAGT7XTsE5iIxteIkJr-qlBOqNmJyH_NG87QQQxia_ybN2gmdyt6_UJy3rxthCuRk2fPIKrD8jNRde9f0E7sJF05H_VWqsg9d1pfxzMZTgBVlPezBeI8Jb7HlwbIYDU41xbVjJ8PleJ3ptf_64IeM9k1ghJnyOEqJp-1Uf3Wb18Z0aMW6KfLNFOMela89s4Oamvn2ns8ntq19u9N7649l3bC_NgS5gQyArIyNhGu5SAF_zlkrt6crrftIeUqXPGZrNo9ll_MwGSBXylp-4NIMrjwZXMZO9usxSCKh7oF4sNetcRmZdDB5HDO8COCo95yodu8oR2VQDW3bmNXOG5xu-1ISUzQR4QZ5dkcmpOfjtdjIIBmjoGHNYtXBQo0MSYQo8wyuFwSTR-XEJ1s3xA=w960-h1280-s-no?authuser=0',
-    name: 'Mykhailo Hudz',
+    name: 'Mykhailo <br> Hudz',
     position: 'Web Developer',
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
     instagram: 'https://instagram.com',
   },
   {
-    img: 'https://lh3.googleusercontent.com/pw/AJFCJaUR80YBuO_49SihTbVt470vxeTElq3OoMHQnuUE5glbb6m84RsJmD8Np2RD7WuadlkfPQ3Y9DKeXz3IboV-sSoNFVzYBeNdM1hR93R4mqKhWMWZBfxhqh_h-WQcrsmod6sHtw51oGnZuGl4ukqL68AiQAWFPBBN8Ydsvvr-XjRXZPFSkMWIe7SA692M9K0B1_qupLVpnAQFwzNHMbu3gmCy_72qIVCmxwFkOZKdUUUIW8C_Sq_Z0NCdkjQRMAMRADp5ZSFhR1K47Hw6KRrQNORpfkPjjj27HEyMxxKTAyHb-W2tIYMUba_p-zWFhe55Jt7saBFzYImAPS3RCRNPV8v8tTxdO82KPkWLdxjOw2At6FR3WwiRPwBJjeitGn9bQRtW0fQcaXMZ8tM-X1E-l4_bNAmM9A0PXNZbe-Par9p_BMLbiNXH7cddxa9Dt3SNkv-EGk3cYvOJTzTBFhoJIToWB4GiaNTqbNy4el-WHlT9lYeUJyPLUXATxXAVIZ0bK0ORonZgpD21uP1EDZ-zNrB7ml4jvHFi2XIPhUZ6U0LFTCqwAva9MSMHI1rfIEZr-TX78Etf82mFOuas5oQPGeKNHEU12jfTSme9q_0h_fgoUTHZG7aTDxC7Ag0ndNEUQ3RVki8aEIg8OWL2ovJdX4txtyhfmdyBE0Wq9lGhMjw2ea1QcWewBnG3dkPpvTl2JNrqvqgOJY9ZSJZGw-v1mbwgEu_LmxFT2Evokz4i0fpt0gEp21POb3YAdHrlZRPoWq3ltxHB8HsEA8u3BLnIgwLNQeS4vHfY4fBXO2vJv7FKSmr25-xViPLRB8E826_zbxDJ3rWWJmBZB6SKmYIZZ7y7CxLKOeDZZMIXre_n7JGeIMckpEP1cMCMONIeT0IljhK1Qnxl5V8QpPUtnJ4w14gK1Q=w360-h450-s-no?authuser=0',
-    name: 'Oleksandr Dubovyi',
+    img: 'https://lh3.googleusercontent.com/pw/AJFCJaUvX-fRVlPlKvuoy2NnYtpco89jrZPhIm0CFTwXL9fUcx0uPBrewROQiLy_sdSeziDdRWmosv1k5NtBHrU6yGb10EUAbxMSyLZMrTBdhhNt84GV9rObfalbEx1IhwqPbcvmAMhoTtT7TQGEIiDb0PQH_EX8Elo-wj4BYKX6gmHgf0onrC03fFCUoFCYtvjzQEjgVxno2EtGIJikNXoAoCrPMUpw7azafKz-pzypJ4O2YfSyDYuLj60OqHL8LjMheAzJOalRkeaey8x6WOgL8yPKaXmg3AZ-OdhBDDk8fUqnoLzsrgPm7WTzma2WgODrdvs13NLETZnC5SAqCdLtwPjbdpAVi4ZyvIufS_F9jmI_x5hcBbldZFA9-gnry-hwcOPlU3M8EE_Osujov9GTHkW-fArjRz1EbrGyU7E_Qo2h2qW0xVVNTkW6iV84Zchmp0h3D5jmgtq4IUJi-hSTdUXjaFotzCLpk6ae1Vb2lUPDQW9B2OYTFL9xkFTi0vIGiqgqb1V0fWrZBKnSwjX9nXsHwTt1W-SkU5M-Ol4KL7f2tWcRzDNcVsxKRYTOOdFnfloDzorGZY-h1YbIBCHQB73zFFIRSJftz9zK8B_LifMqfD_9-1qJhpWpcggpFiBV7zmc7PVoJfhNKLh--MJSSYEfQZIOJ5eow454TPFkL35xzg6k1Cml58XjIa_ihYPeBP2ml2ZTitWOPvKbtUDCy67WRnQ6Xc0qmhgMdOOgEEGEwxYbbim1g4xoVb5WKtuOXQ0dyy0EmV9SRPLGw3V26DdfFgfi8zemR_1xcXM2wz4RxpUPXZKkn1qf1DdTMFPRMVoLWwluEzcE5Wu2mJvmowrIE52Wc-sHzIlLxd-UXPxpEg9Wpy9wuZXSZ04gQ_2PTMFCiiSBNmolq36nDE71ATUjVg=w860-h1273-s-no?authuser=0',
+    name: 'Oleksandr <br> Dubovyi',
     position: 'Web Developer',
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
@@ -34,7 +34,7 @@ const developers = [
   },
   {
     img: 'https://lh3.googleusercontent.com/pw/AJFCJaUpWE5w25Vpurf-Q2338Kd_Mz7Tbw6RTNGy6lB_emig_fdTq-ac4KU5ARwqh-gUZi-9lrKOxxeMI4CkzahfcvBXLgf7QB3yO_HjCdO5XsxpQv6OfFDCzH442Ay3bV1XCTx5JKZwZ-gnor4rut-BrzP9ky7A_QzosPyO_JFdMThlfvSGYGgyBGD159RgDywMOyO4DFotGyWzYgQJtMOLToONG4RgcxFRv59GTEcMBEM-sERI9etnbG2-FyrK58Bbjgi-7oCLC6kRpmPrTEP7y7lpbZNX0HK03U6Rg1qoBwqkrp2jLBnDTmwu25N5lAzBpVM6N7ewWDi1Bvb3dBLzkfNfb3pm10yt9K63d86IeiMaAKpdo_V4uBPf2BSQCn_o5fzWw6lL9W9nMX4k0U0jUfUByIy399deyyys0fi-rgF7oJSfrYBxOALhr6V6rbdGqI3rQCTIeoBl2o_QMsHP9_q1WmHzx9n2VIr7BOOTiCdyYYYcxX7WZAdlDLZz-FTA9hZVa9zYY7suSYdEeB9F8qbSAq96gHD3jg-nMbjmiKDxOJRxY1eTnvhuNn0TgX9jVg6oToGRy7k96ZvBzT50g43jhXj9hneYrPvxyIt-s7fyNCC36L2IRbIzNoH7vkleLBpkXl0_JVgD9NfXaE1y8-wdFbix9L118QUnaH_3TC-u53L1g8oeroqNYNPgQsk1gThINJbl8xHostHppnipYscGR9FEsEeKXZ0CBemnYlhc2QcecspzpVuSULu1Cy8Rc0f72cqVYX3GV8PzeoDEoAYT7a9iLySelrFJYPYvqHI5IcYaWOgt5WRFV2q6IYsFgfWK5UU5X4nZgiSmSX5ap10LAQY-2OTlDyqUIw2qWfe1DQb4EXFEyXjKRNMHRS6PQGa7sP3vzjyb3pSOlEcymBJNCQ=w730-h857-s-no?authuser=0',
-    name: 'Vladyslav Todosiichuk',
+    name: 'Vladyslav <br>Todosiichuk',
     position: 'Web Developer',
     github: 'https://github.com/VladyslavTodo',
     linkedin: 'https://linkedin.com',
@@ -42,7 +42,7 @@ const developers = [
   },
   {
     img: 'https://lh3.googleusercontent.com/pw/AJFCJaUlObCezAb4e2GknHP5f9seHjNHA9n2Hy9zvFmqLukY4nQV9r5BvqUX3x_x_V0E5jEPnXwiA3nJOIXmH11nGH0Zt3CM_-i5GtsmkYa1D8RBuU2-5MhjV-XLMBBx-cfUh_dnnJoTcTNNHqOvDTDXVClhVL39KtGJWnOZwXYwtaI8BUldypt5U5HbzcQCBklEdLwgXBVSnuoXf23W90Urw_S4pvoVqv9YWyxuwzOGvBKEZAU8TmlipLpAQH21jQuL_3xH9ChTA-MUIDdW4CgNGVEWDSgpxi8bS4nL8P31c2HOWFnVKpCG8i9VnX_oq9gOYngNvha6Pw9ai9l4A9SUdybGjZD8kTbBZuKCRUMQnE6cK7YZC0zhznLhkOYAyeXp0bG6RNxGvwHX8stcC8wQ9zhEK38BgYPO6Er7fegiVhTtbF3CzlmDZnCPTTfbKxVRYpkcVzSgR5i1l9oWCLGKnPraWQEQpuVqDCtvKrVSqp38bEfxTtwvTwjPw2QxXWGd2XNuvB-5LGeRo8g87qUE342i17D5Mq9vJagy-oZCOZGCivWKKEu_XgddDg6u8suTc0e4LE4-YhQvdQ5gtZE--VeiWdXARUCeUy_nhbGisvat-p18cHOmbWekuue2j9URDiz78f77S4ItPPVojSfmTHtV53wnQOBXmwkEDgy1138oOprvRUOYpMJ9ltIvByn14Tkz5PXbcW_B78AjRzWcrgaY5o-F_2OQzzRNViMFx9vZSUa6SNskQfLgTQQx-Q7uZEOZpukuPEwW2cMPcVnSCwPkwRm1qDL5fwGd9Mekx6jWVwVUL9Snh_XWOA4GrsFqqdqoqfF4atzg9zbfvP0KQQRaCM1ca3JlPAa0ygkx0kwEFt0AuobcRkI1K4M8KfG_W9fsUtSAV5VCoY96VxOsY5Sgcw=w773-h1374-s-no?authuser=0',
-    name: 'Oleksandra Tyron',
+    name: 'Oleksandra <br> Tyron',
     position: 'Web Developer',
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
@@ -50,7 +50,7 @@ const developers = [
   },
   {
     img: 'https://lh3.googleusercontent.com/pw/AJFCJaWFDh_xL1DmuTDGda--Cdd_hQG5--22bLgrKQ3xGaKpCSv0uzVV3GrucoU7rufLyzoDkxkzbSihDTp8Jog_MDqMQtsg8RPg1v_z9czsnqUXqD8-SPfZHryxpK1dKv4c5Wjvm8eF85k0LpRKz9N8gNljPgFz4h7eiubcVw6x_yok72zGJ_Z1Ab0_xmGK5lX1oKjXqSr4bFJJxJq-_D4L3p_Gn75CdE2BD0fi4Y-TeZ1Nhi1boDfTgFGpm4osHNaULBa2UX3LogjFe7efdCigRTbTuyTNpNDEyPtxAUCOAadhFwel2aNjSp9Pp9EBK_1ulOj9_gsOzMWMdT1HSYP5Ekn9G1H-XMyiKa-1oXAfoc5zr9v8bj_HohMYTRDyZQpwIf2zXHZqkioWIighDmS4R6_wSsc9lwpMb267zD6F8t48UUX0pShGfEQ0dPv0jDbZTrITQSBNORCOY5NwBmACArqNuzhrjKDDjM2kkS_Wxz1TiVwPF_fzvO4ND0iPEDWoAj-2eWaIvgZJ9tmDSELBMStOtkQj8g8gxO0SN_nSGf_w_PVEPwNtk8iAM_RCX14wyTpRvHT3B-VVhXDTH8FBhIlL_-yKnc5qKM8NvmIpCQ9qlWaaQT3BlJHIN32rg8nyz6sWCzTba9ge7WmZOfly4itCVRo_KAxt6y8xYR7i4yldfwh1uzto9U2NsIp1Qf-WSSvXUxQ-7vS2BWf0VLSinY6sDJhXsWsRXmjs-t55c2iYuw2e823fdttYna9joGKxNIemuwHEJ95Txzz2dLYgyUZlrBwHAG7mgJxZSWGM8eXIpdOJmk8XVEFEwWdSoOPxWLuqeO9QAsyhkKurB_kRB6oWVfZ1b8PJO7nkzfzbTUPrw4L29sAgmnjvNSAmDrKOnutnHE1xs_DRf0jhE3k7OXj74Q=w1031-h1374-s-no?authuser=0',
-    name: 'Kristina Papura',
+    name: 'Kristina <br> Papura',
     position: 'Web Developer',
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
@@ -58,7 +58,7 @@ const developers = [
   },
   {
     img: 'https://lh3.googleusercontent.com/pw/AJFCJaV3EGuYPwktlsyJlTFhLcxuqs6M8bIRDWmL48nuexC5meorEgvCVk0uRic67t_o3Iwm4EEjnHFA6_X76v7-iN0PYK5gSzVWHJhgt3JuRMH7aCGytfEfr2Z0XvoUV9Yt-sUIi3d4FWTFVmHrU6eE8ZHc-pojABYjaGFkULFBgJD3qbpjlStyUVZ_A7LnUh1UsW2QSmrnbiWq0nMxhazzUOoUxKkanov0HdigTCCrNfsrFJAdj8rRpMm0UUE6UwK9keq-seEO7BxaSQM_NnWTaXB6WmHwEsJwoH_eQTXA1mmxbiREEGL2GDPd7H2cI_cYnDAuRFQMRKQ1MVDqgeOyAA5MzB9MYCcyNOvuWiVzuF35IwRZ989ZeLwxyCSmnWBIezj3qo4RmkKAtx--D9dkGEDFNNmb6XUUWrO_ovJGXfEHUPM7C5C0lg5gOVz44ve8AM2Ctt29tfZNFPIB__J6sf4ejvwxMxSGPh2eSviSen_BxvIBsisaf062pmuBOIHhVtSD07rpBgzsVPbdw_bN1sIHThu1JXVk0o8lUm17mBjTWGS1DCDoxYvRIdDzvjXiCi6w1uNoyldwXZNfwDvSZ6ZZZ3T88DLpzbMpitKajjOAyRZYl7qwV1vi_tyWbRFcbXle6F1Cn23_ViTnO7JDXkSCV93cRUNGkvkaix8DTKANXIfatDnRHsB-EQn_Bv9jLk5oltZ0sxjAILRnjeFFMreKixaj7KFHTH_djYdykwXKAN2heYlpxHjSnDyy0XRtTzlRe1r2I0WkKxX6Rt9J7V9e8a2o7jqid_UqYx_korPpG91pcCkT9z6bb_bdJHjRWv2YZ4SnTGr9UBYvCGiU_QvoCKTa64EeDmUB4H-KU4hhCdqWXEqymTWzJVK1o8GqFjiMZGvtKVekxOiGRXEAvZmuZw=w635-h1374-s-no?authuser=0',
-    name: 'Denys Struk',
+    name: 'Denys <br> Struk',
     position: 'Web Developer',
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
@@ -66,7 +66,7 @@ const developers = [
   },
   {
     img: 'https://lh3.googleusercontent.com/pw/AJFCJaVvkoE7ZTTO1C_k0Xu2j_Z6BX8vdLy6Nz4hcc0_GLjc8r6Ih8oZOS0WFfzAlgjBxUHZLSq5xQNmAcOBbrORX-oE1ANHNqRWHR76jQ-SgxFZ7DHtoohmfqzqm66EvsaH6t75WDjXMiag_qO5mh_XF_x-3rf2NvEIQZDqINLLSQjXHMq0qNdObsYhS7pOkqIuSoBORHy7ANahAHHkNp2JZs7UP77ZC8nA9PHMca6c-TVoaLgy2uoa-lN2aJvGM492xfpND5Ou3Z4oRzOBmLLCawzJCkk44m83RBg_suyBxBuUa0KJUty_kFfKqIp9_VMMHfmGtbUvIZqyxHBdffMtVH41Yhdikkmx8IDLCoYryMhfjopUsS6TqvIArODy9Dckdp8dZSMyRdD4zfPv5j1fMfHlCSJ9OueMStxaFtd0S3WljdxAFa7qFasyecqT6jhvSY6v7Yk6vOojFGcvUSV58kh66GnH7eqCGQO--PNa3RfMMfglD8eF3rOoJAwjvnOcnzSl_p28PC8i9E8aLxJZuPsy9yMEopwENwJLLbx1BC71uW_alxiTM4qFFDSKy0rFh1-IG-ks_x0Dyp_V7x3HZGeW6vP_jOO_qBiVgHxZQqzYV1OW-cRlTEeDZqMMlEMqjj619KN7DRc8x7vMK9lP71urp_xAa88mraMM0S_OY0iY9F34CMElAcpYfjzQVJD7qgJWYrMUfEtBdfJbr7nGVw5wdUOv69-Efsv8jguGqEoIOrd-S2waeNPLNfNR1Efx1lt8NFtEkiq1PYrBBz1YCPdrvBBBmgi7LqyC_nHiecvKGjogISvTw5Qrl-yJ6NfhR81gey70MYviCLwcsaxJ6KI98s2lEk3Knsgd25ep5iz5uyAV7ZYs4DqGXtyY0_2QEHXdS-rk7wlwtxg1mL9BmJgo9A=w127-h219-no?authuser=0',
-    name: 'Maryna Bonko',
+    name: 'Maryna <br> Bonko',
     position: 'Web Developer',
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
@@ -74,7 +74,7 @@ const developers = [
   },
   {
     img: 'https://lh3.googleusercontent.com/pw/AJFCJaVfxXRX-9fNq0YHtuk6BeYsyNUd0ryKhY_nprXXiyjsIfqy7ldGC6XBWj9_Olu_eWGclPYaGr8FrKtAzRbI0mvo6DjCzrEeO_i00tBsqUBP2cLozspVJI8aN058IKv5ynEp36TGfj88-IRRQCI3FXCVqrDxSvoGQxzTmtwrg55aVAgSdWOMlPEb6a-zjsN_UQfZT2dvas6Dp_mUZmgctEjBU321UnMmUoozyI1Rg6kg--2BlcXVRk4mUitoBHufBpPhKvzDzKtQNQutcowV0jNCNi2IdPevkv8LFyy7LH3RZIKOKnxJpPc9ZvA2RU7J2ryZ4px1xCqFyJMmpgasoBeaQMF1RB7N3uTkvm0kKTFT0kkJQrJKZuWXyu76vehHhm9fNFKEeLS9ZZNzwfxdTu3AQR0MFJiGHbgsrd6BO7VfcoVoS7BAOnriLe7IsDu8D43_WeIjRWuU3CRPWoOvc7Eki-EWyh9pvy-t1BTNbpu_OV1riQCvKo1_r7MLPNTAPCIdJA_LQifoo16UP8J7z2VO87ZEfzjZkgePw1p8vmLBtQZNO597qDVYrLJVH6GyOVn_aPhzXBj2OVUqVdWJ4Q_sE9jY2nn0pZjdh6mNDrjmlEDFHa9gUd48qoxzVaaWyqWKulvIJCAUZzGaiu5Mq6G2DKPN2iJL8WbtUbFyRmWbAyNGHOz2a8y8NBn_qSs33Vd4ZTWcCrnEsnuRjIJFoTODPEtk0xgKlaqk6XrSH5aC1B2BzlwAZYXYTbO27jmR1_O-_Cap1s1MqOGP5jcWEOimfQBgFwsWRqHKLgEnfVoI5_MHtARBAFUU_oZgY501iEzQIvTpPoSx6iAhEmkshDilh2GhK1hcUmZcOkKxDl1doDvU5OdXgqEd2aphtfELgBPzhqZx90O-8bju5jhW6bMfBQ=w328-h437-no?authuser=0',
-    name: 'Maksym Nazarenko',
+    name: 'Maksym <br> Nazarenko',
     position: 'Web Developer',
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
@@ -109,7 +109,10 @@ function createModalContentMarkup() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" width="30px" height="30px"><linearGradient id="KpzH_ttTMIjq8dhx1zD2pa" x1="30.999" x2="30.999" y1="16" y2="55.342" gradientUnits="userSpaceOnUse" spreadMethod="reflect"><stop offset="0" stop-color="#6dc7ff"/><stop offset="1" stop-color="#e6abff"/></linearGradient><path fill="url(#KpzH_ttTMIjq8dhx1zD2pa)" d="M25.008,56.007c-0.003-0.368-0.006-1.962-0.009-3.454l-0.003-1.55 c-6.729,0.915-8.358-3.78-8.376-3.83c-0.934-2.368-2.211-3.045-2.266-3.073l-0.124-0.072c-0.463-0.316-1.691-1.157-1.342-2.263 c0.315-0.997,1.536-1.1,2.091-1.082c3.074,0.215,4.63,2.978,4.694,3.095c1.569,2.689,3.964,2.411,5.509,1.844 c0.144-0.688,0.367-1.32,0.659-1.878C20.885,42.865,15.27,40.229,15.27,30.64c0-2.633,0.82-4.96,2.441-6.929 c-0.362-1.206-0.774-3.666,0.446-6.765l0.174-0.442l0.452-0.144c0.416-0.137,2.688-0.624,7.359,2.433 c1.928-0.494,3.969-0.749,6.074-0.759c2.115,0.01,4.158,0.265,6.09,0.759c4.667-3.058,6.934-2.565,7.351-2.433l0.451,0.145 l0.174,0.44c1.225,3.098,0.813,5.559,0.451,6.766c1.618,1.963,2.438,4.291,2.438,6.929c0,9.591-5.621,12.219-10.588,13.087 c0.563,1.065,0.868,2.402,0.868,3.878c0,1.683-0.007,7.204-0.015,8.402l-2-0.014c0.008-1.196,0.015-6.708,0.015-8.389 c0-2.442-0.943-3.522-1.35-3.874l-1.73-1.497l2.274-0.253c5.205-0.578,10.525-2.379,10.525-11.341c0-2.33-0.777-4.361-2.31-6.036 l-0.43-0.469l0.242-0.587c0.166-0.401,0.894-2.442-0.043-5.291c-0.758,0.045-2.568,0.402-5.584,2.447l-0.384,0.259l-0.445-0.123 c-1.863-0.518-3.938-0.796-6.001-0.806c-2.052,0.01-4.124,0.288-5.984,0.806l-0.445,0.123l-0.383-0.259 c-3.019-2.044-4.833-2.404-5.594-2.449c-0.935,2.851-0.206,4.892-0.04,5.293l0.242,0.587l-0.429,0.469 c-1.536,1.681-2.314,3.712-2.314,6.036c0,8.958,5.31,10.77,10.504,11.361l2.252,0.256l-1.708,1.49 c-0.372,0.325-1.03,1.112-1.254,2.727l-0.075,0.549l-0.506,0.227c-1.321,0.592-5.839,2.162-8.548-2.485 c-0.015-0.025-0.544-0.945-1.502-1.557c0.646,0.639,1.433,1.673,2.068,3.287c0.066,0.19,1.357,3.622,7.28,2.339l1.206-0.262 l0.012,3.978c0.003,1.487,0.006,3.076,0.009,3.444L25.008,56.007z"/><linearGradient id="KpzH_ttTMIjq8dhx1zD2pb" x1="32" x2="32" y1="5" y2="59.167" gradientUnits="userSpaceOnUse" spreadMethod="reflect"><stop offset="0" stop-color="#1a6dff"/><stop offset="1" stop-color="#c822ff"/></linearGradient><path fill="url(#KpzH_ttTMIjq8dhx1zD2pb)" d="M32,58C17.663,58,6,46.337,6,32S17.663,6,32,6s26,11.663,26,26S46.337,58,32,58z M32,8 C18.767,8,8,18.767,8,32s10.767,24,24,24s24-10.767,24-24S45.233,8,32,8z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="25px" fill-rule="evenodd" clip-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 640 640">
+  <path d="M319.988 7.973C143.293 7.973 0 151.242 0 327.96c0 141.392 91.678 261.298 218.826 303.63 16.004 2.964 21.886-6.957 21.886-15.414 0-7.63-.319-32.835-.449-59.552-89.032 19.359-107.8-37.772-107.8-37.772-14.552-36.993-35.529-46.831-35.529-46.831-29.032-19.879 2.209-19.442 2.209-19.442 32.126 2.245 49.04 32.954 49.04 32.954 28.56 48.922 74.883 34.76 93.131 26.598 2.882-20.681 11.15-34.807 20.315-42.803-71.08-8.067-145.797-35.516-145.797-158.14 0-34.926 12.52-63.485 32.965-85.88-3.33-8.078-14.291-40.606 3.083-84.674 0 0 26.87-8.61 88.029 32.8 25.512-7.075 52.878-10.642 80.056-10.76 27.2.118 54.614 3.673 80.162 10.76 61.076-41.386 87.922-32.8 87.922-32.8 17.398 44.08 6.485 76.631 3.154 84.675 20.516 22.394 32.93 50.953 32.93 85.879 0 122.907-74.883 149.93-146.117 157.856 11.481 9.921 21.733 29.398 21.733 59.233 0 42.792-.366 77.28-.366 87.804 0 8.516 5.764 18.473 21.992 15.354 127.076-42.354 218.637-162.274 218.637-303.582 0-176.695-143.269-319.988-320-319.988l-.023.107" fill="#FFFFFF"/>
+</svg>
+
             </a>
           </li>
           <li class="ftr-social-item">

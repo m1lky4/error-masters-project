@@ -143,6 +143,7 @@
 }
 .dev-name{
     text-align: center;
+    width: 100px;
 }
 .dev-position{
     padding-top: 35px;
@@ -150,6 +151,10 @@
 }
 .ftr-social{
     margin-top: 20px;
+}
+.ftr-social-item {
+    width: 30px;
+    height: 30px;
 }
 .ftr-social-list {
     display: flex;
@@ -187,7 +192,5 @@
      position: absolute;
      left: 50%;
      transform: translateX(-50%);
-     /* центруємо swiper-pagination */
      bottom: 0px;
-     /* наприклад, перемістити пагінацію вгору на 10px */
  }
