@@ -1,3 +1,8 @@
+::-webkit-scrollbar {
+  width: 0px;
+  background: rgba(255, 255, 255, 0.0);
+}
+
 .support-container {
   background: radial-gradient(
     183.6% 183.01% at 59.76% -23.42%,
@@ -5,7 +10,7 @@
     #ffffff 100%
   );
   width: 335px; //add
-  height: 452px; //add
+  height: 360px; //add
   box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
   border-radius: 16px;
 }
@@ -30,16 +35,25 @@
   letter-spacing: -0.04em;
   color: #ffffff;
 
+  display: flex;
+
   padding: 24px 0 40px 40px;
+}
+
+.emblem-ukraine {
+  margin-left: 12px;
 }
 
 .support-list {
   padding-left: 40px;
-  max-height: 292px;
-  overflow: hidden;
+  height: 188px;
+  overflow: scroll;
+  scroll-behavior: smooth;
 }
-
-.support-list-item {
+@media only screen and (min-width: 768px) {
+  .support-list {
+    height: 292px;
+  }
 }
 
 .support-site {
@@ -47,15 +61,33 @@
   align-items: center;
   gap: 14px;
   margin-bottom: 20px;
+
+  width: auto;
+  height: 32px;
 }
 
+.support-svg {
+  height: 32px;
+}
 .support-slider-btn {
   margin: 0 auto;
   display: flex;
   cursor: pointer;
   background: none;
   border: none;
-  padding-bottom: 20px;
+  padding: 16px 0 20px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .support-slider-btn {
+    padding: 32px 0 14px 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .support-slider-btn {
+    padding: 40px 0 24px 0
+  }
 }
 
 .support-slider {
@@ -68,17 +100,17 @@
   cursor: pointer;
   background: none;
   border: none;
-  padding-bottom: 20px;
+  padding: 16px 0 20px 0;
 }
 
 @media (min-width: 768px) {
   .support-slider-btn-up {
-    height: 472px; //add
+    padding: 32px 0 14px 0;
   }
 }
 
 @media (min-width: 1440px) {
   .support-slider-btn-up {
-    height: 472px; //add
+    padding: 40px 0 24px 0
   }
 }
