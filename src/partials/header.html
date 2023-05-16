@@ -10,17 +10,17 @@
             </a>
             <!-- ===============================/LOGO============================ -->
             <!-- ===============================NAV LINKS==================== -->
-            <div class="nav-container">
-                <ul class="nav-list">
-                    <li class="nav-item home-item"><a class="link-home current" href="/src/index.html">HOME</a></li>
-                    <li class="nav-item shoping-item"><a class="link-shoping" href="/src/shopping-list.html">
-                            SHOPPING LIST
-                            <svg class="icon-item" width="20px" height="20px">
-                                <use href="/src/images/sprite-header.svg#icon-soppingCart"></use>
-                            </svg>
-                        </a></li>
-                </ul>
-            </div>
+            <!-- <div class="nav-container"> -->
+            <ul class="nav-list">
+                <li class="nav-item home-item"><a class="link-home current" href="/src/index.html">HOME</a></li>
+                <li class="nav-item shoping-item"><a class="link-shoping" href="/src/shopping-list.html">
+                        SHOPPING LIST
+                        <svg class="icon-item" width="20px" height="20px">
+                            <use href="/src/images/sprite-header.svg#icon-soppingCart"></use>
+                        </svg>
+                    </a></li>
+            </ul>
+            <!-- </div> -->
             <!-- ===============================SWITCHER============================ -->
             <div class="toggle-switch">
 
@@ -53,43 +53,48 @@
     </div>
     <!-- ===============================/NAVIGATION=========================================== -->
     <!-- ============================MOBILE MENU=============================== -->
-    <div class="mobile-menu " data-menu>
 
+    <div class="mobile-menu-backdrop" data-menu>
 
-        <div class="mobile-menu-wrapper">
-            <button type="button" class="mobile-sign-up">Log in <svg class="icon-arrow" width="20px" height="20px">
-                    <use href="/src/images/sprite-header.svg#icon-arrow"></use>
-                </svg></button>
-
-
-            <ul class="mobile-menu-list">
-                <li class="nav-item home-item"><a class="mobile-menu-link mobile-link-home"
-                        href="/src/index.html">HOME</a>
-                </li>
-                <li class="nav-item shoping-item"><a class="mobile-menu-link mobile-link-shoping"
-                        href="/src/shopping-list.html">
-                        SHOPPING LIST
-                        <svg class="icon-item" width="20px" height="20px">
-                            <use href="/src/images/sprite-header.svg#icon-soppingCart"></use>
-                        </svg>
-                    </a></li>
-            </ul>
-
-
-            <button type="button" class="mobile-log-out">Log out <svg class="icon-arrow" width="20px" height="20px">
-                    <use href="/src/images/sprite-header.svg#icon-arrow"></use>
-                </svg></button>
+        <div class="mobile-menu ">
+            <div class="mobile-menu-bg-img"></div>
+            <div class="mobile-menu-wrapper ">
+                <button type="button" class="mobile-sign-up">Log in <svg class="icon-arrow" width="20px" height="20px">
+                        <use href="/src/images/sprite-header.svg#icon-arrow"></use>
+                    </svg></button>
+                <ul class="mobile-menu-list">
+                    <li class="nav-item home-item"><a class="mobile-menu-link mobile-link-home"
+                            href="/src/index.html">HOME</a>
+                    </li>
+                    <li class="nav-item shoping-item"><a class="mobile-menu-link mobile-link-shoping"
+                            href="/src/shopping-list.html">
+                            SHOPPING LIST
+                            <svg class="mobile-icon-item" width="20px" height="20px">
+                                <use href="/src/images/sprite-header.svg#icon-soppingCart"></use>
+                            </svg>
+                        </a></li>
+                </ul>
+                <button type="button" class="mobile-log-out">Log out <svg class="icon-arrow" width="20px" height="20px">
+                        <use href="/src/images/sprite-header.svg#icon-arrow"></use>
+                    </svg></button>
+            </div>
 
 
         </div>
 
-
-        <picture>
-            <source srcset="/src/images/support/group-books.png 1x, /src/images/support/group-books@2x.png 2x">
-            <img class="mobile-menu-bg-img" src="/src/images/support/group-books.png" alt="books-group" width="360"
-                height="300" />
-        </picture>
-
     </div>
+
     <!-- ============================/MOBILE MENU=============================== -->
+    <!-- <div class="sign-in-wrapper">
+        <button type="button" class="header-sign-in"><svg class="icon-user" width="20px" height="20px">
+                <use href="/src/images/sprite-header.svg#icon-user"></use>
+            </svg>--name--</button>
+        <button type="button" class="header-log-out"> Log out <svg class="icon-arrow" width="20px" height="20px">
+                <use href="/src/images/sprite-header.svg#icon-arrow"></use>
+            </svg></button>
+    </div> -->
+
+
+
+
 </header>
