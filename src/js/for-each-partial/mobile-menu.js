@@ -30,6 +30,7 @@ window.addEventListener(
   currenPage(window.location.pathname.split('/').pop())
 );
 
+
 function currenPage(location) {
   const homeLink = document.querySelector('.mobile-link-home');
   const shoppingLink = document.querySelector('.mobile-link-shoping');
@@ -37,6 +38,7 @@ function currenPage(location) {
     homeLink.classList.add('current');
     return;
   } else if (location === 'shopping-list.html') {
+
     homeLink.classList.remove('current');
     shoppingLink.classList.add('current');
   }
