@@ -6,6 +6,13 @@
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--body-color);
+}
+
 // ====================NAVIGATION===========================
 /* /THEME/ */
 
@@ -132,9 +139,6 @@
   }
 }
 
-.hidden {
-}
-
 /* Для екранів пристроїв desctop */
 @media (min-width: 1440px) {
   .logo-top {
@@ -214,7 +218,6 @@ body {
 .toggle-switch {
   display: flex;
   flex-direction: row;
-
   align-items: center;
   margin-right: 14px;
   margin-left: auto;
@@ -241,7 +244,6 @@ body {
   background-color: transparent;
   line-height: 0;
   min-height: 812px;
-  overflow-y: scroll;
 }
 
 .mobile-menu {
