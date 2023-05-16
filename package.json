@@ -24,6 +24,7 @@
     "firebase": "^9.22.0",
     "lodash.debounce": "^4.0.8",
     "modern-normalize": "^1.1.0",
+    "paginationjs": "^2.6.0",
     "validator": "^13.9.0"
   },
   "devDependencies": {

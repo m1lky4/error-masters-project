@@ -1,3 +1,6 @@
+import './js/for-each-partial/store';
+import './js/for-each-partial/pagination';
+
 import './js/for-each-partial/header';
 
 // import './js/for-each-partial/support';
