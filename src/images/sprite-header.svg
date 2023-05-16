@@ -34,10 +34,5 @@
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.4286" d="M24 8l-16 16M8 8l16 16"></path>
 </symbol>
 
-<symbol id="icon-user" viewBox="0 0 32 32">
-<path fill="#f6f6f6" style="fill: var(--color1, #f6f6f6)" d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
-<path fill="#4f2ee8" style="fill: var(--color2, #4f2ee8)" d="M10.523 22.847c0-1.453 0.577-2.846 1.604-3.873s2.421-1.604 3.873-1.604 2.846 0.577 3.873 1.604c1.027 1.027 1.604 2.421 1.604 3.873h-10.955zM16 16.685c-2.27 0-4.108-1.838-4.108-4.108s1.838-4.108 4.108-4.108c2.27 0 4.108 1.838 4.108 4.108s-1.838 4.108-4.108 4.108z"></path>
-</symbol>
-
 </defs>
 </svg>
