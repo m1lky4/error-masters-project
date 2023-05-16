@@ -21,7 +21,8 @@
     "axios": "^1.4.0",
     "firebase": "^9.22.0",
     "lodash.debounce": "^4.0.8",
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "paginationjs": "^2.6.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
