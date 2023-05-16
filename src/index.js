@@ -12,12 +12,9 @@ import './js/for-each-partial/footer-modal';
 import './js/for-each-partial/create-markup-bookcard';
 import './js/for-each-partial/main';
 import './js/for-each-partial/shopping-skeleton';
-
 import './js/for-each-partial/mobile-menu';
-
 // import './js/firebase/firebase';
 import './js/firebase/auth';
-
 import './js/for-each-partial/registration-modal';
 import './js/for-each-partial/validation-registration-form';
 
