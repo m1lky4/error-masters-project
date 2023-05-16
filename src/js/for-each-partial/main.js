@@ -2,7 +2,7 @@ import { createTopBookList } from './book_list_markup';
 import { BookAPI } from '../api/book.service';
 import { formatResponse } from '../helpers/format_data';
 import debounce from 'lodash.debounce';
-import {onModal} from './modal'
+import { onModal } from './modal';
 import { createImmediateSkeleton } from './skeleton';
 
 export let data;
@@ -15,7 +15,7 @@ export function renderTopBookList(data, limit) {
   const markup = createTopBookList(data, limit);
   const categoryMarkupList = document.querySelector('.category-markup-list');
   categoryMarkupList.innerHTML = markup;
-  categoryMarkupList.addEventListener('click',onModal);
+  categoryMarkupList.addEventListener('click', onModal);
 }
 
 window.addEventListener('resize', debounce(formatResponse, 300));
@@ -27,9 +27,9 @@ window.addEventListener('load', async e => {
 
   if (window.innerWidth < 767) {
     renderTopBookList(data, 1);
-  } else if (window.innerWidth >= 767 && window.innerWidth <= 1199) {
+  } else if (window.innerWidth >= 767 && window.innerWidth < 1440) {
     renderTopBookList(data, 3);
-  } else if (window.innerWidth >= 1200) {
+  } else if (window.innerWidth >= 1440) {
     renderTopBookList(data, 5);
   }
 });
