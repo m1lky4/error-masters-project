@@ -2,6 +2,7 @@ const buttonSlider = document.getElementById('support-slider');
 const buttonSliderUp = document.getElementById('support-slider-up');
 const supList = document.getElementById('support-list-id');
 
+
 const liItemHeight = 59;
 let scrollHeight = 0;
 
@@ -22,3 +23,4 @@ function showFirstFund() {
 
 buttonSlider.addEventListener('click', showNextFund);
 buttonSliderUp.addEventListener('click', showFirstFund);
+
