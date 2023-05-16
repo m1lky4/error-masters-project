@@ -11,15 +11,17 @@
   height: 100%;
   background-color: rgba(47, 47, 47, 0.1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transform: scale(0.5);
+}
+
+.modal.is-hidden {
+  transform: translate(-50%, -50%) scale(0);
 }
 
 @media screen and (min-width: 375px) {
@@ -43,7 +45,8 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%) scale(1);
   box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.42);
 }
 
@@ -107,18 +110,6 @@
   margin: auto;
   margin-top: 40px;
   transition: all 0.5s ease;
-  // transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  //   color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  // &:hover {
-  //   background-color: var(--accent-color);
-  //   color: var(--body-color);
-  //   // transform: translateX(-0.5em);
-  //   box-shadow: 0 0 0.5em 0em var(--accent-color);
-  // }
-  // &:focus {
-  //   background-color: var(--accent-color);
-  //   color: var(--body-color);
-  // }
 }
 
 .modal-shopping-btn:hover,
@@ -126,7 +117,6 @@
   letter-spacing: 1px;
   background-color: var(--accent-color);
   color: var(--body-color);
-  // box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
   box-shadow: 0 0 0.5em 0em var(--accent-color);
 }
 
@@ -160,7 +150,6 @@
 @media screen and (min-width: 768px) {
   .congratulations-text {
     width: 324px;
-
     font-size: 12px;
     line-height: 1.17;
   }
@@ -174,7 +163,6 @@
   }
 }
 .modal-img {
-  // margin-right: 24px;
   border-radius: 8px;
   overflow: hidden;
   height: 408px;
@@ -201,13 +189,13 @@
   }
 }
 
-// .logo{
-//   border-radius: 50%;
-//   &:hover {
-//     background-color: var(--accent-color);
-//     fill: var(--light-text-color);
-//   }
-// }
+.logo {
+  fill: var(--text-color);
+  &:hover {
+    fill: var(--accent-color);
+    filter: drop-shadow(0px 0px 3px rgba(127, 111, 198, 0.8));
+  }
+}
 
 .modal-text {
   margin-top: 14px;
