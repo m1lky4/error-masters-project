@@ -2,30 +2,24 @@
 .main-footer{
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
-.container-footer{
-    margin-top: 40px;
-}
   .footer-text {
       color: var(--light-text-color);
       width: 200px;
       margin: auto;
-      margin-top: 15px;
+      padding-top: 15px;
   }
 @media only screen and (min-width: 768px){
     .footer-text{
       width: 500px;
-      margin-top: 20px;
-    }
-}
-@media only screen and (min-width: 1200px){
-    .footer-text{
-    //  width: 500px;
-     margin-top: 35px;
     }
 }
 .key-word-footer-modal {
     font-style: italic;
     text-decoration: underline;
+}
+.footer-logo-text{
+    font-size: 11px;
+    width: 150px;
 }
 .about-us-btn{
     display: block;
@@ -52,7 +46,18 @@
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
 }
-
+.logo-team {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.footer-svg-logo{
+    padding-top: 5px;
+    width: 40px;
+    height: 40px;
+}
 .modal-content-footer {
     background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
     margin: 10% auto;
@@ -96,7 +101,6 @@
 
  .content-footer .dev-name, .dev-position{
      color: rgba(255, 255, 255, .8);
-    //  margin: 10px 0;
  }
 @media only screen and (min-width: 1200px) {
     .card-footer:hover .content-footer {
