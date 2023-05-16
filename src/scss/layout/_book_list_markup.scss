@@ -21,7 +21,7 @@
 .category-markup-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 40px 24px;
   width: 335px;
 }
 
@@ -34,6 +34,15 @@
 @media only screen and (min-width: 1440px) {
   .category-markup-list {
     width: 996px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .current-cattegory {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // width: 996px;
   }
 }
 
