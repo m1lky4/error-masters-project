@@ -87,3 +87,20 @@ export class BookAPI {
 //   console.log('getBookByID', response);
 // }
 // test4();
+// async function seeMoreBtnList(e) {
+//     if (e.target.nodeName !== 'BUTTON') return;
+//     const liElements = e.target.closest("li");
+//     const targetParagraph = liElements.querySelector('.category-markup-subtitle')
+// console.log(targetParagraph);
+//     const response = await bookAPI.getBooksWithSelectedCategory(targetParagraph);
+//     if (!response) return;
+
+//     mainContent.innerHTML = createBookCardMarkup(response);
+//     console.log(response);
+
+//   titleOfCategory.innerHTML = formatCategoryTitle(targetParagraph);
+//   if (categoryList.querySelector('.active')) {
+//     categoryList.querySelector('.active').classList.remove('active');
+//   }
+//     e.target.classList.add('active');
+// }
