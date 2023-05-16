@@ -4,7 +4,7 @@ import { Navigation, Pagination } from 'swiper';
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination],
   slidesPerView: 3,
-  spaceBetween: 30,
+  spaceBetween: 0,
   fade: true,
   loop: true,
   loopFillGroupWithBlank: true,

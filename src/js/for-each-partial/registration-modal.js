@@ -1,6 +1,6 @@
 import { log } from 'console';
 
-refs = {
+const refs = {
   signInButton: document.querySelector('[name="sign-in"]'),
   signUpButton: document.querySelector('[name="sign-up"]'),
   signForm: document.querySelector('.registration-form'),
