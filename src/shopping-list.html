@@ -26,6 +26,28 @@
     </main>
 
     <script src="./index.js" type="module"></script>
-    <!-- <script src="../node_modules/paginationjs/dist/pagination.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script> -->
+
+    <!-- <script>
+      $(function () {
+        var items = $('.shopping-list li');
+        var numItems = items.length;
+        var perPage = 5;
+
+        items.slice(perPage).hide();
+
+        $('#pagination').pagination({
+          items: numItems,
+          itemsOnPage: perPage,
+          prevText: '&laquo;',
+          nextText: '&raquo;',
+          onPageClick: function (pageNumber) {
+            var showFrom = perPage * (pageNumber - 1);
+            var showTo = showFrom + perPage;
+            items.hide().slice(showFrom, showTo).show();
+          },
+        });
+      });
+    </script> -->
   </body>
 </html>

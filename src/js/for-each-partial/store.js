@@ -1,5 +1,4 @@
 import { BookAPI } from '../api/book.service';
-
 const bookApi = new BookAPI();
 
 let selectedBooks = {};
@@ -44,7 +43,7 @@ function renderFavorites() {
             <div class="shopping-book-info">
               <div class="shopping-book-title">
                 <h3>${book.title}</h3>
-                <p>${book.list_name}</p>
+                <p>${book.category}</p>
               </div>
               <a href="#">
                 <svg class="book__add-cart-icon" width="28" height="28">
@@ -99,6 +98,6 @@ function renderFavorites() {
     });
     return acc;
   }, []);
-  console.log(selectedBooks);
+  // console.log(selectedBooks);
   renderFavorites();
 })();
