@@ -27,9 +27,9 @@ window.addEventListener('load', async e => {
 
   if (window.innerWidth < 767) {
     renderTopBookList(data, 1);
-  } else if (window.innerWidth >= 767 && window.innerWidth <= 1199) {
+  } else if (window.innerWidth >= 767 && window.innerWidth < 1440) {
     renderTopBookList(data, 3);
-  } else if (window.innerWidth >= 1200) {
+  } else if (window.innerWidth >= 1440) {
     renderTopBookList(data, 5);
   }
 });
