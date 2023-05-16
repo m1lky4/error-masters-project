@@ -45,7 +45,7 @@ async function renderBookCardsByCategory(e) {
   mainContent.innerHTML = createImmediateSkeleton();
   if (e.target.nodeName !== 'LI') return;
  if (e.target.classList.contains('all')) {
-   data = await bookAPI.getTopBooksList();
+  const data = await bookAPI.getTopBooksList();
    titleOfCategory.innerHTML = formatCategoryTitle('All categories');
      if (categoryList.querySelector('.active')) {
     categoryList.querySelector('.active').classList.remove('active');
@@ -89,13 +89,13 @@ categoryList.addEventListener('click', renderBookCardsByCategory);
 all.addEventListener('click', async e => {
   mainContent.innerHTML = createImmediateSkeleton();
 
-  data = await bookAPI.getTopBooksList();
+  const data = await bookAPI.getTopBooksList();
 
   if (window.innerWidth < 767) {
     renderTopBookList(data, 1);
-  } else if (window.innerWidth >= 767 && window.innerWidth <= 1199) {
+  } else if (window.innerWidth >= 767 && window.innerWidth <= 1440) {
     renderTopBookList(data, 3);
-  } else if (window.innerWidth >= 1200) {
+  } else if (window.innerWidth >= 1440) {
     renderTopBookList(data, 5);
   }
 });
