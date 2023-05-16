@@ -1,6 +1,6 @@
 @import url(/src/scss/utils/_variables.scss);
 .main-footer{
-    border-top: 1.5px solid black;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .container-footer{
     margin-top: 40px;
@@ -13,17 +13,20 @@
   }
 @media only screen and (min-width: 768px){
     .footer-text{
-      width: 450px;
+      width: 500px;
       margin-top: 20px;
     }
 }
 @media only screen and (min-width: 1200px){
     .footer-text{
-     width: 500px;
+    //  width: 500px;
      margin-top: 35px;
     }
 }
-
+.key-word-footer-modal {
+    font-style: italic;
+    text-decoration: underline;
+}
 .about-us-btn{
     display: block;
     border-radius: 20px;
@@ -34,6 +37,9 @@
     margin: 20px auto;
     padding: 8px 10px;
     cursor: pointer;
+}
+.footer-title-logo{
+    font-size: 20px;
 }
 .modal-about-us {
     display: none;
@@ -50,19 +56,18 @@
 .modal-content-footer {
     background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
     margin: 10% auto;
-    padding: 20px;
     border-radius: 15px;
    
-    width: 375px;
+    width: 300px;
 }
 @media only screen and (min-width: 768px){
     .modal-content-footer{
-        width: 600px;
+        width: 520px;
     }
 }
 @media only screen and (min-width: 1200px) {
     .modal-content-footer{
-        width: 1000px;
+        width: 775px;
     }
  }
  .card-footer {
@@ -112,6 +117,7 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    margin: 10px;
 }
 
 .close-modal-footer:hover,
@@ -121,7 +127,7 @@
     cursor: pointer;
 }
 .developers-title{
-    margin-top: 20px;
+    // margin-top: 20px;
     text-align: center;
     color: #FFFFFF;;
 }
@@ -173,6 +179,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
+     margin-right: 0;
  }
 
  .swiper-slide img {
