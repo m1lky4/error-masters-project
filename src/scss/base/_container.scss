@@ -44,3 +44,8 @@
     flex-direction: column;
   }
 }
+@media only screen and (max-width:767px) {
+   .container-category {
+    margin-bottom: 40px;
+  }
+}
