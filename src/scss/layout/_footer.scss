@@ -1,6 +1,14 @@
 @import url(/src/scss/utils/_variables.scss);
+
+footer {
+    opacity: 0;
+    visibility: hidden;
+}
 .main-footer{
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
 }
   .footer-text {
       color: var(--light-text-color);
@@ -13,11 +21,14 @@
       width: 500px;
     }
 }
-
 .key-word-footer-modal {
     font-style: italic;
     text-decoration: underline;
     font-weight: bold;
+    cursor: pointer;
+}
+.key-word-footer-modal:hover {
+    color: var(--accent-color);
 }
 .footer-logo-text{
     font-size: 11px;
@@ -123,7 +134,9 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
-    margin: 10px;
+    padding: 10px;
+    padding-left: 0;
+    margin: 0;
 }
 
 .close-modal-footer:hover,
@@ -134,7 +147,8 @@
 }
 .developers-title{
     text-align: center;
-    color: #FFFFFF;;
+    color: #FFFFFF;
+    padding-top: 15px;
 }
 
 .developers-cards{
