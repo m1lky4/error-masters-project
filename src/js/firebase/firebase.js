@@ -18,7 +18,7 @@ const setupUI = user => {
   const loggedInLinks = document.querySelectorAll('.logged-in');
 
   if (user) {
-    console.log(user);
+    // console.log(user);
     // Інформація про обліковий запис
     getDoc(doc(db, 'users', user.uid)).then(doc => {
       const html = `
@@ -47,7 +47,7 @@ const setupGuides = data => {
       const book = doc.data();
 
       if (book.owner == currentUser) {
-        console.log(book);
+        // console.log(book);
         return book;
       }
     });
@@ -56,6 +56,7 @@ const setupGuides = data => {
     const markup = filterBookByCurrentUser
       .map(book => {
         const data = book.data();
+        // console.log(book.id);
         return `
         <details>
             <summary class="collapsible-header grey lighten-4" style="background-color: darkgray; width: 500px; margin-left: 10px;">
@@ -78,6 +79,8 @@ const setupGuides = data => {
 // ===================new firebase================
 import { initializeApp } from 'firebase/app';
 import {
+  updateDoc,
+  deleteField,
   getFirestore,
   collection,
   getDocs,
@@ -86,6 +89,7 @@ import {
   setDoc,
   onSnapshot,
   doc,
+  deleteDoc,
 } from 'firebase/firestore';
 import {
   getAuth,
@@ -111,7 +115,6 @@ const signupForm = document.querySelector('#signup-form');
 auth.onAuthStateChanged(user => {
   if (user) {
     currentUser = user.uid;
-    // console.log(currentUser);
     const query = collection(db, 'books');
     onSnapshot(
       query,
@@ -130,24 +133,45 @@ auth.onAuthStateChanged(user => {
   }
 });
 
-// create new book
-const createForm = document.querySelector('#create-form');
-createForm.addEventListener('submit', evt => {
-  evt.preventDefault();
-
+export function addBookToCollection({
+  uid,
+  title,
+  description,
+  author,
+  book_image,
+  buy_links,
+}) {
   addDoc(collection(db, 'books'), {
+    uid,
     owner: currentUser,
-    title: createForm.title.value,
-    description: createForm.description.value,
+    title,
+    description,
+    author,
+    book_image,
+    buy_links,
   })
     .then(() => {
       //close the modal and reset the form
-      createForm.reset();
+      // createForm.reset();
     })
     .catch(error => {
       console.log(error.message);
     });
-});
+}
+
+export async function deleteBookFromCollection(uid) {
+  // data => console.log(data.id);
+  // await deleteDoc(doc(db, 'books', book.id));
+  const cityRef = collection(db, 'books');
+  onSnapshot(cityRef, async data => {
+    const bookToDelete = data.docs[0].id;
+    console.log(bookToDelete);
+    await deleteDoc(doc(db, 'books', bookToDelete));
+  });
+  console.log(collection(db, 'books'));
+
+  // Remove the 'capital' field from the document
+}
 
 //logout (Marina)
 const logout = document.querySelector('.btn-logout');
