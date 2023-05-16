@@ -25,6 +25,7 @@
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
     "modern-normalize": "^1.1.0",
+    "npm": "^9.6.6",
     "paginationjs": "^2.6.0",
     "swiper": "^9.3.1",
     "tui-pagination": "^3.4.1",
