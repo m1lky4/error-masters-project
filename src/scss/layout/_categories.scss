@@ -10,7 +10,7 @@
   background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-background: var(--scroll-color);
+  background: var(--scroll-color);
   border-radius: 12px;
 }
 .categories-box {
@@ -57,7 +57,7 @@ background: var(--scroll-color);
   letter-spacing: -0.02em;
   cursor: pointer;
 
-  color: rgba(17, 17, 17, 0.6);
+  color: var(--text-color);
 }
 
 .categories-item.active {
