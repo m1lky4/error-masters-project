@@ -23,4 +23,3 @@ function showFirstFund() {
 
 buttonSlider.addEventListener('click', showNextFund);
 buttonSliderUp.addEventListener('click', showFirstFund);
-

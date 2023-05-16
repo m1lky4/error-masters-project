@@ -11,6 +11,10 @@ const mainContent = document.querySelector('.category-markup-list');
 const titleOfCategory = document.querySelector('.title-category-markup');
 const categoryMarkupList = document.querySelector('.category-markup-list');
 
+
+
+
+
 categoryMarkupList.addEventListener('click', seeMoreBtnList);
 
 async function seeMoreBtnList(e) {
@@ -20,6 +24,7 @@ async function seeMoreBtnList(e) {
   const targetParagraph = liElements.querySelector('.category-markup-subtitle').textContent.trim();
   titleOfCategory.innerHTML = formatCategoryTitle(targetParagraph);
   const response = await bookAPI.getBooksWithSelectedCategory(targetParagraph);
+
   if (!response) return;
 
   mainContent.innerHTML = createBookCardMarkup(response);
@@ -38,10 +43,9 @@ async function renderCategoryList() {
 
 async function renderBookCardsByCategory(e) {
   mainContent.innerHTML = createImmediateSkeleton();
-
   if (e.target.nodeName !== 'LI') return;
  if (e.target.classList.contains('all')) {
-   data = await bookAPI.getTopBooksList();
+  const data = await bookAPI.getTopBooksList();
    titleOfCategory.innerHTML = formatCategoryTitle('All categories');
      if (categoryList.querySelector('.active')) {
     categoryList.querySelector('.active').classList.remove('active');
@@ -81,3 +85,18 @@ function createCategoryItemMarkup(categories) {
 renderCategoryList();
 
 categoryList.addEventListener('click', renderBookCardsByCategory);
+
+all.addEventListener('click', async e => {
+  mainContent.innerHTML = createImmediateSkeleton();
+
+  const data = await bookAPI.getTopBooksList();
+
+  if (window.innerWidth < 767) {
+    renderTopBookList(data, 1);
+  } else if (window.innerWidth >= 767 && window.innerWidth <= 1440) {
+    renderTopBookList(data, 3);
+  } else if (window.innerWidth >= 1440) {
+    renderTopBookList(data, 5);
+  }
+});
+
