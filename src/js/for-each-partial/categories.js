@@ -18,7 +18,11 @@ const categoryMarkupList = document.querySelector('.category-markup-list');
 categoryMarkupList.addEventListener('click', seeMoreBtnList);
 
 async function seeMoreBtnList(e) {
-  if (e.target.nodeName !== 'BUTTON') return;
+    if (e.target.nodeName !== 'BUTTON') return;
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
   mainContent.innerHTML = createImmediateSkeleton();
   const liElements = e.target.closest('li');
   const targetParagraph = liElements.querySelector('.category-markup-subtitle').textContent.trim();
@@ -87,6 +91,7 @@ renderCategoryList();
 categoryList.addEventListener('click', renderBookCardsByCategory);
 
 all.addEventListener('click', async e => {
+    
   mainContent.innerHTML = createImmediateSkeleton();
 
   const data = await bookAPI.getTopBooksList();
