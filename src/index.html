@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Store</title>
+    <title>Page title</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
       rel="stylesheet"
@@ -25,49 +26,26 @@
   </head>
 
   <body class="light modal-open">
-    <!-- if you logIN -->
     <!-- logout -->
-    <div class="logged-in" style="display: none">
+    <!-- <div class="logged-in" style="display: none">
       <form action="register-form" class="signinForm" id="logout-form">
         Logout
         <button type="submit" class="btn-logout">LogOut</button>
       </form>
-    </div>
+    </div> -->
 
     <!-- acount details -->
-    <details
+    <!-- <details
       class="account-content logged-in"
       style="display: none; margin-bottom: 50px; margin-top: 10px"
     >
       <summary>Account details</summary>
       <div class="account-details"></div>
     </details>
-
-    <!-- Create book -->
-    <div class="logged-in" style="border: 1px solid black; display: none">
-      <h4>Create Book</h4>
-      <br />
-      <form id="create-form">
-        <div class="input-field">
-          <input type="text" id="title" required />
-          <label for="title">Book Title</label>
-        </div>
-        <div class="input-field">
-          <textarea
-            id="description"
-            class="materialize-textarea"
-            required
-          ></textarea>
-          <label for="content">Book Description</label>
-        </div>
-        <button class="btn yellow darken-2 z-depth-0">Create</button>
-      </form>
-    </div>
-
     <!-- show form after login -->
-    <div class="container-collabsible" style="margin-top: 40px">
+    <!-- <div class="container-collabsible" style="margin-top: 40px">
       <ul class="collapsible z-depth-0 guides" style="border: none"></ul>
-    </div>
+    </div> -->
     <!--  -->
     <include src="./partials/header.html"></include>
     <main>
