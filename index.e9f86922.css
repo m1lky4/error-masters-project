@@ -744,6 +744,7 @@ ul, ol {
 
 .shopping-book-img {
   float: left;
+  border-radius: 16px;
   margin-right: 14px;
 }
 
@@ -867,6 +868,13 @@ ul, ol {
   .some-book-centr {
     margin-top: 140px;
     margin-left: 170px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .shopping-book-img {
+    height: 142px;
+    margin-bottom: 14px;
   }
 }
 
@@ -2522,4 +2530,4 @@ footer {
   transition: all .2s;
 }
 
-/*# sourceMappingURL=index.6823e817.css.map */
+/*# sourceMappingURL=index.e9f86922.css.map */
