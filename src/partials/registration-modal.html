@@ -1,6 +1,6 @@
 <div class="registration-backdrop registration-is-hiden">
   <div class="registration-modal">
-    <button class="registration-close-btn">
+    <button type="button" class="registration-close-btn">
       <svg class="registration-close-btn-icon" width="14px" height="14px">
         <use href="./images/registration-modal-icon.svg#close-icon"></use>
       </svg>
@@ -35,7 +35,7 @@
             placeholder="password"
             name="user_password"
           />
-          <button class="show-password-text">
+          <button type="button" class="show-password-text">
             <svg
               class="password-input-icon input-icon"
               width="13.5px"
@@ -50,16 +50,24 @@
         </li>
       </ul>
 
-      <button class="sign-button" name="submit_btn">sign up</button>
+      <button class="sign-button" type="submit" name="submit_btn">
+        sign up
+      </button>
     </form>
     <ul class="switch-sign">
       <li>
-        <button class="switch-sign-button switch-sign-active" name="sign-up">
+        <button
+          class="switch-sign-button switch-sign-active"
+          type="button"
+          name="sign-up"
+        >
           sign up
         </button>
       </li>
       <li>
-        <button class="switch-sign-button" name="sign-in">sign in</button>
+        <button class="switch-sign-button" type="button" name="sign-in">
+          sign in
+        </button>
       </li>
     </ul>
   </div>

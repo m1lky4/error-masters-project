@@ -6,7 +6,7 @@ const refs = {
   signForm: document.querySelector('.registration-form'),
   passwordFild: document.querySelector('[name="user_password"]'),
   closeButton: document.querySelector('.registration-close-btn'),
-  openModalButton: document.querySelector('.sign-up'),
+  openModalButtonS: document.querySelectorAll('.sign-up'),
   passwordShowButton: document.querySelector(`.show-password-text`),
   allFormInputs: document.querySelectorAll('.form-input-filds'),
   modalBackdrop: document.querySelector('.registration-backdrop'),
@@ -21,20 +21,24 @@ export const {
   allFormInputs,
   closeButton,
   modalBackdrop,
-  openModalButton,
+  openModalButtonS,
 } = refs;
 
 signInButton.addEventListener('click', onSignInButtonClick);
 signUpButton.addEventListener('click', onSignUpButtonClick);
 passwordShowButton.addEventListener('click', onShowPasswordButtonClick);
 
-openModalButton.addEventListener('click', onLoginButtonClick);
+openModalButtonS.forEach(openModalButton => {
+  openModalButton.addEventListener('click', onLoginButtonClick);
+});
 
 function onLoginButtonClick() {
   modalBackdrop.classList.remove('registration-is-hiden');
+  resetInputs();
   closeButton.addEventListener('click', closeModal);
   modalBackdrop.addEventListener('click', onBackdropClick);
   document.addEventListener('keydown', onEscapeClick);
+  document.body.classList.add('modal-open');
 }
 
 function onSignInButtonClick() {
@@ -51,11 +55,12 @@ function onSignUpButtonClick() {
 
 function onShowPasswordButtonClick(evt) {
   evt.preventDefault();
-  if (passwordFild.type === 'password') {
-    passwordFild.type = 'text';
-    return;
-  }
-  passwordFild.type = 'password';
+  evt.target.closest('button').disabled = true;
+  passwordFild.type = 'text';
+  setTimeout(() => {
+    passwordFild.type = 'password';
+    evt.target.closest('button').disabled = false;
+  }, 3000);
 }
 
 function removeAndAddClasses(elementForRemove, elementForAdd) {
@@ -83,7 +88,7 @@ function onBackdropClick(evt) {
 
 export function closeModal() {
   modalBackdrop.classList.add('registration-is-hiden');
-
+  document.body.classList.remove('modal-open');
   closeButton.removeEventListener('click', closeModal);
   modalBackdrop.removeEventListener('click', onBackdropClick);
   document.removeEventListener('keydown', onEscapeClick);
