@@ -58,7 +58,6 @@ ol {
 
 .shopping-title {
   margin-bottom: 140px;
-  margin-top: 40px;
   margin-bottom: 20px;
   font-family: 'DM Sans';
   font-weight: 700;
@@ -231,5 +230,17 @@ ol {
   }
   .shopping-book-description {
     max-width: 808px;
+  }
+}
+// =======================================
+.shopping {
+  padding-top: 40px;
+}
+
+.support-shoping-list-hidden {
+}
+@media only screen and (max-width: 1439px) {
+  .support-shoping-list-hidden {
+    display: none;
   }
 }
