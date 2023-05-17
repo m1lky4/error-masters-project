@@ -24,6 +24,7 @@
     refs.menu.classList.remove('is-open');
     refs.burgerBtn.classList.remove('hidden');
     refs.mobileMenuCloseBtn.classList.add('hidden');
+    refs.mainBody.classList.remove('modal-open');
   }
 })();
 
