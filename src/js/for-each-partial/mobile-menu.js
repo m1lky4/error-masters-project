@@ -7,6 +7,8 @@
     menu: document.querySelector('[data-menu]'),
     burgerBtn: document.querySelector('.burger'),
     mobileMenuCloseBtn: document.querySelector('.mobile-menu-close-btn'),
+    mobileMenuBackdrop: document.querySelector('.mobile-menu-backdrop'),
+    mainBody: document.querySelector('body'),
   };
 
   refs.openMenuBtn.addEventListener('click', openModal);
@@ -16,11 +18,14 @@
     refs.menu.classList.add('is-open');
     refs.burgerBtn.classList.add('hidden');
     refs.mobileMenuCloseBtn.classList.remove('hidden');
+    refs.mobileMenuBackdrop.classList.remove('hidden');
+    refs.mainBody.classList.add('modal-open');
   }
   function closeModal() {
     refs.menu.classList.remove('is-open');
     refs.burgerBtn.classList.remove('hidden');
     refs.mobileMenuCloseBtn.classList.add('hidden');
+    refs.mainBody.classList.remove('modal-open');
   }
 })();
 
