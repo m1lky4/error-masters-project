@@ -29,7 +29,7 @@ window.addEventListener('keydown', function (event) {
 
 function showFooterOnScroll() {
   const footer = document.querySelector('footer');
-  const scrollThreshold = 3000; // Adjust the scroll threshold as needed
+  const scrollThreshold = 200; // Adjust the scroll threshold as needed
 
   window.addEventListener('scroll', function () {
     if (window.pageYOffset > scrollThreshold) {
