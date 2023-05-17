@@ -20,6 +20,7 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "axios": "^1.4.0",
+    "datatables.net": "^1.13.4",
     "firebase": "^9.22.0",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
@@ -27,6 +28,7 @@
     "npm": "^9.6.6",
     "paginationjs": "^2.6.0",
     "swiper": "^9.3.1",
+    "tui-pagination": "^3.4.1",
     "validator": "^13.9.0"
   },
   "devDependencies": {
