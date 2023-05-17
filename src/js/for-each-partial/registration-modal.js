@@ -1,4 +1,6 @@
 import { log } from 'console';
+import tippy from 'tippy.js';
+import 'tippy.js/dist/tippy.css';
 
 const refs = {
   signInButton: document.querySelector('[name="sign-in"]'),
@@ -8,6 +10,7 @@ const refs = {
   closeButton: document.querySelector('.registration-close-btn'),
   openModalButtonS: document.querySelectorAll('.sign-up'),
   passwordShowButton: document.querySelector(`.show-password-text`),
+  lockUses: document.querySelectorAll(`.lock-use`),
   allFormInputs: document.querySelectorAll('.form-input-filds'),
   modalBackdrop: document.querySelector('.registration-backdrop'),
 };
@@ -22,7 +25,16 @@ export const {
   closeButton,
   modalBackdrop,
   openModalButtonS,
+  lockUses,
 } = refs;
+
+export const weeckPasswordMassage = tippy(passwordFild, {
+  content:
+    'The password must consist of at least 8 characters, including: letters in lower and upper case, a number and a symbol',
+  placement: 'bottom',
+  trigger: 'manual',
+  maxWidth: 320,
+});
 
 signInButton.addEventListener('click', onSignInButtonClick);
 signUpButton.addEventListener('click', onSignUpButtonClick);
@@ -54,13 +66,14 @@ function onSignUpButtonClick() {
 }
 
 function onShowPasswordButtonClick(evt) {
-  evt.preventDefault();
-  evt.target.closest('button').disabled = true;
-  passwordFild.type = 'text';
-  setTimeout(() => {
-    passwordFild.type = 'password';
-    evt.target.closest('button').disabled = false;
-  }, 3000);
+  lockUses.forEach(lockUse => {
+    lockUse.classList.toggle('use-hiden');
+  });
+  if (passwordFild.type === 'password') {
+    passwordFild.type = 'text';
+    return;
+  }
+  passwordFild.type = 'password';
 }
 
 function removeAndAddClasses(elementForRemove, elementForAdd) {

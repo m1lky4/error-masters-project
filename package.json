@@ -28,6 +28,7 @@
     "npm": "^9.6.6",
     "paginationjs": "^2.6.0",
     "swiper": "^9.3.1",
+    "tippy.js": "^6.3.7",
     "tui-pagination": "^3.4.1",
     "validator": "^13.9.0"
   },

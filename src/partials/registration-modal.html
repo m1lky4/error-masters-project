@@ -5,7 +5,7 @@
         <use href="./images/registration-modal-icon.svg#close-icon"></use>
       </svg>
     </button>
-    <form class="registration-form" action="">
+    <form class="registration-form">
       <ul class="input-list">
         <li class="input-fild-container">
           <input
@@ -14,7 +14,7 @@
             placeholder="name"
             name="user_name"
           />
-          <span class="errom-massage" name="name_error"></span>
+          <span class="errom-massage name_error"></span>
         </li>
         <li class="input-fild-container">
           <input
@@ -26,7 +26,7 @@
           <svg class="email-input-icon input-icon" width="15px" height="13px">
             <use href="./images/registration-modal-icon.svg#email-icon"></use>
           </svg>
-          <span class="errom-massage" name="email_error"></span>
+          <span class="errom-massage email_error"></span>
         </li>
         <li class="input-fild-container">
           <input
@@ -42,11 +42,16 @@
               height="13.5px"
             >
               <use
+                class="lock-use use-hiden"
                 href="./images/registration-modal-icon.svg#password-icon"
+              ></use>
+              <use
+                class="lock-use eye-use"
+                href="./images/registration-modal-icon.svg#icon-eye"
               ></use>
             </svg>
           </button>
-          <span class="errom-massage" name="password_error"></span>
+          <span class="errom-massage"></span>
         </li>
       </ul>
 
