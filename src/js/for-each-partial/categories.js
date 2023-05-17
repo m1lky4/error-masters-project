@@ -80,7 +80,7 @@ async function renderBookCardsByCategory(e) {
 function createCategoryItemMarkup(categories) {
   return categories
     .map(category => {
-      return `<li class="categories-item">${category.list_name}</li>`;
+      return `<li class="categories-item animation-link">${category.list_name}</li>`;
     })
     .join('');
 }
