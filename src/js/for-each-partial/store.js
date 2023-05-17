@@ -34,7 +34,12 @@ function renderFavorites() {
         This page is empty, add some books<br />and proceed to order.
       </p>
       <div class="stack-of-books">
-      <h3>everything has its time</h3>
+        <img
+            src="https://lh3.googleusercontent.com/pw/AJFCJaXF-_bnsOB3uXSYccYIy6OIbasPGhK58TIG0KTbIRDMPOMP1TtEGd2v8e9EsOOUcZtpOjn5ToZTgfcrfJbF-r0KEa0DReOlQZhvZF8xlygQIOy7rBEg9YFDmqIH1RQ9sjRUPPvATZYh0PGnOM4RpkEm=w323-h241-s-no?authuser=0"
+            alt="stack of books"
+            width="265"
+            height="198"
+          />
      </div>
       `;
   } else {
@@ -146,6 +151,13 @@ function removeBookFromFavorite(e) {
         '</a>',
     },
   };
+
+  if (selectedBooks.length === 0) {
+    document.querySelector('.tui-pagination').style.display = 'none';
+  } else {
+    document.querySelector('.tui-pagination').style.display = 'block';
+  }
+
   const container = document.getElementById('pagination');
   paginator = new Pagination(container, options);
   paginator.getCurrentPage();
