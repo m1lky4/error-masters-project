@@ -149,6 +149,7 @@ ol {
 }
 
 .shopping-book-img {
+  border-radius: 16px;
   float: left;
   margin-right: 14px;
 }
@@ -277,4 +278,9 @@ ol {
     margin-top: 140px;
   }
 }
-
+@media only screen and (max-width: 767px) {
+  .shopping-book-img {
+    margin-bottom: 14px;
+    height: 142px;
+  }
+}
