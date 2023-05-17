@@ -44,7 +44,12 @@
 .movie--isloading .loading-image {
   height: 256px;
   border-radius: 8px;
-  background-image: var(--skelet-color);
+  background-image: linear-gradient(
+    90deg,
+    #ececec 0px,
+    #f4f4f4 40px,
+    #ececec 80px
+  );
   background-size: 250px;
   animation: shine-loading-image 2s infinite ease-out;
 }
@@ -77,7 +82,12 @@
   width: 100%;
   margin-bottom: 7px;
   background: #ececec;
-  background-image: var(--skelet-color);
+  background-image: linear-gradient(
+    90deg,
+    #ececec 0px,
+    #ddd 40px,
+    #ececec 80px
+  );
   background-size: 250px;
   border-radius: 5px;
   animation: shine-loading-container-items 2s infinite ease-out;
@@ -87,7 +97,12 @@
   height: 10px;
   width: 50%;
   background: #ececec;
-  background-image: var(--skelet-color);
+  background-image: linear-gradient(
+    90deg,
+    #ececec 0px,
+    #ddd 40px,
+    #ececec 80px
+  );
   background-size: 250px;
   border-radius: 5px;
   animation: shine-loading-container-items 2s infinite ease-out;

@@ -1,3 +1,26 @@
+// .shopping-list li {
+//   display: none;
+// }
+
+.remove_book {
+  padding: 8px;
+  border-radius:50%;
+  background-color: var(--accent-color);
+  display: flex;
+  cursor: pointer;
+}
+.trash-svg {
+  pointer-events: none;
+}
+.tui-pagination .tui-page-btn {
+  border-radius: 20px;
+  background: var(--accent-color);
+}
+
+// .tui-pagination {
+//   margin-left: 245px;
+// }
+
 h1,
 h2,
 h3,
@@ -43,7 +66,7 @@ ol {
   text-align: center;
   letter-spacing: -0.02em;
 
-  color: var(--light-text-color);
+  color: rgba(0, 0, 0, 0.6);
   margin-bottom: 20px;
 }
 
@@ -54,6 +77,7 @@ ol {
 
 .shopping-title {
   margin-bottom: 140px;
+  margin-top: 40px;
   margin-bottom: 20px;
   font-family: 'DM Sans';
   font-weight: 700;
@@ -96,6 +120,7 @@ ol {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--light-text-color);
+  display: flex;
 }
 
 .shopping-book-author p {
@@ -195,9 +220,18 @@ ol {
   display: flex;
 }
 
+.some-book-centr {
+  margin-top: 120px;
+}
+
+.support-shoping-list-hidden {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .shopping-list-book {
     width: 704px;
+    height: 213px;
     padding: 24px 24px;
   }
   .shopping-book-img {
@@ -218,6 +252,10 @@ ol {
   .shopping-book-retailers {
     column-gap: 16px;
   }
+  .some-book-centr {
+    margin-left: 20px;
+    margin-top: 140px;
+  }
 }
 @media only screen and (min-width: 1440px) {
   .shopping-list-book {
@@ -228,14 +266,15 @@ ol {
   }
 }
 // =======================================
-.shopping {
-  padding-top: 40px;
-}
 
-.support-shoping-list-hidden {
-}
-@media only screen and (max-width: 1439px) {
+@media only screen and (min-width: 1440px) {
   .support-shoping-list-hidden {
-    display: none;
+    display: block;
+    margin-top: 40px;
+  }
+  .some-book-centr {
+    margin-left: 170px;
+    margin-top: 140px;
   }
 }
+
