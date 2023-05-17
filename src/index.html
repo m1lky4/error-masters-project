@@ -12,6 +12,10 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
@@ -21,39 +25,59 @@
   </head>
 
   <body class="light modal-open">
-    <!-- <form action="" style="display: flex" width="500" height="500">
-      <h1>Sing up</h1>
-      <input type="text" id="username" name="username" placeholder="UserName" />
-      <input type="email" id="email" name="email" placeholder="E-mail" />
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="user-password"
-      />
-      <input type="submit" id="signUp" name="signup_submit" value="Sing up" />
-    </form>
-    <form action="" style="display: flex" width="500" height="500">
-      <h1>Sing in</h1>
-      <input type="text" id="email" name="email" placeholder="E-mail" />
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="user-password"
-      />
-      <input type="submit" id="login" name="login" value="login" />
-    </form>
-    <form action="" style="display: flex" width="500" height="500">
-      <h1>Remove</h1>
+    <!-- if you logIN -->
+    <!-- logout -->
+    <div class="logged-in" style="display: none">
+      <form action="register-form" class="signinForm" id="logout-form">
+        Logout
+        <button type="submit" class="btn-logout">LogOut</button>
+      </form>
+    </div>
 
-      <input type="submit" id="remove" name="remove" value="remove" />
-    </form> -->
+    <!-- acount details -->
+    <details
+      class="account-content logged-in"
+      style="display: none; margin-bottom: 50px; margin-top: 10px"
+    >
+      <summary>Account details</summary>
+      <div class="account-details"></div>
+    </details>
+
+    <!-- Create book -->
+    <div class="logged-in" style="border: 1px solid black; display: none">
+      <h4>Create Book</h4>
+      <br />
+      <form id="create-form">
+        <div class="input-field">
+          <input type="text" id="title" required />
+          <label for="title">Book Title</label>
+        </div>
+        <div class="input-field">
+          <textarea
+            id="description"
+            class="materialize-textarea"
+            required
+          ></textarea>
+          <label for="content">Book Description</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Create</button>
+      </form>
+    </div>
+
+    <!-- show form after login -->
+    <div class="container-collabsible" style="margin-top: 40px">
+      <ul class="collapsible z-depth-0 guides" style="border: none"></ul>
+    </div>
+    <!--  -->
     <include src="./partials/header.html"></include>
-    <include src="./partials/main.html"></include>
-    <include src="./partials/support.html"></include>
-    <include src="./partials/modal.html"></include>
-    <include src="./partials/registration-modal.html"></include>
+    <main>
+      <include src="./partials/main.html"></include>
+      <include src="./partials/support.html"></include>
+      <include src="./partials/modal.html"></include>
+      <include src="./partials/registration-modal.html"></include>
+      <include src="./partials/scroll-up.html"></include>
+    </main>
+    <include src="./partials/footer.html"></include>
     <script src="./index.js" type="module"></script>
   </body>
 </html>

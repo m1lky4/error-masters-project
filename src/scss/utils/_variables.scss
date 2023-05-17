@@ -10,7 +10,13 @@
   --main-font: #111111;
   --logo-font-color: #111111;
   --burger-fill: #111111;
+  --header-height: 62px;
   --scroll-color:#E0E0E0;
+  --skelet-color: linear-gradient(90deg,
+        #ececec 0px,
+        #f4f4f4 40px,
+        #ececec 80px);
+
 }
 
 body.dark {
@@ -21,4 +27,5 @@ body.dark {
   --main-font: white;
   --logo-font-color: #ffffff;
   --burger-fill: #4f2ee8;
+  --skelet-color: linear-gradient(90deg, rgba(149, 148, 148, 1) 12%, rgba(140, 140, 140, 1) 23%, rgba(128, 128, 128, 1) 31%);
 }
