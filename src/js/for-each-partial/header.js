@@ -26,6 +26,7 @@ function setThemeOnLoad() {
     themeSwitcher.checked = false;
   }
 }
+
 window.addEventListener(
   'load',
   currenPage(window.location.pathname.split('/').pop())

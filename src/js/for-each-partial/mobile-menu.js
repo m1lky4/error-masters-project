@@ -19,13 +19,11 @@
     refs.burgerBtn.classList.add('hidden');
     refs.mobileMenuCloseBtn.classList.remove('hidden');
     refs.mobileMenuBackdrop.classList.remove('hidden');
-    refs.mainBody.classList.add('modal-open');
   }
   function closeModal() {
     refs.menu.classList.remove('is-open');
     refs.burgerBtn.classList.remove('hidden');
     refs.mobileMenuCloseBtn.classList.add('hidden');
-    refs.mainBody.classList.remove('modal-open');
   }
 })();
 
@@ -35,7 +33,6 @@ window.addEventListener(
   currenPage(window.location.pathname.split('/').pop())
 );
 
-
 function currenPage(location) {
   const homeLink = document.querySelector('.mobile-link-home');
   const shoppingLink = document.querySelector('.mobile-link-shoping');
@@ -43,7 +40,6 @@ function currenPage(location) {
     homeLink.classList.add('current');
     return;
   } else if (location === 'shopping-list.html') {
-
     homeLink.classList.remove('current');
     shoppingLink.classList.add('current');
   }
