@@ -1,4 +1,5 @@
 import { BookAPI } from '../api/book.service';
+import { createSkeletonShopList } from '/src/js/for-each-partial/shopping-skeleton';
 const bookApi = new BookAPI();
 const Pagination = require('tui-pagination');
 
@@ -36,9 +37,11 @@ function renderFavorites() {
      </div>
       `;
   } else {
-    shoppingList.innerHTML = booksOnPage
-      .map(book => {
-        return `
+    shoppingList.innerHTML = createSkeletonShopList();
+    setTimeout(() => {
+      shoppingList.innerHTML = booksOnPage
+        .map(book => {
+          return `
           <li class="shopping-list-book">
             <img class="shopping-book-img" src="${book.book_image}" alt="${book.title}" width="100" height="142" />
             <div class="shopping-book-info">
@@ -87,8 +90,9 @@ function renderFavorites() {
             </div>
           </li>
         `;
-      })
-      .join('');
+        })
+        .join('');
+    }, 500);
     document.querySelectorAll('.remove_book').forEach(b => {
       b.addEventListener('click', removeBookFromFavorite);
     });
