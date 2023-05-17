@@ -58,6 +58,7 @@
   cursor: pointer;
 
   color: var(--text-color);
+  position: relative;
 }
 
 .categories-item.active {
@@ -69,4 +70,28 @@
 
   letter-spacing: -0.02em;
   text-transform: uppercase;
+}
+
+// ===================================
+
+.animation-link::before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: 0.2s linear;
+}
+
+.animation-link::before {
+  left: 0;
+  top: 20px;
+}
+
+.animation-link:hover::after,
+.animation-link:hover::before,
+.animation-link:focus::after,
+.animation-link:focus::before {
+  width: 80%;
 }
