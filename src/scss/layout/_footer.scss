@@ -26,6 +26,7 @@ footer {
     text-decoration: underline;
     font-weight: bold;
     cursor: pointer;
+    transition: .35s linear;
 }
 .key-word-footer-modal:hover {
     color: var(--accent-color);
@@ -34,30 +35,20 @@ footer {
     font-size: 11px;
     width: 150px;
 }
-.about-us-btn{
-    display: block;
-    border-radius: 20px;
-    border: transparent;
-    background: var(--focus-color);
-    color: var(--text-color);
-    width: 120px;
-    margin: 20px auto;
-    padding: 8px 10px;
-    cursor: pointer;
-}
 .footer-title-logo{
     font-size: 20px;
 }
 .modal-about-us {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 11;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px); //blur 
 }
 .logo-team {
     padding-top: 20px;
@@ -70,8 +61,10 @@ footer {
     padding-top: 5px;
     width: 40px;
     height: 40px;
+    transition: .5s;
 }
 .modal-content-footer {
+    box-shadow: 0px 7px 58px 0px rgba(0, 0, 0, 1);  //box-shadow
     background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
     margin: 10% auto;
     border-radius: 15px;
@@ -83,7 +76,7 @@ footer {
         width: 520px;
     }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1000px) {
     .modal-content-footer{
         width: 775px;
     }
@@ -95,9 +88,8 @@ footer {
      border-radius: 8px;
      background-position: center;
      background-size: cover;
-     box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
+     box-shadow: inset 0 0 12px 8px rgba(0, 0, 0, .6);
      overflow: hidden;
-    
  }
 
  .content-footer {
@@ -219,3 +211,5 @@ footer {
      transform: translateX(-50%);
      bottom: 0px;
  }
+
+ 
