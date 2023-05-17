@@ -1,10 +1,10 @@
 import { signForm } from '../for-each-partial/registration-modal';
 import { resetInputs } from '../for-each-partial/registration-modal';
-// import {
-//   nameFildValidate,
-//   emailFildValidate,
-//   passwordFildValidate,
-// } from '../for-each-partial/validation-registration-form';
+import {
+  nameFildValidate,
+  emailFildValidate,
+  passwordFildValidate,
+} from '../for-each-partial/validation-registration-form';
 import { closeModal } from '../for-each-partial/registration-modal';
 
 // ===========setup materialize components========
@@ -19,6 +19,7 @@ const setupUI = user => {
 
   if (user) {
     // console.log(user);
+    // Інформація про обліковий запис
     getDoc(doc(db, 'users', user.uid)).then(doc => {
       const html = `
         <div>Email: ${user.email}</div>
@@ -27,6 +28,7 @@ const setupUI = user => {
       accountDetails.innerHTML = html;
     });
 
+    // Елементи інтерфейсу користувача
     loggedInLinks.forEach(item => (item.style.display = 'block'));
     loggedOutLinks.forEach(item => (item.style.display = 'none'));
   } else {
@@ -107,7 +109,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// const signupForm = document.querySelector('#signup-form');
+const signupForm = document.querySelector('#signup-form');
 
 //listen for auth status change
 auth.onAuthStateChanged(user => {
@@ -167,6 +169,8 @@ export async function deleteBookFromCollection(uid) {
     await deleteDoc(doc(db, 'books', bookToDelete));
   });
   console.log(collection(db, 'books'));
+
+  // Remove the 'capital' field from the document
 }
 
 //logout (Marina)
@@ -186,11 +190,11 @@ signForm.addEventListener('submit', evt => {
   const depend = evt.target.elements.submit_btn.innerText;
   const formData = {};
 
-  // const passwordStatus = passwordFildValidate(password);
-  // const emailStatus = emailFildValidate(email);
-  // const nameStatus = nameFildValidate(name);
+  const passwordStatus = passwordFildValidate(password);
+  const emailStatus = emailFildValidate(email);
+  const nameStatus = nameFildValidate(name);
 
-  if (password && email && name) {
+  if (passwordStatus && emailStatus && nameStatus) {
     formData.depend = depend;
     formData.name = name;
     formData.email = email;
