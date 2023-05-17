@@ -3,10 +3,15 @@
 // }
 
 .remove_book {
-  fill: var(--accent-color);
-  // padding: 11px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  display: flex;
+  cursor: pointer;
 }
-
+.trash-svg {
+  pointer-events: none;
+}
 .tui-pagination .tui-page-btn {
   border-radius: 20px;
   background: var(--accent-color);
@@ -259,15 +264,16 @@ ol {
   .shopping-book-description {
     max-width: 808px;
   }
+}
+// =======================================
+
+@media only screen and (min-width: 1440px) {
   .support-shoping-list-hidden {
     display: block;
+    margin-top: 40px;
   }
   .some-book-centr {
     margin-left: 170px;
     margin-top: 140px;
   }
-}
-
-.wrapper {
-  margin-top: 40px;
 }
