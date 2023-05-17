@@ -51,7 +51,7 @@
 
 @media only screen and (min-width: 1440px) {
     .right-part {
-        width: 807px;
+        width: 867px;
     }
 }
 
@@ -60,12 +60,12 @@
 }
 
 .left-part-skelet {
-    margin-right: 51px;
+    margin-right: 50px;
 }
 
 @media only screen and (min-width: 768px) {
     .left-part-skelet {
-        margin-right: 368px;
+        margin-right: 370px;
     }
 }
 
@@ -79,13 +79,13 @@
     width: 114px;
     height: 18px;
     background-image: var(--skelet-color);
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 }
 
 .type-book-skelet {
     width: 101px;
     height: 14px;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     background-image: var(--skelet-color);
 }
 
@@ -99,8 +99,8 @@
 
 @media only screen and (min-width: 768px) {
     .bucket-skeleton {
-        width: 34px;
-        height: 34px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -108,36 +108,39 @@
     width: 190px;
     height: 54px;
     margin-right: 0px;
-    margin-bottom: 28px;
+    margin-bottom: 14px;
     background-image: var(--skelet-color);
 }
 
 @media only screen and (min-width: 768px) {
     .text-book-skelet {
-        width: 508px;
+        width: 515px;
+        margin-bottom: 24px;
     }
 }
 
 @media only screen and (min-width: 1440px) {
     .text-book-skelet {
-        width: 790px;
+        width: 805px;
+        
     }
 }
 
 .bottom-part-list {
     display: flex;
-    gap: 42px;
+    gap: 35px;
+    align-items: flex-end;
 }
 
 @media only screen and (min-width: 768px) {
     .bottom-part-list {
-        gap: 305px;
+        gap: 335px;
     }
 }
 
 @media only screen and (min-width: 1440px) {
     .bottom-part-list {
-        gap: 597px;
+        gap: 630px;
     }
 }
 
@@ -148,14 +151,14 @@
 }
 
 .links-shop-skelet {
-    width: 80px;
+    width: 85px;
     height: 16px;
     background-image: var(--skelet-color);
 }
 
 @media only screen and (min-width: 768px) {
     .links-shop-skelet {
-        width: 140px;
+        width: 110px;
         height: 30px;
     }
 }
