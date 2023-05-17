@@ -1,4 +1,4 @@
-<footer class="main-footer">
+<footer class="footer main-footer">
   <div class="container container-footer">
     <div id="modal-footer" class="modal-about-us">
       <div class="modal-content-footer">
@@ -8,7 +8,6 @@
         </h2>
         <div class="swiper">
           <div class="swiper-wrapper"></div>
-          <div class="swiper-pagination"></div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
@@ -16,8 +15,21 @@
     </div>
     <p class="footer-text">
       This site was created by the development team "The Error Masters", you can
-      learn more about us by clicking on the button <em>Our team</em>
+      get more information about us by clicking here
+      <span id="open-modal-footer-btn" class="key-word-footer-modal"
+        >Our team</span
+      >
     </p>
-    <button id="open-modal-footer-btn" class="about-us-btn">Our team</button>
+    <div class="logo-team">
+      <svg class="footer-svg-logo">
+        <use href="/src/images/images.footer/socials.svg#icon-wrench"></use>
+      </svg>
+      <div class="right-part-footer">
+        <h2 class="footer-title-logo">THE ERROR MASTERS</h2>
+        <p class="footer-logo-text">
+          We make mistakes better, than everyone else
+        </p>
+      </div>
+    </div>
   </div>
 </footer>

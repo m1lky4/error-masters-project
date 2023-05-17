@@ -40,7 +40,7 @@ function onSubmitForm(evt) {
   console.log(formData);
 }
 
-function nameFildValidate(name) {
+export function nameFildValidate(name) {
   if (!validator.isAlpha(name) || name.length < 2) {
     const message = 'Uncorrect User Name';
     nameErrorMessage.innerText = message;
@@ -52,7 +52,7 @@ function nameFildValidate(name) {
   return true;
 }
 
-function emailFildValidate(email) {
+export function emailFildValidate(email) {
   if (!validator.isEmail(email)) {
     const massage = 'Uncorrect Email';
     emailErrorMassage.innerText = massage;
@@ -64,7 +64,7 @@ function emailFildValidate(email) {
   return true;
 }
 
-function passwordFildValidate(password) {
+export function passwordFildValidate(password) {
   if (!validator.isStrongPassword(password)) {
     const massage = 'Weak password';
     passwordErrorMassage.innerText = massage;

@@ -144,7 +144,7 @@ function updateButton() {
 //   if (isLoggedIn) {
 //     return true;
 //   } else {
-//     return false;
+//     return false
 //   }
 // }
 

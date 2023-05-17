@@ -1,151 +1,241 @@
-// import firebase from 'firebase/compat/app';
-// import 'firebase/compat/auth';
-// import 'firebase/compat/storage';
-// import 'firebase/compat/firestore';
-// const firebaseConfig = {
-//   apiKey: 'AIzaSyCgjEFXQidkD_gtSEs09jDck9M1Ax9vjRc',
-//   authDomain: 'the-error-masters.firebaseapp.com',
-//   databaseURL:
-//     'https://the-error-masters-default-rtdb.europe-west1.firebasedatabase.app',
-//   projectId: 'the-error-masters',
-//   storageBucket: 'the-error-masters.appspot.com',
-//   messagingSenderId: '926729610661',
-//   appId: '1:926729610661:web:60731048c7f8671080744c',
-// };
-// export default firebase.initializeApp(firebaseConfig);
+import { signForm } from '../for-each-partial/registration-modal';
+import { resetInputs } from '../for-each-partial/registration-modal';
+import {
+  nameFildValidate,
+  emailFildValidate,
+  passwordFildValidate,
+} from '../for-each-partial/validation-registration-form';
+import { closeModal } from '../for-each-partial/registration-modal';
 
-// Індус
-// =========================================================================
-// const username = document.querySelector('#username');
-// const email = document.querySelector('#email');
-// const password = document.querySelector('#password');
-// import app from './firebase';
-// const signUp = document.querySelector('#signUp');
-// const login = document.querySelector('#login');
-// console.log(login);
-// // Import the functions you need from the SDKs you need
-// import { initializeApp } from 'firebase/app';
-// import { getDatabase, set, ref, update } from 'firebase/database';
-// import {
-//   getAuth,
-//   createUserWithEmailAndPassword,
-//   signInWithEmailAndPassword,
-//   onAuthStateChanged,
-//   signOut,
-// } from 'firebase/auth';
+// ===========setup materialize components========
+const guideList = document.querySelector('.guides');
+const accountDetails = document.querySelector('.account-details');
+let currentUser = null;
+let currentUserName = null;
 
-// // TODO: Add SDKs for Firebase products that you want to use
-// // https://firebase.google.com/docs/web/setup#available-libraries
+const setupUI = user => {
+  const loggedOutLinks = document.querySelectorAll('.logged-out');
+  const loggedInLinks = document.querySelectorAll('.logged-in');
 
-// // Your web app's Firebase configuration
-// const firebaseConfig = {
-//   apiKey: 'AIzaSyCKPJSd6DrfPHIRFfx7DhFHQYjLf1SWwQg',
-//   authDomain: 'the-error-masters-d4291.firebaseapp.com',
-//   databaseURL:
-//     'https://the-error-masters-d4291-default-rtdb.europe-west1.firebasedatabase.app',
-//   projectId: 'the-error-masters-d4291',
-//   storageBucket: 'the-error-masters-d4291.appspot.com',
-//   messagingSenderId: '1081307963164',
-//   appId: '1:1081307963164:web:1bc1e1915552a443dfe4d9',
-// };
+  if (user) {
+    // console.log(user);
+    // Інформація про обліковий запис
+    getDoc(doc(db, 'users', user.uid)).then(doc => {
+      const html = `
+        <div>Email: ${user.email}</div>
+        <div>Name: ${doc.data().name || currentUserName}</div>
+        `;
+      accountDetails.innerHTML = html;
+    });
 
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const database = getDatabase(app);
-// const auth = getAuth();
-// console.log(auth);
+    // Елементи інтерфейсу користувача
+    loggedInLinks.forEach(item => (item.style.display = 'block'));
+    loggedOutLinks.forEach(item => (item.style.display = 'none'));
+  } else {
+    //hide acc info
+    accountDetails.innerHTML = '';
+    //toggle UI elements
+    loggedInLinks.forEach(item => (item.style.display = 'none'));
+    loggedOutLinks.forEach(item => (item.style.display = 'block'));
+  }
+};
 
-// signUp.addEventListener('click', e => {
-//   e.preventDefault();
+//setup guides
+const setupGuides = data => {
+  if (data.length) {
+    const filterBookByCurrentUser = data.filter(doc => {
+      const book = doc.data();
 
-//   var email = document.querySelector('#email').value;
-//   var password = document.querySelector('#password').value;
-//   var username = document.querySelector('#username').value;
+      if (book.owner == currentUser) {
+        // console.log(book);
+        return book;
+      }
+    });
+    // const query = collection(db, 'books');
+    // onSnapshot(query, data => data.docs.map(doc => console.log(doc)));
+    const markup = filterBookByCurrentUser
+      .map(book => {
+        const data = book.data();
+        // console.log(book.id);
+        return `
+        <details>
+            <summary class="collapsible-header grey lighten-4" style="background-color: darkgray; width: 500px; margin-left: 10px;">
+            ${data.title}
+            </summary>
+            <p class="collapsible-body white" style="background-color: aliceblue; width: 500px; margin-left: 10px;">
+            ${data.description}
+            </p>
+        </details>
+    `;
+      })
+      .join('');
 
-//   createUserWithEmailAndPassword(auth, email, password)
-//     .then(userCredential => {
-//       // Signed in
-//       const user = userCredential.user;
-//       set(ref(database, 'users/' + user.uid), {
-//         username: username,
-//         email: email,
-//       });
-//       alert('User Create');
-//       // ...
-//     })
-//     .catch(error => {
-//       const errorCode = error.code;
-//       const errorMessage = error.message;
+    guideList.innerHTML = markup;
+  } else {
+    guideList.innerHTML = '<h3>Login to view books</h3>';
+  }
+};
 
-//       alert('Error message1');
-//       // ..
-//     });
-// });
+// ===================new firebase================
+import { initializeApp } from 'firebase/app';
+import {
+  updateDoc,
+  deleteField,
+  getFirestore,
+  collection,
+  getDocs,
+  getDoc,
+  addDoc,
+  setDoc,
+  onSnapshot,
+  doc,
+  deleteDoc,
+} from 'firebase/firestore';
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from 'firebase/auth';
 
-// login.addEventListener('click', e => {
-//   e.preventDefault();
+const firebaseConfig = {
+  apiKey: 'AIzaSyCqf7IbxQGzKEnVt10HxkceW7bQtKvtVFQ',
+  authDomain: 'theerrormasters-8c68c.firebaseapp.com',
+  projectId: 'theerrormasters-8c68c',
+  storageBucket: 'theerrormasters-8c68c.appspot.com',
+  messagingSenderId: '440951672891',
+  appId: '1:440951672891:web:27c33f78cbda1a63290c1e',
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
-//   var email = document.querySelector('#email').value;
-//   var password = document.querySelector('#password').value;
+const signupForm = document.querySelector('#signup-form');
 
-//   signInWithEmailAndPassword(auth, email, password)
-//     .then(userCredential => {
-//       // Signed in
-//       const user = userCredential.user;
+//listen for auth status change
+auth.onAuthStateChanged(user => {
+  if (user) {
+    currentUser = user.uid;
+    const query = collection(db, 'books');
+    onSnapshot(
+      query,
+      snapshot => {
+        setupGuides(snapshot.docs);
+        setupUI(user);
+      },
+      err => {
+        console.log(err.message);
+      }
+    );
+  } else {
+    currentUser = null;
+    setupUI();
+    setupGuides([]);
+  }
+});
 
-//       const dt = new Date();
+export function addBookToCollection({
+  uid,
+  title,
+  description,
+  author,
+  book_image,
+  buy_links,
+}) {
+  addDoc(collection(db, 'books'), {
+    uid,
+    owner: currentUser,
+    title,
+    description,
+    author,
+    book_image,
+    buy_links,
+  })
+    .then(() => {
+      //close the modal and reset the form
+      // createForm.reset();
+    })
+    .catch(error => {
+      console.log(error.message);
+    });
+}
 
-//       update(ref(database, 'users/' + user.uid), {
-//         last_login: dt,
-//       });
+export async function deleteBookFromCollection(uid) {
+  // data => console.log(data.id);
+  // await deleteDoc(doc(db, 'books', book.id));
+  const cityRef = collection(db, 'books');
+  onSnapshot(cityRef, async data => {
+    const bookToDelete = data.docs[0].id;
+    console.log(bookToDelete);
+    await deleteDoc(doc(db, 'books', bookToDelete));
+  });
+  console.log(collection(db, 'books'));
 
-//       alert('Welcome syka');
-//       // ...
-//     })
-//     .catch(error => {
-//       const errorCode = error.code;
-//       const errorMessage = error.message;
+  // Remove the 'capital' field from the document
+}
 
-//       alert('Error message2');
-//     });
-// });
+//logout (Marina)
+const logout = document.querySelector('.btn-logout');
+logout.addEventListener('click', evt => {
+  evt.preventDefault();
 
-// // const user = auth.currentUser;
-// // console.log(user);
-// onAuthStateChanged(auth, user => {
-//   console.log(user);
-//   if (user) {
-//     // User is signed in, see docs for a list of available properties
-//     // https://firebase.google.com/docs/reference/js/firebase.User
-//     const uid = user.uid;
-//     console.log(uid);
-//     email.style.display = 'none';
-//     // bla bla bla
-//     // ...
-//   } else {
-//     // User is signed out
-//     // ...
-//     // bla bla bla
-//   }
-// });
+  auth.signOut();
+});
 
-// remove.addEventListener('click', e => {
-//   const auth = getAuth();
-//   signOut(auth)
-//     .then(() => {
-//       const dto = new Date();
+signForm.addEventListener('submit', evt => {
+  evt.preventDefault();
 
-//       update(ref(database, 'users/' + user.uid), {
-//         last_logout: dto,
-//       });
-//       // Sign-out successful.const errorCode = error.code;
-//       alert('out');
-//     })
-//     .catch(error => {
-//       const errorCode = error.code;
-//       const errorMessage = error.message;
+  const password = evt.target.elements.user_password.value;
+  const email = evt.target.elements.user_email.value;
+  const name = evt.target.elements.user_name.value;
+  const depend = evt.target.elements.submit_btn.innerText;
+  const formData = {};
 
-//       alert('Error message3');
-//       // An error happened.
-//     });
-// });
+  const passwordStatus = passwordFildValidate(password);
+  const emailStatus = emailFildValidate(email);
+  const nameStatus = nameFildValidate(name);
+
+  if (passwordStatus && emailStatus && nameStatus) {
+    formData.depend = depend;
+    formData.name = name;
+    formData.email = email;
+    formData.password = password;
+    resetInputs();
+  }
+
+  if (depend === 'SIGN IN') {
+    //   if (depend === 'SIGN IN' && emailStatus && passwordStatus) {
+    formData.depend = depend;
+    formData.email = email;
+    formData.password = password;
+
+    signInWithEmailAndPassword(auth, formData.email, formData.password)
+      .then(cred => {
+        resetInputs();
+        closeModal();
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+  }
+
+  if (depend === 'SIGN UP') {
+    formData.depend = depend;
+    formData.name = name;
+    formData.email = email;
+    formData.password = password;
+
+    createUserWithEmailAndPassword(auth, formData.email, formData.password)
+      .then(cred => {
+        return setDoc(doc(db, 'users', cred.user.uid), {
+          name: formData.name,
+        });
+      })
+      .then(() => {
+        resetInputs();
+        closeModal();
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+  }
+});
