@@ -1,4 +1,3 @@
-
 .main-header {
   position: sticky;
   top: 0;
@@ -6,7 +5,6 @@
   background: var(--body-color);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
   height: 64px; //
-
 }
 
 // ====================NAVIGATION===========================
@@ -130,12 +128,47 @@
     min-width: 184px;
     height: 45px;
     padding: 14px;
+    cursor: pointer;
+    background: var(--accent-color);
+    color: var(--white-color);
+    border-radius: 36px;
+    border: transparent;
+  }
+
+  .logged-btn-style {
+    display: flex;
+    justify-content: space-between;
+    min-width: 184px;
+    height: 45px;
+    // padding: 14px;
 
     background: var(--accent-color);
     color: var(--white-color);
     border-radius: 36px;
     border: transparent;
   }
+
+  .padding {
+    padding: 14px;
+    cursor: pointer;
+  }
+  //
+  .mainmenubtn {
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-child {
+    display: none;
+  }
+  .dropdown:hover .dropdown-child {
+    display: flex;
+  }
+  //
 
   .burger {
     display: none;
@@ -423,16 +456,16 @@ body {
 //   display: flex;
 // }
 
-// .header-log-out {
-//   cursor: pointer;
-//   box-sizing: border-box;
+.header-log-out {
+  // cursor: pointer;
+  // box-sizing: border-box;
 
-//   width: 184px;
-//   height: 48px;
-//   background-color: #ffffff;
-//   border: 1.5px solid #111111;
-//   border-radius: 18px;
-// }
+  width: 184px;
+  height: 48px;
+  background-color: #ffffff;
+  border: 1.5px solid #111111;
+  border-radius: 18px;
+}
 
 // .header-sign-in {
 //   background-color: #4f2ee8;
@@ -444,4 +477,3 @@ body {
 // }
 
 // ==================================================================================
-

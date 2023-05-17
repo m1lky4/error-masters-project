@@ -3,6 +3,11 @@ import { resetInputs } from '../for-each-partial/registration-modal';
 import { auth, db } from './firebase';
 import { closeModal } from '../for-each-partial/registration-modal';
 import {
+  nameFildValidate,
+  emailFildValidate,
+  passwordFildValidate,
+} from '../for-each-partial/validation-registration-form';
+import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from 'firebase/auth';
@@ -30,18 +35,26 @@ const setupUI = user => {
   if (user) {
     getDoc(doc(db, 'users', user.uid)).then(doc => {
       const html = `
-        <div>Email: ${user.email}</div>
-        <div>Name: ${doc.data().name || currentUserName}</div>
+        <div class="padding">${doc.data().name || currentUserName}</div>
+        <div class="dropdown-child">
+            <button type="submit" class="btn-logout header-log-out padding">LogOut</button>
+        </div>
         `;
       accountDetails.innerHTML = html;
+      const logout = document.querySelector('.btn-logout');
+      logout.addEventListener('click', evt => {
+        evt.preventDefault();
+
+        auth.signOut();
+      });
     });
 
-    loggedInLinks.forEach(item => (item.style.display = 'block'));
+    loggedInLinks.forEach(item => (item.style.display = 'flex'));
     loggedOutLinks.forEach(item => (item.style.display = 'none'));
   } else {
     accountDetails.innerHTML = '';
     loggedInLinks.forEach(item => (item.style.display = 'none'));
-    loggedOutLinks.forEach(item => (item.style.display = 'block'));
+    loggedOutLinks.forEach(item => (item.style.display = 'flex'));
   }
 };
 
@@ -71,13 +84,12 @@ const setupGuides = data => {
       .join('');
 
     guideList.innerHTML = markup;
-  } else {
-    guideList.innerHTML = '<h3>Login to view books</h3>';
   }
 };
 
 auth.onAuthStateChanged(user => {
   if (user) {
+    localStorage.setItem('isLoggedIn', true);
     currentUser = user.uid;
     const query = collection(db, 'books');
     onSnapshot(
@@ -91,17 +103,11 @@ auth.onAuthStateChanged(user => {
       }
     );
   } else {
+    localStorage.setItem('isLoggedIn', false);
     currentUser = null;
     setupUI();
     setupGuides([]);
   }
-});
-
-const logout = document.querySelector('.btn-logout');
-logout.addEventListener('click', evt => {
-  evt.preventDefault();
-
-  auth.signOut();
 });
 
 signForm.addEventListener('submit', evt => {
@@ -113,15 +119,21 @@ signForm.addEventListener('submit', evt => {
   const depend = evt.target.elements.submit_btn.innerText;
   const formData = {};
 
-  if (password && email && name) {
-    formData.depend = depend;
-    formData.name = name;
-    formData.email = email;
-    formData.password = password;
-    resetInputs();
-  }
+  const passwordStatus = passwordFildValidate(password);
+  const emailStatus = emailFildValidate(email);
+  const nameStatus = nameFildValidate(name);
+  // console.log(evt.target.elements.user_name.value);
+  console.log(passwordStatus, emailStatus, nameStatus);
 
-  if (depend === 'SIGN IN') {
+  // if (password && email && name) {
+  //   formData.depend = depend;
+  //   formData.name = name;
+  //   formData.email = email;
+  //   formData.password = password;
+  //   resetInputs();
+  // }
+
+  if (depend === 'SIGN IN' && emailStatus && passwordStatus) {
     formData.depend = depend;
     formData.email = email;
     formData.password = password;
@@ -136,7 +148,7 @@ signForm.addEventListener('submit', evt => {
       });
   }
 
-  if (depend === 'SIGN UP') {
+  if (depend === 'SIGN UP' && emailStatus && passwordStatus && nameStatus) {
     formData.depend = depend;
     formData.name = name;
     formData.email = email;

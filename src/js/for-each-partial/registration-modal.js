@@ -24,6 +24,8 @@ export const {
   openModalButton,
 } = refs;
 
+export const allFields = allFormInputs;
+
 signInButton.addEventListener('click', onSignInButtonClick);
 signUpButton.addEventListener('click', onSignUpButtonClick);
 passwordShowButton.addEventListener('click', onShowPasswordButtonClick);

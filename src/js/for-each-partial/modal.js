@@ -66,18 +66,11 @@ export function onModal(event) {
     if (localList !== []) {
       localList.map(el => {
         if (el.id === bookId) {
-          shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST';
-          return;
+          return (shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST');
         } else {
           return;
         }
       });
-    }
-    if (shoppingBtn.textContent === 'REMOVE FROM THE SHOPPING LIST') {
-      congratulationsText.textContent =
-        'Congratulations! You have added the book to the shopping list. To delete, press the button "Remove from the shopping list".';
-    } else {
-      congratulationsText.textContent = '';
     }
   }
 }
@@ -105,26 +98,6 @@ async function showBookDetails(bookId) {
   }
 }
 
-function addToShoppingList() {
-  const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
-  const bookIndex = shoppingList.findIndex(item => item.id === bookId);
-
-  if (shoppingBtn.textContent === 'ADD TO SHOPPING LIST') {
-    let book = {
-      id: bookId,
-    };
-    shoppingList.push(book);
-    shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST';
-    congratulationsText.textContent =
-      'Congratulations! You have added the book to the shopping list. To delete, press the button "Remove from the shopping list".';
-  } else {
-    shoppingBtn.textContent = 'ADD TO SHOPPING LIST';
-    shoppingList.splice(bookIndex, 1);
-    congratulationsText.textContent = '';
-  }
-  updateLocalStorage(shoppingList);
-}
-
 function updateLocalStorage(shoppingList) {
   localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
 }
@@ -139,37 +112,58 @@ function updateButton() {
   }
 }
 
-// function checkRegistration() {
-//   const isLoggedIn = localStorage.getItem('isLoggedIn');
-//   if (isLoggedIn) {
-//     return true;
-//   } else {
-//     return false
-//   }
-// }
+function checkRegistration() {
+  const isLoggedIn = JSON.parse(localStorage.getItem('isLoggedIn'));
+  if (isLoggedIn) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function addToShoppingList() {
+  const isLoggedIn = checkRegistration();
+
+  if (isLoggedIn) {
+    const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
+    const bookIndex = shoppingList.findIndex(item => item.id === bookId);
+
+    if (shoppingBtn.textContent === 'ADD TO SHOPPING LIST') {
+      let book = {
+        id: bookId,
+      };
+      shoppingList.push(book);
+      shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST';
+      console.log(book);
+      congratulationsText.textContent =
+        'Congratulations! You have added the book to the shopping list. To delete, press the button "Remove from the shopping list".';
+    } else {
+      shoppingBtn.textContent = 'ADD TO SHOPPING LIST';
+      shoppingList.splice(bookIndex, 1);
+      congratulationsText.textContent = '';
+    }
+    updateLocalStorage(shoppingList);
+  } else {
+    alert('Please register or log in first!');
+  }
+}
 
 // function addToShoppingList() {
-//   const isLoggedIn = checkRegistration();
+//   const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
+//   const bookIndex = shoppingList.findIndex(item => item.id === bookId);
 
-//   if (isLoggedIn) {
-//     const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
-//     const bookIndex = shoppingList.findIndex(item => item.id === bookId);
-
-//     if (shoppingBtn.textContent === 'ADD TO SHOPPING LIST') {
-//       let book = {
-//         id: bookId,
-//       };
-//       shoppingList.push(book);
-//       shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST';
-//       congratulationsText.textContent =
-//         'Congratulations! You have added the book to the shopping list. To delete, press the button "Remove from the shopping list".';
-//     } else {
-//       shoppingBtn.textContent = 'ADD TO SHOPPING LIST';
-//       shoppingList.splice(bookIndex, 1);
-//       congratulationsText.textContent = '';
-//     }
-//     updateLocalStorage(shoppingList);
+//   if (shoppingBtn.textContent === 'ADD TO SHOPPING LIST') {
+//     let book = {
+//       id: bookId,
+//     };
+//     shoppingList.push(book);
+//     shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST';
+//     congratulationsText.textContent =
+//       'Congratulations! You have added the book to the shopping list. To delete, press the button "Remove from the shopping list".';
 //   } else {
-//     alert('Please register or log in first!');
+//     shoppingBtn.textContent = 'ADD TO SHOPPING LIST';
+//     shoppingList.splice(bookIndex, 1);
+//     congratulationsText.textContent = '';
 //   }
+//   updateLocalStorage(shoppingList);
 // }

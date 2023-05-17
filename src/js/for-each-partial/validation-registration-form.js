@@ -1,6 +1,7 @@
 import { signForm } from './registration-modal';
 import validator from 'validator';
-import { resetInputs } from './registration-modal';
+// import { resetInputs } from './registration-modal';
+import { allFields } from './registration-modal';
 
 const refs = {
   passwordErrorMassage: document.querySelector('[name="password_error"]'),
@@ -74,4 +75,11 @@ export function passwordFildValidate(password) {
   passwordErrorMassage.innerText = '';
   signForm.elements.user_password.classList.remove('input-error');
   return true;
+}
+
+export function resetInputs() {
+  allFields.forEach(input => {
+    input.classList.remove('input-error');
+    input.closest('li').querySelector('span').innerText = '';
+  });
 }
