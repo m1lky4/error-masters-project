@@ -2,7 +2,7 @@ name: Build and deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [dev]
 
 jobs:
   build-and-deploy:
@@ -13,7 +13,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm ci
+          npm i
           npm run build
 
       - name: Deploy 🚀

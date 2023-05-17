@@ -25,17 +25,17 @@ function renderFavorites() {
         This page is empty, add some books<br />and proceed to order.
       </p>
       <div class="stack-of-books">
-        <div class="stack-of-books">
-          <img
-            src="./images/books-list-00100.png"
+        <img
+            src="https://lh3.googleusercontent.com/pw/AJFCJaXF-_bnsOB3uXSYccYIy6OIbasPGhK58TIG0KTbIRDMPOMP1TtEGd2v8e9EsOOUcZtpOjn5ToZTgfcrfJbF-r0KEa0DReOlQZhvZF8xlygQIOy7rBEg9YFDmqIH1RQ9sjRUPPvATZYh0PGnOM4RpkEm=w323-h241-s-no?authuser=0"
             alt="stack of books"
             width="265"
             height="198"
           />
-        </div>
+
+     </div>
       `;
   } else {
-    shoppingList.innerHTML = selectedBooks
+    shoppingList.innerHTML = booksOnPage
       .map(book => {
         return `
           <li class="shopping-list-book">
@@ -84,6 +84,9 @@ function renderFavorites() {
         `;
       })
       .join('');
+  document.querySelectorAll('.remove_book').forEach(b => {
+      b.addEventListener('click', removeBookFromFavorite);
+    });
   }
 }
 
@@ -98,6 +101,46 @@ function renderFavorites() {
     });
     return acc;
   }, []);
-  // console.log(selectedBooks);
+  console.log(selectedBooks);
+
+  const options = {
+    totalItems: selectedBooks.length,
+    itemsPerPage: booksPerPage,
+    visiblePages: 10,
+    page: 1,
+    centerAlign: false,
+    firstItemClassName: 'tui-first-child',
+    lastItemClassName: 'tui-last-child',
+    template: {
+      page: '<a href="#" class="tui-page-btn">{{page}}</a>',
+      currentPage:
+        '<strong class="tui-page-btn tui-is-selected">{{page}}</strong>',
+      moveButton:
+        '<a href="#" class="tui-page-btn tui-{{type}}">' +
+        '<span class="tui-ico-{{type}}">{{type}}</span>' +
+        '</a>',
+      disabledMoveButton:
+        '<span class="tui-page-btn tui-is-disabled tui-{{type}}">' +
+        '<span class="tui-ico-{{type}}">{{type}}</span>' +
+        '</span>',
+      moreButton:
+        '<a href="#" class="tui-page-btn tui-{{type}}-is-ellip">' +
+        '<span class="tui-ico-ellip">...</span>' +
+        '</a>',
+    },
+  };
+
+  if (selectedBooks.length === 0) {
+    document.querySelector('.tui-pagination').style.display = 'none';
+  } else {
+    document.querySelector('.tui-pagination').style.display = 'block';
+  }
+
+  const container = document.getElementById('pagination');
+  paginator = new Pagination(container, options);
+  paginator.getCurrentPage();
+  updateBooksOnPage(paginator.getCurrentPage());
+  paginator.on('afterMove', ({ page }) => updateBooksOnPage(page));
+
   renderFavorites();
 })();
