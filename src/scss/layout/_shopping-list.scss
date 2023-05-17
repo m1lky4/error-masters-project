@@ -173,6 +173,7 @@ ol {
 }
 
 .shopping-book-img {
+  border-radius: 16px;
   float: left;
   margin-right: 14px;
 }
@@ -299,5 +300,11 @@ ol {
   .some-book-centr {
     margin-left: 355px;
     margin-top: 140px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .shopping-book-img {
+    margin-bottom: 14px;
+    height: 142px;
   }
 }
