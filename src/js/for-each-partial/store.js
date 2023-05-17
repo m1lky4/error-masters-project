@@ -21,6 +21,7 @@ function addToFavorites(book) {
   localStorage.setItem('favoriteBooks', JSON.stringify(favoriteBooks));
   renderFavorites();
 }
+shoppingList.innerHTML = createSkeletonShopList();
 
 function renderFavorites() {
   if (!shoppingList) return;
@@ -37,8 +38,6 @@ function renderFavorites() {
      </div>
       `;
   } else {
-    shoppingList.innerHTML = createSkeletonShopList();
-    setTimeout(() => {
       shoppingList.innerHTML = booksOnPage
         .map(book => {
           return `
@@ -92,7 +91,6 @@ function renderFavorites() {
         `;
         })
         .join('');
-    }, 500);
     document.querySelectorAll('.remove_book').forEach(b => {
       b.addEventListener('click', removeBookFromFavorite);
     });
