@@ -879,6 +879,10 @@ ul, ol {
   box-shadow: 0 2px 5px #00000080;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container-border {
   border-radius: 0 0 8px 8px;
   position: relative;
@@ -904,13 +908,21 @@ ul, ol {
   padding: 0;
 }
 
+.icon-item {
+  fill: var(--logo-font-color);
+}
+
 .current {
   background: #eac645;
   border-radius: 36px;
 }
 
-.logo-svg, .icon-item {
+.logo-svg {
   fill: var(--logo-font-color);
+}
+
+.link-shoping.current .icon-item {
+  fill: var(--modal-links-font-black);
 }
 
 .burger {
@@ -1188,7 +1200,7 @@ body {
 }
 
 .mobile-menu-close-icon {
-  stroke: var(--main-font);
+  stroke: var(--burger-fill);
   transition: fill;
 }
 
@@ -1203,23 +1215,6 @@ body {
   justify-content: space-between;
   margin-bottom: 126px;
   padding: 14px;
-  display: flex;
-}
-
-.mobile-log-out {
-  width: 118px;
-  height: 48px;
-  background: #fff;
-  border: 1.5px solid #111;
-  border-radius: 18px;
-  justify-content: space-between;
-  align-self: flex-start;
-  margin-top: auto;
-  margin-bottom: 0;
-  padding: 14px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.3;
   display: flex;
 }
 
@@ -2532,4 +2527,4 @@ footer {
   transition: all .2s;
 }
 
-/*# sourceMappingURL=index.045aa702.css.map */
+/*# sourceMappingURL=index.2b20eecc.css.map */
