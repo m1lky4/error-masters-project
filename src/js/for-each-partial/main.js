@@ -24,7 +24,6 @@ window.addEventListener('load', async e => {
   data = await bookAPI.getTopBooksList();
 
   if (!data) return console.log('Error');
-
   if (window.innerWidth < 767) {
     renderTopBookList(data, 1);
   } else if (window.innerWidth >= 767 && window.innerWidth < 1440) {
@@ -32,4 +31,11 @@ window.addEventListener('load', async e => {
   } else if (window.innerWidth >= 1440) {
     renderTopBookList(data, 5);
   }
+  
+  showFooter()
 });
+
+function showFooter() {
+  const footer = document.querySelector('footer');
+  footer.classList.add('main-footer');
+}

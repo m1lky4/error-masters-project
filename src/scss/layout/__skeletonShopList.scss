@@ -115,18 +115,21 @@
 @media only screen and (min-width: 768px) {
     .text-book-skelet {
         width: 508px;
+        margin-bottom: 37px;
     }
 }
 
 @media only screen and (min-width: 1440px) {
     .text-book-skelet {
         width: 790px;
+        
     }
 }
 
 .bottom-part-list {
     display: flex;
     gap: 42px;
+    align-items: flex-end;
 }
 
 @media only screen and (min-width: 768px) {

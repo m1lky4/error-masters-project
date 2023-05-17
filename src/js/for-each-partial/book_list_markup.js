@@ -11,7 +11,7 @@ export function createTopBookList(param, limit) {
             <ul class="books-list-markup">
             ${createBookCardMarkup(books.slice(0, limit))}
             </ul>
-            <button class="category-markup-button glow-on-hover" type="submit">
+            <button class="category-markup-button" type="submit">
               See more
             </button>
           </li>
