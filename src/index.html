@@ -25,7 +25,6 @@
   </head>
 
   <body class="light modal-open">
-    <!-- if you logIN -->
     <!-- logout -->
     <div class="logged-in" style="display: none">
       <form action="register-form" class="signinForm" id="logout-form">
@@ -42,27 +41,6 @@
       <summary>Account details</summary>
       <div class="account-details"></div>
     </details>
-
-    <!-- Create book -->
-    <div class="logged-in" style="border: 1px solid black; display: none">
-      <h4>Create Book</h4>
-      <br />
-      <form id="create-form">
-        <div class="input-field">
-          <input type="text" id="title" required />
-          <label for="title">Book Title</label>
-        </div>
-        <div class="input-field">
-          <textarea
-            id="description"
-            class="materialize-textarea"
-            required
-          ></textarea>
-          <label for="content">Book Description</label>
-        </div>
-        <button class="btn yellow darken-2 z-depth-0">Create</button>
-      </form>
-    </div>
 
     <!-- show form after login -->
     <div class="container-collabsible" style="margin-top: 40px">
