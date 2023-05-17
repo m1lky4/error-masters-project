@@ -81,7 +81,7 @@ function onBackdropClick(evt) {
   closeModal();
 }
 
-function closeModal() {
+export function closeModal() {
   modalBackdrop.classList.add('registration-is-hiden');
 
   closeButton.removeEventListener('click', closeModal);
