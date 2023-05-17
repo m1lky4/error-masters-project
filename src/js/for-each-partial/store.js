@@ -30,6 +30,7 @@ function renderFavorites() {
 
   if (selectedBooks.length === 0) {
     shoppingList.innerHTML = `
+    <div class="some-book-centr">
       <p class="some-book">
         This page is empty, add some books<br />and proceed to order.
       </p>
@@ -40,6 +41,7 @@ function renderFavorites() {
             width="265"
             height="198"
           />
+      </div>
      </div>
       `;
   } else {
@@ -53,7 +55,11 @@ function renderFavorites() {
                 <h3>${book.title}</h3>
                 <p>${book.list_name}</p>
               </div>
-              <a href="#" class="remove_book" data-id="${book._id}">[X]
+              <a href="#" class="remove_book" data-id="${book._id}">
+              <svg class="remove_book" data-id="${book._id}" width="33" height="33">
+                <path fill="#4f2ee8" style="fill: var(--color1, #4f2ee8)" d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+                <path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.1429" d="M13.714 9.143h4.571M9.143 11.429h13.714M21.333 11.429l-0.534 8.015c-0.080 1.202-0.12 1.804-0.38 2.26-0.229 0.401-0.574 0.724-0.989 0.925-0.472 0.229-1.075 0.229-2.28 0.229h-2.3c-1.205 0-1.808 0-2.28-0.229-0.416-0.201-0.761-0.524-0.989-0.925-0.26-0.456-0.3-1.057-0.38-2.26l-0.534-8.015M14.476 14.857v3.809M17.524 14.857v3.809"></path>
+            </svg>
               </a>
             </div>
             <div class="shopping-book-box">
