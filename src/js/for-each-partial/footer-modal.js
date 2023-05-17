@@ -27,17 +27,17 @@ window.addEventListener('keydown', function (event) {
   }
 });
 
-function showFooterOnScroll() {
-  const footer = document.querySelector('footer');
-  const scrollThreshold = 200; // Adjust the scroll threshold as needed
+// function showFooterOnScroll() {
+//   const footer = document.querySelector('footer');
+//   const scrollThreshold = 200; // Adjust the scroll threshold as needed
 
-  window.addEventListener('scroll', function () {
-    if (window.pageYOffset > scrollThreshold) {
-      footer.classList.add('main-footer');
-    } else {
-      footer.classList.remove('main-footer');
-    }
-  });
-}
+//   window.addEventListener('scroll', function () {
+//     if (window.pageYOffset > scrollThreshold) {
+//       footer.classList.add('main-footer');
+//     } else {
+//       footer.classList.remove('main-footer');
+//     }
+//   });
+// }
 
-window.addEventListener('DOMContentLoaded', showFooterOnScroll);
+// window.addEventListener('DOMContentLoaded', showFooterOnScroll);
