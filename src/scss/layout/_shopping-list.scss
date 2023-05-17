@@ -1,7 +1,3 @@
-// .shopping-list li {
-//   display: none;
-// }
-
 h1,
 h2,
 h3,
@@ -47,7 +43,7 @@ ol {
   text-align: center;
   letter-spacing: -0.02em;
 
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--light-text-color);
   margin-bottom: 20px;
 }
 
@@ -58,7 +54,6 @@ ol {
 
 .shopping-title {
   margin-bottom: 140px;
-  margin-top: 40px;
   margin-bottom: 20px;
   font-family: 'DM Sans';
   font-weight: 700;
@@ -101,7 +96,6 @@ ol {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--light-text-color);
-  display: flex;
 }
 
 .shopping-book-author p {
@@ -204,7 +198,6 @@ ol {
 @media only screen and (min-width: 768px) {
   .shopping-list-book {
     width: 704px;
-    height: 213px;
     padding: 24px 24px;
   }
   .shopping-book-img {
@@ -232,5 +225,17 @@ ol {
   }
   .shopping-book-description {
     max-width: 808px;
+  }
+}
+// =======================================
+.shopping {
+  padding-top: 40px;
+}
+
+.support-shoping-list-hidden {
+}
+@media only screen and (max-width: 1439px) {
+  .support-shoping-list-hidden {
+    display: none;
   }
 }
