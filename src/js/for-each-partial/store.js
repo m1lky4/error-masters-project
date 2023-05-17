@@ -1,4 +1,5 @@
 import { BookAPI } from '../api/book.service';
+import { createSkeletonShopList } from '/src/js/for-each-partial/shopping-skeleton';
 const bookApi = new BookAPI();
 const Pagination = require('tui-pagination');
 
@@ -20,6 +21,7 @@ function addToFavorites(book) {
   localStorage.setItem('favoriteBooks', JSON.stringify(favoriteBooks));
   renderFavorites();
 }
+shoppingList.innerHTML = createSkeletonShopList();
 
 function renderFavorites() {
   if (!shoppingList) return;
