@@ -1,10 +1,23 @@
-// .shopping-list li {
-//   display: none;
-// }
+.tui-page-btn {
+  border-radius: 50%;
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  margin-right: 0.5rem;
+  background-color: #ffffff;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tui-page-btn:hover:not(.is-disabled) {
+  background-color: var(--accent-color);
+  color: #fff;
+}
 
 .remove_book {
   padding: 8px;
-  border-radius:50%;
+  border-radius: 50%;
   background-color: var(--accent-color);
   display: flex;
   cursor: pointer;
@@ -12,14 +25,25 @@
 .trash-svg {
   pointer-events: none;
 }
-.tui-pagination .tui-page-btn {
-  border-radius: 20px;
-  background: var(--accent-color);
+
+.tui-page-btn {
+  background-color: #fff;
+}
+.tui-next {
+  background-color: #eac645;
+}
+.tui-last {
+  background-color: #eac645;
+}
+.tui-first,
+.tui-prev {
+  background-color: #000;
 }
 
-// .tui-pagination {
-//   margin-left: 245px;
-// }
+.tui-pagination .tui-is-selected,
+.tui-pagination strong {
+  background-color: #000;
+}
 
 h1,
 h2,
@@ -66,7 +90,7 @@ ol {
   text-align: center;
   letter-spacing: -0.02em;
 
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--light-text-color);
   margin-bottom: 20px;
 }
 
@@ -274,7 +298,7 @@ ol {
     margin-top: 40px;
   }
   .some-book-centr {
-    margin-left: 170px;
+    margin-left: 355px;
     margin-top: 140px;
   }
 }

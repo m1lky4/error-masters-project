@@ -100,7 +100,7 @@ function renderFavorites() {
               </div>
             </div>
           </li>
-        `
+        `;
       })
       .join('');
     document.querySelectorAll('.remove_book').forEach(b => {
@@ -120,14 +120,16 @@ function removeBookFromFavorite(e) {
       localStorage.setItem('shoppingList', JSON.stringify(shoppingListArray));
     }
     console.log(shoppingListArray);
-    options.totalItems = JSON.parse(localStorage.getItem('shoppingList')).length;
+    options.totalItems = JSON.parse(
+      localStorage.getItem('shoppingList')
+    ).length;
     paginator = new Pagination(container, options);
-     if (options.totalItems <= 3) {
-    document.querySelector('.tui-pagination').style.display = 'none';
-  } else {
-    document.querySelector('.tui-pagination').style.display = 'block';
-  }
-  })
+    if (options.totalItems <= 3) {
+      document.querySelector('.tui-pagination').style.display = 'none';
+    } else {
+      document.querySelector('.tui-pagination').style.display = 'block';
+    }
+  });
   // localStorage.setItem('shoppingList', JSON.stringify(updatedBooks));
   selectedBooks = selectedBooks.filter(b => b._id !== id);
   updateBooksOnPage(paginator.getCurrentPage());
@@ -146,7 +148,7 @@ function removeBookFromFavorite(e) {
   }, []);
   console.log(selectedBooks);
 
-   options = {
+  options = {
     totalItems: selectedBooks.length,
     itemsPerPage: booksPerPage,
     visiblePages: 10,
