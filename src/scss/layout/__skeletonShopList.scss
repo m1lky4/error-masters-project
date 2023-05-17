@@ -60,18 +60,18 @@
 }
 
 .left-part-skelet {
-    margin-right: 80px;
+    margin-right: 50px;
 }
 
 @media only screen and (min-width: 768px) {
     .left-part-skelet {
-        margin-right: 420px;
+        margin-right: 370px;
     }
 }
 
 @media only screen and (min-width: 1440px) {
     .left-part-skelet {
-        margin-right: 707px;
+        margin-right: 660px;
     }
 }
 
@@ -105,7 +105,7 @@
 }
 
 .text-book-skelet {
-    width: 220px;
+    width: 190px;
     height: 54px;
     margin-right: 0px;
     margin-bottom: 14px;
@@ -114,33 +114,33 @@
 
 @media only screen and (min-width: 768px) {
     .text-book-skelet {
-        width: 567px;
+        width: 515px;
         margin-bottom: 24px;
     }
 }
 
 @media only screen and (min-width: 1440px) {
     .text-book-skelet {
-        width: 857px;
+        width: 805px;
         
     }
 }
 
 .bottom-part-list {
     display: flex;
-    gap: 65px;
+    gap: 35px;
     align-items: flex-end;
 }
 
 @media only screen and (min-width: 768px) {
     .bottom-part-list {
-        gap: 385px;
+        gap: 335px;
     }
 }
 
 @media only screen and (min-width: 1440px) {
     .bottom-part-list {
-        gap: 675px;
+        gap: 630px;
     }
 }
 
