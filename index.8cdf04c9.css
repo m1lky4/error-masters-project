@@ -615,6 +615,23 @@ img {
   }
 }
 
+.tui-page-btn {
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: .5rem;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.tui-page-btn:hover:not(.is-disabled) {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
 .remove_book {
   background-color: var(--accent-color);
   cursor: pointer;
@@ -627,9 +644,16 @@ img {
   pointer-events: none;
 }
 
-.tui-pagination .tui-page-btn {
-  background: var(--accent-color);
-  border-radius: 20px;
+.tui-page-btn {
+  background-color: #fff;
+}
+
+.tui-next, .tui-last {
+  background-color: #eac645;
+}
+
+.tui-first, .tui-prev, .tui-pagination .tui-is-selected, .tui-pagination strong {
+  background-color: #000;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -663,7 +687,7 @@ ul, ol {
 .some-book {
   text-align: center;
   letter-spacing: -.02em;
-  color: #0009;
+  color: var(--light-text-color);
   margin-bottom: 20px;
   font-family: DM Sans;
   font-size: 18px;
@@ -867,7 +891,7 @@ ul, ol {
 
   .some-book-centr {
     margin-top: 140px;
-    margin-left: 170px;
+    margin-left: 355px;
   }
 }
 
@@ -2530,4 +2554,4 @@ footer {
   transition: all .2s;
 }
 
-/*# sourceMappingURL=index.1d8821e5.css.map */
+/*# sourceMappingURL=index.8cdf04c9.css.map */
