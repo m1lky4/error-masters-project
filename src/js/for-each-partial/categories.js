@@ -42,6 +42,10 @@ async function renderCategoryList() {
 async function renderBookCardsByCategory(e) {
   mainContent.innerHTML = createImmediateSkeleton();
   if (e.target.nodeName !== 'LI') return;
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
   if (e.target.classList.contains('all')) {
     const data = await bookAPI.getTopBooksList();
     titleOfCategory.innerHTML = formatCategoryTitle('All categories');
@@ -58,6 +62,7 @@ async function renderBookCardsByCategory(e) {
     }
     return;
   }
+
   const selectedCategory = e.target.textContent;
 
   const response = await bookAPI.getBooksWithSelectedCategory(selectedCategory);
