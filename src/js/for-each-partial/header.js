@@ -26,15 +26,14 @@ function setThemeOnLoad() {
     themeSwitcher.checked = false;
   }
 }
-///////////////////////////////////////////////////////////////////////////////////////
 window.addEventListener(
   'load',
   currenPage(window.location.pathname.split('/').pop())
 );
-
 function currenPage(location) {
   const homeLink = document.querySelector('.link-home');
   const shoppingLink = document.querySelector('.link-shoping');
+
   if (location === 'index.html') {
     homeLink.classList.add('current');
     return;

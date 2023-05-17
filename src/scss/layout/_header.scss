@@ -1,3 +1,4 @@
+
 .main-header {
   position: sticky;
   top: 0;
@@ -5,6 +6,7 @@
   background: var(--body-color);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
   height: 64px; //
+
 }
 
 // ====================NAVIGATION===========================
@@ -19,7 +21,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
   height: 64px;
   width: 100%;
   background: inherit;
@@ -145,6 +146,10 @@
     display: none;
     cursor: pointer;
   }
+
+  .mobile-menu-close-btn {
+    display: none;
+  }
 }
 
 /* Для екранів пристроїв desctop */
@@ -227,7 +232,6 @@ body {
 .toggle-switch {
   display: flex;
   flex-direction: row;
-
   align-items: center;
   margin-right: 14px;
   margin-left: auto;
@@ -254,7 +258,6 @@ body {
   position: fixed;
   top: var(--header-height);
   left: 0;
-
   background: radial-gradient(
     183.6% 183.01% at 59.76% -23.42%,
     #4f2ee8 18.03%,
@@ -278,12 +281,9 @@ body {
   flex-direction: column;
   padding: 20px;
   overflow: hidden;
-
   position: relative;
-
   top: 0;
   left: 50%;
-
   transform: translate(-50%, 0%) scale(1);
   width: 375px;
   height: calc(100% - var(--header-height));
@@ -292,7 +292,6 @@ body {
   background-position: bottom;
   overflow: visible;
 }
-
 .mobile-menu-wrapper {
   // z-index: 1;
   display: flex;
@@ -341,7 +340,6 @@ body {
 .mobile-link-home {
   margin-bottom: 16px;
 }
-
 .mobile-link-shoping,
 .mobile-link-home {
   padding: 8px 16px;
@@ -420,7 +418,6 @@ body {
 .hidden {
   display: none;
 }
-
 // ==================================================================================
 // .sign-in-wrapper {
 //   display: flex;
@@ -447,3 +444,4 @@ body {
 // }
 
 // ==================================================================================
+
