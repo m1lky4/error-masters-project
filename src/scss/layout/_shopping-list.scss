@@ -1,20 +1,41 @@
 .tui-page-btn {
+  position: relative;
   border-radius: 50%;
   display: inline-block;
-  padding: 0.5rem 0.75rem;
+  padding-top: 12px !important;
   margin-right: 0.5rem;
   background-color: #ffffff;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 18px !important;
   text-align: center;
   cursor: pointer;
+  border: 1px solid #000 !important;
+  width: 44px !important;
+  height: 44px !important;
+  
+}
+.tui-is-selected {
+  border: 1px solid #000 !important;
 }
 
 .tui-page-btn:hover:not(.is-disabled) {
-  background-color: var(--accent-color);
+  background-color: #eac645;
   color: #fff;
+  transition: background-color 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
+.tui-ico-ellip::after {
+    position: absolute;
+    display: flex;
+    // content: '...';
+    content: '...';
+    width: 10px;
+    height: 10px;
+    top: 15%;
+    left: 32%;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: black;
+}
 .remove_book {
   padding: 8px;
   border-radius: 50%;
@@ -26,23 +47,108 @@
   pointer-events: none;
 }
 
-.tui-page-btn {
-  background-color: #fff;
-}
-.tui-next {
+.tui-page-btn.tui-next {
   background-color: #eac645;
+  border: 1px solid #000 !important;
 }
-.tui-last {
+.tui-page-btn.tui-last {
   background-color: #eac645;
+  border: 1px solid #000 !important;
 }
-.tui-first,
-.tui-prev {
+// .tui-pagination.tui-page-btn.tui-first,
+// .tui-pagination.tui-page-btn.tui-prev {
+//   background-color: #000;
+//   color: white;
+// }
+.tui-page-btn.tui-first {
   background-color: #000;
+  border: 1px solid #000 !important;
+  color: #fff;
 }
-
+.tui-page-btn.tui-prev {
+  background-color: #000;
+  border: 1px solid #000 !important;
+}
 .tui-pagination .tui-is-selected,
 .tui-pagination strong {
   background-color: #000;
+  color: white;
+}
+strong {
+  position: absolute;
+}
+.tui-last::after {
+  position: absolute;
+  display: block;
+  content: '>>';
+  width: 10px;
+  height: 10px;
+  top: 23%;
+  left: 39%;
+  font-size: 20px;
+  letter-spacing: -5;
+  color: black;
+}
+
+.tui-next {
+  position: relative;
+  display: block;
+  
+}
+
+.tui-next::after {
+  position: absolute;
+  display: block;
+  content: '>';
+  width: 10px;
+  height: 10px;
+  top: 23%;
+  left: 39%;
+  font-size: 20px;
+  color: black;
+}
+
+.tui-first {
+  position: relative;
+  display: block;
+}
+
+.tui-first::after {
+  position: absolute;
+  display: block;
+  content: '<<';
+  width: 10px;
+  height: 10px;
+  top: 23%;
+  left: 32%;
+  font-size: 20px;
+  letter-spacing: -5;
+  color: white;
+}
+
+.tui-prev {
+  position: relative;
+  display: block;
+}
+
+.tui-prev::after {
+  position: absolute;
+  display: block;
+  content: '<';
+  width: 10px;
+  height: 10px;
+  left: 39%;
+  top: 23%;
+  font-size: 20px;
+  color: white;
+}
+
+.tui-pagination .tui-ico-first,
+.tui-pagination .tui-ico-prev,
+.tui-pagination .tui-ico-next,
+.tui-pagination .tui-ico-last,
+.tui-pagination .tui-ico-ellip {
+  background: none;
 }
 
 h1,
@@ -306,5 +412,12 @@ ol {
   .shopping-book-img {
     margin-bottom: 14px;
     height: 142px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+   .tui-pagination {
+    position: absolute;
+    left:49%;
+    bottom:20px;
   }
 }
