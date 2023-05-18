@@ -44,17 +44,24 @@ const setupUI = user => {
       const logout = document.querySelector('.btn-logout');
       logout.addEventListener('click', evt => {
         evt.preventDefault();
-
         auth.signOut();
       });
     });
-
-    loggedInLinks.forEach(item => (item.style.display = 'flex'));
+    if (window.innerWidth < 767) {
+      loggedInLinks.forEach(item => (item.style.display = 'none'));
+    } else {
+      loggedInLinks.forEach(item => (item.style.display = 'flex'));
+    }
+    // loggedInLinks.forEach(item => (item.style.display = 'flex'));
     loggedOutLinks.forEach(item => (item.style.display = 'none'));
   } else {
     accountDetails.innerHTML = '';
-    loggedInLinks.forEach(item => (item.style.display = 'none'));
-    loggedOutLinks.forEach(item => (item.style.display = 'flex'));
+    if (window.innerWidth < 767) {
+      loggedInLinks.forEach(item => (item.style.display = 'none'));
+    }
+    // loggedInLinks.forEach(item => (item.style.display = 'none'));
+    // loggedOutLinks.forEach(item => (item.style.display = 'flex'));
+
   }
 };
 

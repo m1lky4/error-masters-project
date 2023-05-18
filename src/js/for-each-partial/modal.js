@@ -153,7 +153,8 @@ function addToShoppingList() {
     }
     updateLocalStorage(shoppingList);
   } else {
-    Swal.fire('Please register or log in first!');
+ Swal.fire('Please register or log in first!');
+
   }
 }
 
