@@ -1,14 +1,13 @@
 import { signForm } from './registration-modal';
 import validator from 'validator';
-// import { resetInputs } from './registration-modal';
 import { allFields } from './registration-modal';
+import { weeckPasswordMassage } from './registration-modal';
 
 const refs = {
-  passwordErrorMassage: document.querySelector('[name="password_error"]'),
-  emailErrorMassage: document.querySelector('[name="email_error"]'),
-  nameErrorMessage: document.querySelector(`[name="name_error"]`),
+  emailErrorMassage: document.querySelector('.email_error'),
+  nameErrorMessage: document.querySelector('.name_error'),
 };
-const { passwordErrorMassage, emailErrorMassage, nameErrorMessage } = refs;
+const { emailErrorMassage, nameErrorMessage } = refs;
 
 signForm.addEventListener('submit', onSubmitForm);
 
@@ -57,6 +56,7 @@ export function emailFildValidate(email) {
   if (!validator.isEmail(email)) {
     const massage = 'Uncorrect Email';
     emailErrorMassage.innerText = massage;
+
     signForm.elements.user_email.classList.add('input-error');
     return false;
   }
@@ -67,12 +67,10 @@ export function emailFildValidate(email) {
 
 export function passwordFildValidate(password) {
   if (!validator.isStrongPassword(password)) {
-    const massage = 'Weak password';
-    passwordErrorMassage.innerText = massage;
+    weeckPasswordMassage.show();
     signForm.elements.user_password.classList.add('input-error');
     return false;
   }
-  passwordErrorMassage.innerText = '';
   signForm.elements.user_password.classList.remove('input-error');
   return true;
 }

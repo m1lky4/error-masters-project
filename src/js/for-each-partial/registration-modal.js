@@ -1,4 +1,6 @@
 import { log } from 'console';
+import tippy from 'tippy.js';
+import 'tippy.js/dist/tippy.css';
 
 const refs = {
   signInButton: document.querySelector('[name="sign-in"]'),
@@ -6,8 +8,9 @@ const refs = {
   signForm: document.querySelector('.registration-form'),
   passwordFild: document.querySelector('[name="user_password"]'),
   closeButton: document.querySelector('.registration-close-btn'),
-  openModalButton: document.querySelector('.sign-up'),
+  openModalButtonS: document.querySelectorAll('.sign-up'),
   passwordShowButton: document.querySelector(`.show-password-text`),
+  lockUses: document.querySelectorAll(`.lock-use`),
   allFormInputs: document.querySelectorAll('.form-input-filds'),
   modalBackdrop: document.querySelector('.registration-backdrop'),
 };
@@ -21,22 +24,34 @@ export const {
   allFormInputs,
   closeButton,
   modalBackdrop,
-  openModalButton,
+  openModalButtonS,
+  lockUses,
 } = refs;
 
 export const allFields = allFormInputs;
+export const weeckPasswordMassage = tippy(passwordFild, {
+  content:
+    'The password must consist of at least 8 characters, including: letters in lower and upper case, a number and a symbol',
+  placement: 'bottom',
+  trigger: 'manual',
+  maxWidth: 320,
+});
 
 signInButton.addEventListener('click', onSignInButtonClick);
 signUpButton.addEventListener('click', onSignUpButtonClick);
 passwordShowButton.addEventListener('click', onShowPasswordButtonClick);
 
-openModalButton.addEventListener('click', onLoginButtonClick);
+openModalButtonS.forEach(openModalButton => {
+  openModalButton.addEventListener('click', onLoginButtonClick);
+});
 
 function onLoginButtonClick() {
   modalBackdrop.classList.remove('registration-is-hiden');
+  resetInputs();
   closeButton.addEventListener('click', closeModal);
   modalBackdrop.addEventListener('click', onBackdropClick);
   document.addEventListener('keydown', onEscapeClick);
+  document.body.classList.add('modal-open');
 }
 
 function onSignInButtonClick() {
@@ -52,7 +67,9 @@ function onSignUpButtonClick() {
 }
 
 function onShowPasswordButtonClick(evt) {
-  evt.preventDefault();
+  lockUses.forEach(lockUse => {
+    lockUse.classList.toggle('use-hiden');
+  });
   if (passwordFild.type === 'password') {
     passwordFild.type = 'text';
     return;
@@ -85,7 +102,7 @@ function onBackdropClick(evt) {
 
 export function closeModal() {
   modalBackdrop.classList.add('registration-is-hiden');
-
+  document.body.classList.remove('modal-open');
   closeButton.removeEventListener('click', closeModal);
   modalBackdrop.removeEventListener('click', onBackdropClick);
   document.removeEventListener('keydown', onEscapeClick);

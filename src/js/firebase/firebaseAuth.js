@@ -122,16 +122,6 @@ signForm.addEventListener('submit', evt => {
   const passwordStatus = passwordFildValidate(password);
   const emailStatus = emailFildValidate(email);
   const nameStatus = nameFildValidate(name);
-  // console.log(evt.target.elements.user_name.value);
-  console.log(passwordStatus, emailStatus, nameStatus);
-
-  // if (password && email && name) {
-  //   formData.depend = depend;
-  //   formData.name = name;
-  //   formData.email = email;
-  //   formData.password = password;
-  //   resetInputs();
-  // }
 
   if (depend === 'SIGN IN' && emailStatus && passwordStatus) {
     formData.depend = depend;
