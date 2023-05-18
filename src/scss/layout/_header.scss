@@ -153,6 +153,12 @@ button {
     border: transparent;
   }
 
+  @media only screen and (min-width: 768px) {
+    .logged-btn-style {
+      display: flex;
+    }
+  }
+
   .padding {
     padding: 14px;
     cursor: pointer;
