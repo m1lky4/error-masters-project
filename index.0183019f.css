@@ -987,9 +987,13 @@ ul, ol {
 @media only screen and (min-width: 1440px) {
   .tui-pagination {
     position: absolute;
-    bottom: 20px;
+    bottom: -60px;
     left: 49%;
   }
+}
+
+.wrapper {
+  position: relative;
 }
 
 .main-header {
@@ -2700,4 +2704,4 @@ footer {
   transition: all .2s;
 }
 
-/*# sourceMappingURL=index.699dab15.css.map */
+/*# sourceMappingURL=index.0183019f.css.map */
