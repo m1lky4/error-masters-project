@@ -28,6 +28,7 @@ export const {
   lockUses,
 } = refs;
 
+export const allFields = allFormInputs;
 export const weeckPasswordMassage = tippy(passwordFild, {
   content:
     'The password must consist of at least 8 characters, including: letters in lower and upper case, a number and a symbol',
