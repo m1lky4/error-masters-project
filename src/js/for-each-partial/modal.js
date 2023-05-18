@@ -1,4 +1,6 @@
 import { BookAPI } from '../api/book.service';
+import Swal from 'sweetalert2'
+
 const bookApi = new BookAPI();
 
 const body = document.body;
@@ -151,7 +153,7 @@ function addToShoppingList() {
     }
     updateLocalStorage(shoppingList);
   } else {
-    alert('Please register or log in first!');
+    Swal.fire('Please register or log in first!');
   }
 }
 
