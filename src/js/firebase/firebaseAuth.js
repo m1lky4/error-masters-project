@@ -44,7 +44,6 @@ const setupUI = user => {
       const logout = document.querySelector('.btn-logout');
       logout.addEventListener('click', evt => {
         evt.preventDefault();
-
         auth.signOut();
       });
     });
@@ -62,6 +61,7 @@ const setupUI = user => {
     }
     // loggedInLinks.forEach(item => (item.style.display = 'none'));
     // loggedOutLinks.forEach(item => (item.style.display = 'flex'));
+
   }
 };
 

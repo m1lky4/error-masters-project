@@ -141,7 +141,7 @@ function removeBookFromFavorite(e) {
   options = {
     totalItems: selectedBooks.length,
     itemsPerPage: booksPerPage,
-    visiblePages: 10,
+    visiblePages: 2,
     page: 1,
     centerAlign: false,
     firstItemClassName: 'tui-first-child',

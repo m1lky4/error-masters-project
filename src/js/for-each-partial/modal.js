@@ -1,4 +1,6 @@
 import { BookAPI } from '../api/book.service';
+import Swal from 'sweetalert2'
+
 const bookApi = new BookAPI();
 
 const body = document.body;
@@ -66,11 +68,18 @@ export function onModal(event) {
     if (localList !== []) {
       localList.map(el => {
         if (el.id === bookId) {
-          return (shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST');
+          shoppingBtn.textContent = 'REMOVE FROM THE SHOPPING LIST';
+          return;
         } else {
           return;
         }
       });
+    }
+    if (shoppingBtn.textContent === 'REMOVE FROM THE SHOPPING LIST') {
+      congratulationsText.textContent =
+        'Congratulations! You have added the book to the shopping list. To delete, press the button "Remove from the shopping list".';
+    } else {
+      congratulationsText.textContent = '';
     }
   }
 }
@@ -144,7 +153,8 @@ function addToShoppingList() {
     }
     updateLocalStorage(shoppingList);
   } else {
-    alert('Please register or log in first!');
+ Swal.fire('Please register or log in first!');
+
   }
 }
 
